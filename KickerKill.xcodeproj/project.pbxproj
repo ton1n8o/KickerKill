@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02255178232414B200B7A42A /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02255177232414B200B7A42A /* BaseNavigationController.swift */; };
+		0225517B2324151D00B7A42A /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0225517A2324151D00B7A42A /* BaseWireframe.swift */; };
+		0225517F2324174700B7A42A /* SoundEffectsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0225517E2324174700B7A42A /* SoundEffectsWireframe.swift */; };
+		022551812324185500B7A42A /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022551802324185500B7A42A /* UIStoryboardExtension.swift */; };
+		02255183232418B200B7A42A /* SoundEffectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02255182232418B200B7A42A /* SoundEffectsViewController.swift */; };
+		022551852324192600B7A42A /* SoundEffectsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022551842324192600B7A42A /* SoundEffectsInteractor.swift */; };
+		022551872324199400B7A42A /* SoundEffectsInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022551862324199400B7A42A /* SoundEffectsInterfaces.swift */; };
+		02255189232419D800B7A42A /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02255188232419D800B7A42A /* PresenterInterface.swift */; };
+		0225518B23241A0A00B7A42A /* SoundEffectsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0225518A23241A0A00B7A42A /* SoundEffectsPresenter.swift */; };
+		02255191232420E500B7A42A /* SoundEffects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02255190232420E500B7A42A /* SoundEffects.storyboard */; };
 		02F383C7231AB55700FF8F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F383C6231AB55700FF8F69 /* AppDelegate.swift */; };
-		02F383C9231AB55700FF8F69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F383C8231AB55700FF8F69 /* ViewController.swift */; };
-		02F383CC231AB55700FF8F69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F383CA231AB55700FF8F69 /* Main.storyboard */; };
 		02F383CE231AB55800FF8F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F383CD231AB55800FF8F69 /* Assets.xcassets */; };
 		02F383D1231AB55800FF8F69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F383CF231AB55800FF8F69 /* LaunchScreen.storyboard */; };
 		02F383DC231AB55800FF8F69 /* KickerKillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F383DB231AB55800FF8F69 /* KickerKillTests.swift */; };
@@ -34,10 +42,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02255177232414B200B7A42A /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		0225517A2324151D00B7A42A /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
+		0225517E2324174700B7A42A /* SoundEffectsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffectsWireframe.swift; sourceTree = "<group>"; };
+		022551802324185500B7A42A /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
+		02255182232418B200B7A42A /* SoundEffectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffectsViewController.swift; sourceTree = "<group>"; };
+		022551842324192600B7A42A /* SoundEffectsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffectsInteractor.swift; sourceTree = "<group>"; };
+		022551862324199400B7A42A /* SoundEffectsInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffectsInterfaces.swift; sourceTree = "<group>"; };
+		02255188232419D800B7A42A /* PresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
+		0225518A23241A0A00B7A42A /* SoundEffectsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffectsPresenter.swift; sourceTree = "<group>"; };
+		02255190232420E500B7A42A /* SoundEffects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SoundEffects.storyboard; sourceTree = "<group>"; };
 		02F383C3231AB55700FF8F69 /* KickerKill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KickerKill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F383C6231AB55700FF8F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		02F383C8231AB55700FF8F69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		02F383CB231AB55700FF8F69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02F383CD231AB55800FF8F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02F383D0231AB55800FF8F69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02F383D2231AB55800FF8F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,6 +90,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		022551762324148D00B7A42A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				02F383C6231AB55700FF8F69 /* AppDelegate.swift */,
+				02255177232414B200B7A42A /* BaseNavigationController.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		022551792324150400B7A42A /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				0225517A2324151D00B7A42A /* BaseWireframe.swift */,
+				022551802324185500B7A42A /* UIStoryboardExtension.swift */,
+				02255188232419D800B7A42A /* PresenterInterface.swift */,
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
+		0225517C232416AC00B7A42A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0225517D232416CD00B7A42A /* SoundEffects */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0225517D232416CD00B7A42A /* SoundEffects */ = {
+			isa = PBXGroup;
+			children = (
+				02255190232420E500B7A42A /* SoundEffects.storyboard */,
+				022551862324199400B7A42A /* SoundEffectsInterfaces.swift */,
+				0225518A23241A0A00B7A42A /* SoundEffectsPresenter.swift */,
+				02255182232418B200B7A42A /* SoundEffectsViewController.swift */,
+				022551842324192600B7A42A /* SoundEffectsInteractor.swift */,
+				0225517E2324174700B7A42A /* SoundEffectsWireframe.swift */,
+			);
+			path = SoundEffects;
+			sourceTree = "<group>";
+		};
 		02F383BA231AB55700FF8F69 = {
 			isa = PBXGroup;
 			children = (
@@ -97,9 +153,9 @@
 		02F383C5231AB55700FF8F69 /* KickerKill */ = {
 			isa = PBXGroup;
 			children = (
-				02F383C6231AB55700FF8F69 /* AppDelegate.swift */,
-				02F383C8231AB55700FF8F69 /* ViewController.swift */,
-				02F383CA231AB55700FF8F69 /* Main.storyboard */,
+				022551762324148D00B7A42A /* Application */,
+				0225517C232416AC00B7A42A /* Modules */,
+				022551792324150400B7A42A /* VIPER */,
 				02F383CD231AB55800FF8F69 /* Assets.xcassets */,
 				02F383CF231AB55800FF8F69 /* LaunchScreen.storyboard */,
 				02F383D2231AB55800FF8F69 /* Info.plist */,
@@ -229,9 +285,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02255191232420E500B7A42A /* SoundEffects.storyboard in Resources */,
 				02F383D1231AB55800FF8F69 /* LaunchScreen.storyboard in Resources */,
 				02F383CE231AB55800FF8F69 /* Assets.xcassets in Resources */,
-				02F383CC231AB55700FF8F69 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +312,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02F383C9231AB55700FF8F69 /* ViewController.swift in Sources */,
+				022551872324199400B7A42A /* SoundEffectsInterfaces.swift in Sources */,
+				0225517B2324151D00B7A42A /* BaseWireframe.swift in Sources */,
+				0225517F2324174700B7A42A /* SoundEffectsWireframe.swift in Sources */,
+				022551812324185500B7A42A /* UIStoryboardExtension.swift in Sources */,
+				02255178232414B200B7A42A /* BaseNavigationController.swift in Sources */,
+				02255183232418B200B7A42A /* SoundEffectsViewController.swift in Sources */,
+				022551852324192600B7A42A /* SoundEffectsInteractor.swift in Sources */,
+				0225518B23241A0A00B7A42A /* SoundEffectsPresenter.swift in Sources */,
 				02F383C7231AB55700FF8F69 /* AppDelegate.swift in Sources */,
+				02255189232419D800B7A42A /* PresenterInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +357,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		02F383CA231AB55700FF8F69 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				02F383CB231AB55700FF8F69 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		02F383CF231AB55800FF8F69 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
