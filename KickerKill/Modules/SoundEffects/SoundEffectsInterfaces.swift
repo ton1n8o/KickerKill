@@ -1,10 +1,4 @@
-//
-//  SoundEffectsInterfaces.swift
-//  KickerKill
-//
-//  Created by Antonio on 9/7/19.
-//  Copyright © 2019 Antonio Carlos. All rights reserved.
-//
+// Copyright © 9/7/19 Antônio Carlos. All rights reserved.
 
 import UIKit
 
@@ -13,13 +7,15 @@ protocol SoundEffectsWireFrameInterface: WireframeInterface {
 }
 
 protocol SoundEffectsViewInterface: class {
-    
+    func showSounds(_ soundsData: [SoundEffectData])
 }
 
 protocol SoundEffectsPresenterInterface: PresenterInterface {
-    
+    func numberOfSections() -> Int
+    func numberOrItems(in section: Int) -> Int
+    func item(at indexPath: IndexPath) -> SoundEffectData
 }
 
-protocol SoundEffectsInteractorInterface {
-    
+protocol SoundEffectsInteractorInterface {    
+    func fetchSoundEffects() -> [SoundEffect]
 }
