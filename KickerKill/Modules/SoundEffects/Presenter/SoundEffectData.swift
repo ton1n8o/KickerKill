@@ -3,5 +3,6 @@
 import Foundation
 
 struct SoundEffectData {
-    
+    let title: String
+    let audioPath: String
 }

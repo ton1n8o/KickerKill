@@ -19,6 +19,8 @@ extension SoundEffectsPresenter: SoundEffectsPresenterInterface {
     
     func viewDidLoad() {
         let soundEffects = interactor.fetchSoundEffects()
+        sounds = soundEffects.map({ SoundEffectData(title: $0.name, audioPath: $0.audioPath) })
+        view.reloadData()
     }
     
     func numberOfSections() -> Int {

@@ -8,6 +8,10 @@ final class SoundEffectsInteractor {
 extension SoundEffectsInteractor: SoundEffectsInteractorInterface {
     
     func fetchSoundEffects() -> [SoundEffect] {
-        return []
+        return [
+            SoundEffect(name: "First blood", audioPath: ""),
+            SoundEffect(name: "Head shot", audioPath: ""),
+            SoundEffect(name: "Monster kill", audioPath: "")
+        ]
     }
 }

@@ -4,18 +4,20 @@ import UIKit
 
 final class SoundEffectsViewController: UIViewController {
 
+    @IBOutlet var collectinView: UICollectionView!
     var presenter: SoundEffectsPresenterInterface!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectinView.register(UINib(nibName: "SoundItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         presenter.viewDidLoad()
     }
 
 }
 extension SoundEffectsViewController: SoundEffectsViewInterface {
     
-    func showSounds(_ soundsData: [SoundEffectData]) {
-        
+    func reloadData() {
+        collectinView.reloadData()
     }
 }
 extension SoundEffectsViewController: UICollectionViewDataSource {

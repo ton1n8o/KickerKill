@@ -7,7 +7,7 @@ protocol SoundEffectsWireFrameInterface: WireframeInterface {
 }
 
 protocol SoundEffectsViewInterface: class {
-    func showSounds(_ soundsData: [SoundEffectData])
+    func reloadData()
 }
 
 protocol SoundEffectsPresenterInterface: PresenterInterface {
