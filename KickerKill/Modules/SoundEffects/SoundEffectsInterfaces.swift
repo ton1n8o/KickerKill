@@ -12,8 +12,9 @@ protocol SoundEffectsViewInterface: class {
 
 protocol SoundEffectsPresenterInterface: PresenterInterface {
     func numberOfSections() -> Int
-    func numberOrItems(in section: Int) -> Int
+    func numberOfItems(in section: Int) -> Int
     func item(at indexPath: IndexPath) -> SoundEffectData
+    func didSelecItem(_ item: SoundEffectData)
 }
 
 protocol SoundEffectsInteractorInterface {    

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02172A46235335D900CE66B8 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02172A45235335D900CE66B8 /* Identifiable.swift */; };
 		02255178232414B200B7A42A /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02255177232414B200B7A42A /* BaseNavigationController.swift */; };
 		0225517B2324151D00B7A42A /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0225517A2324151D00B7A42A /* BaseWireframe.swift */; };
 		0225517F2324174700B7A42A /* SoundEffectsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0225517E2324174700B7A42A /* SoundEffectsWireframe.swift */; };
@@ -17,10 +18,18 @@
 		02255189232419D800B7A42A /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02255188232419D800B7A42A /* PresenterInterface.swift */; };
 		0225518B23241A0A00B7A42A /* SoundEffectsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0225518A23241A0A00B7A42A /* SoundEffectsPresenter.swift */; };
 		02255191232420E500B7A42A /* SoundEffects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02255190232420E500B7A42A /* SoundEffects.storyboard */; };
-		022E95EB23377E8700FAFF9F /* SoundItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 022E95EA23377E8700FAFF9F /* SoundItemCollectionViewCell.xib */; };
 		02343578232D38D30007C98E /* SoundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02343577232D38D30007C98E /* SoundEffect.swift */; };
 		0234357D232D3C3F0007C98E /* SoundEffectData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0234357C232D3C3F0007C98E /* SoundEffectData.swift */; };
 		02343580232D3F010007C98E /* SoundItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0234357F232D3F010007C98E /* SoundItemCollectionViewCell.swift */; };
+		023900CA235B6D4800325717 /* impressive.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 023900C5235B6D4800325717 /* impressive.mp3 */; };
+		023900CB235B6D4800325717 /* denied.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 023900C6235B6D4800325717 /* denied.mp3 */; };
+		023900CC235B6D4800325717 /* humiliation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 023900C7235B6D4800325717 /* humiliation.mp3 */; };
+		023900CD235B6D4800325717 /* prepare_to_fight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 023900C8235B6D4800325717 /* prepare_to_fight.mp3 */; };
+		023900CE235B6D4800325717 /* holy_shit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 023900C9235B6D4800325717 /* holy_shit.mp3 */; };
+		023900D0235B6E1F00325717 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023900CF235B6E1F00325717 /* AudioPlayer.swift */; };
+		023900D3235B72A300325717 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023900D2235B72A300325717 /* AVFoundation.framework */; };
+		023900D5235B7BD100325717 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023900D4235B7BD100325717 /* UICollectionView+Extensions.swift */; };
+		02729C1F2353341D0065C833 /* SoundItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02729C1E2353341D0065C833 /* SoundItemCollectionViewCell.xib */; };
 		02F383C7231AB55700FF8F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F383C6231AB55700FF8F69 /* AppDelegate.swift */; };
 		02F383CE231AB55800FF8F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F383CD231AB55800FF8F69 /* Assets.xcassets */; };
 		02F383D1231AB55800FF8F69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F383CF231AB55800FF8F69 /* LaunchScreen.storyboard */; };
@@ -46,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02172A45235335D900CE66B8 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		02255177232414B200B7A42A /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		0225517A2324151D00B7A42A /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
 		0225517E2324174700B7A42A /* SoundEffectsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffectsWireframe.swift; sourceTree = "<group>"; };
@@ -56,10 +66,18 @@
 		02255188232419D800B7A42A /* PresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
 		0225518A23241A0A00B7A42A /* SoundEffectsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffectsPresenter.swift; sourceTree = "<group>"; };
 		02255190232420E500B7A42A /* SoundEffects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SoundEffects.storyboard; sourceTree = "<group>"; };
-		022E95EA23377E8700FAFF9F /* SoundItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		02343577232D38D30007C98E /* SoundEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffect.swift; sourceTree = "<group>"; };
 		0234357C232D3C3F0007C98E /* SoundEffectData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffectData.swift; sourceTree = "<group>"; };
 		0234357F232D3F010007C98E /* SoundItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		023900C5235B6D4800325717 /* impressive.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = impressive.mp3; sourceTree = "<group>"; };
+		023900C6235B6D4800325717 /* denied.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = denied.mp3; sourceTree = "<group>"; };
+		023900C7235B6D4800325717 /* humiliation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = humiliation.mp3; sourceTree = "<group>"; };
+		023900C8235B6D4800325717 /* prepare_to_fight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = prepare_to_fight.mp3; sourceTree = "<group>"; };
+		023900C9235B6D4800325717 /* holy_shit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = holy_shit.mp3; sourceTree = "<group>"; };
+		023900CF235B6E1F00325717 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		023900D2235B72A300325717 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		023900D4235B7BD100325717 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		02729C1E2353341D0065C833 /* SoundItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		02F383C3231AB55700FF8F69 /* KickerKill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KickerKill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F383C6231AB55700FF8F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02F383CD231AB55800FF8F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				023900D3235B72A300325717 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,8 +120,12 @@
 		022551762324148D00B7A42A /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				023900C4235B6D3700325717 /* Audios */,
 				02F383C6231AB55700FF8F69 /* AppDelegate.swift */,
 				02255177232414B200B7A42A /* BaseNavigationController.swift */,
+				02172A45235335D900CE66B8 /* Identifiable.swift */,
+				023900CF235B6E1F00325717 /* AudioPlayer.swift */,
+				023900D4235B7BD100325717 /* UICollectionView+Extensions.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -169,9 +192,29 @@
 			isa = PBXGroup;
 			children = (
 				0234357F232D3F010007C98E /* SoundItemCollectionViewCell.swift */,
-				022E95EA23377E8700FAFF9F /* SoundItemCollectionViewCell.xib */,
+				02729C1E2353341D0065C833 /* SoundItemCollectionViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		023900C4235B6D3700325717 /* Audios */ = {
+			isa = PBXGroup;
+			children = (
+				023900C6235B6D4800325717 /* denied.mp3 */,
+				023900C9235B6D4800325717 /* holy_shit.mp3 */,
+				023900C7235B6D4800325717 /* humiliation.mp3 */,
+				023900C5235B6D4800325717 /* impressive.mp3 */,
+				023900C8235B6D4800325717 /* prepare_to_fight.mp3 */,
+			);
+			path = Audios;
+			sourceTree = "<group>";
+		};
+		023900D1235B72A300325717 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				023900D2235B72A300325717 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		02F383BA231AB55700FF8F69 = {
@@ -181,6 +224,7 @@
 				02F383DA231AB55800FF8F69 /* KickerKillTests */,
 				02F383E5231AB55900FF8F69 /* KickerKillUITests */,
 				02F383C4231AB55700FF8F69 /* Products */,
+				023900D1235B72A300325717 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -330,9 +374,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				02255191232420E500B7A42A /* SoundEffects.storyboard in Resources */,
+				023900CC235B6D4800325717 /* humiliation.mp3 in Resources */,
+				023900CB235B6D4800325717 /* denied.mp3 in Resources */,
+				023900CA235B6D4800325717 /* impressive.mp3 in Resources */,
+				023900CD235B6D4800325717 /* prepare_to_fight.mp3 in Resources */,
 				02F383D1231AB55800FF8F69 /* LaunchScreen.storyboard in Resources */,
 				02F383CE231AB55800FF8F69 /* Assets.xcassets in Resources */,
-				022E95EB23377E8700FAFF9F /* SoundItemCollectionViewCell.xib in Resources */,
+				023900CE235B6D4800325717 /* holy_shit.mp3 in Resources */,
+				02729C1F2353341D0065C833 /* SoundItemCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +408,8 @@
 			files = (
 				022551872324199400B7A42A /* SoundEffectsInterfaces.swift in Sources */,
 				0225517B2324151D00B7A42A /* BaseWireframe.swift in Sources */,
+				023900D0235B6E1F00325717 /* AudioPlayer.swift in Sources */,
+				023900D5235B7BD100325717 /* UICollectionView+Extensions.swift in Sources */,
 				02343578232D38D30007C98E /* SoundEffect.swift in Sources */,
 				0225517F2324174700B7A42A /* SoundEffectsWireframe.swift in Sources */,
 				0234357D232D3C3F0007C98E /* SoundEffectData.swift in Sources */,
@@ -368,6 +419,7 @@
 				022551852324192600B7A42A /* SoundEffectsInteractor.swift in Sources */,
 				0225518B23241A0A00B7A42A /* SoundEffectsPresenter.swift in Sources */,
 				02F383C7231AB55700FF8F69 /* AppDelegate.swift in Sources */,
+				02172A46235335D900CE66B8 /* Identifiable.swift in Sources */,
 				02343580232D3F010007C98E /* SoundItemCollectionViewCell.swift in Sources */,
 				02255189232419D800B7A42A /* PresenterInterface.swift in Sources */,
 			);
@@ -539,6 +591,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MG2UCY5382;
 				INFOPLIST_FILE = KickerKill/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -557,6 +610,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MG2UCY5382;
 				INFOPLIST_FILE = KickerKill/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

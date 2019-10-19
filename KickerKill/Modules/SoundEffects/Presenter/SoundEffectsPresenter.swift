@@ -27,12 +27,16 @@ extension SoundEffectsPresenter: SoundEffectsPresenterInterface {
         return 1
     }
     
-    func numberOrItems(in section: Int) -> Int {
+    func numberOfItems(in section: Int) -> Int {
         return sounds.count
     }
     
     func item(at indexPath: IndexPath) -> SoundEffectData {
         return sounds[indexPath.row]
+    }
+    
+    func didSelecItem(_ item: SoundEffectData) {
+        AudioPlayer.shared.play(item)
     }
     
 }

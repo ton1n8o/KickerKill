@@ -9,9 +9,10 @@ extension SoundEffectsInteractor: SoundEffectsInteractorInterface {
     
     func fetchSoundEffects() -> [SoundEffect] {
         return [
-            SoundEffect(name: "First blood", audioPath: ""),
-            SoundEffect(name: "Head shot", audioPath: ""),
-            SoundEffect(name: "Monster kill", audioPath: "")
+            SoundEffect(name: "D", audioPath: "denied"),
+            SoundEffect(name: "H", audioPath: "holy_shit"),
+            SoundEffect(name: "PF", audioPath: "prepare_to_fight"),
+            SoundEffect(name: "I", audioPath: "impressive")
         ]
     }
 }
