@@ -35,6 +35,16 @@
 		02F383D1231AB55800FF8F69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F383CF231AB55800FF8F69 /* LaunchScreen.storyboard */; };
 		02F383DC231AB55800FF8F69 /* KickerKillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F383DB231AB55800FF8F69 /* KickerKillTests.swift */; };
 		02F383E7231AB55900FF8F69 /* KickerKillUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F383E6231AB55900FF8F69 /* KickerKillUITests.swift */; };
+		02FF0D12235FA9170057FF1F /* one_frag_left.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02FF0D11235FA9170057FF1F /* one_frag_left.mp3 */; };
+		02FF0D1D235FAF2D0057FF1F /* head_shot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02FF0D14235FAF2D0057FF1F /* head_shot.mp3 */; };
+		02FF0D1E235FAF2D0057FF1F /* god_like.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02FF0D15235FAF2D0057FF1F /* god_like.mp3 */; };
+		02FF0D1F235FAF2D0057FF1F /* monster_kill.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02FF0D16235FAF2D0057FF1F /* monster_kill.mp3 */; };
+		02FF0D20235FAF2D0057FF1F /* unstopable.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02FF0D17235FAF2D0057FF1F /* unstopable.mp3 */; };
+		02FF0D21235FAF2D0057FF1F /* double kill.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02FF0D18235FAF2D0057FF1F /* double kill.mp3 */; };
+		02FF0D22235FAF2D0057FF1F /* dominating.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02FF0D19235FAF2D0057FF1F /* dominating.mp3 */; };
+		02FF0D23235FAF2D0057FF1F /* first_blood.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02FF0D1A235FAF2D0057FF1F /* first_blood.mp3 */; };
+		02FF0D24235FAF2D0057FF1F /* killing_spreed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02FF0D1B235FAF2D0057FF1F /* killing_spreed.mp3 */; };
+		02FF0D25235FAF2D0057FF1F /* you_have_lost_the_match.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02FF0D1C235FAF2D0057FF1F /* you_have_lost_the_match.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +99,16 @@
 		02F383E2231AB55800FF8F69 /* KickerKillUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KickerKillUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F383E6231AB55900FF8F69 /* KickerKillUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickerKillUITests.swift; sourceTree = "<group>"; };
 		02F383E8231AB55900FF8F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02FF0D11235FA9170057FF1F /* one_frag_left.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = one_frag_left.mp3; path = "../../../../../../../Desktop/quake audios/one_frag_left.mp3"; sourceTree = "<group>"; };
+		02FF0D14235FAF2D0057FF1F /* head_shot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = head_shot.mp3; path = "../../../../../../../../Desktop/unreal audio tracks/head_shot.mp3"; sourceTree = "<group>"; };
+		02FF0D15235FAF2D0057FF1F /* god_like.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = god_like.mp3; path = "../../../../../../../../Desktop/unreal audio tracks/god_like.mp3"; sourceTree = "<group>"; };
+		02FF0D16235FAF2D0057FF1F /* monster_kill.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = monster_kill.mp3; path = "../../../../../../../../Desktop/unreal audio tracks/monster_kill.mp3"; sourceTree = "<group>"; };
+		02FF0D17235FAF2D0057FF1F /* unstopable.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = unstopable.mp3; path = "../../../../../../../../Desktop/unreal audio tracks/unstopable.mp3"; sourceTree = "<group>"; };
+		02FF0D18235FAF2D0057FF1F /* double kill.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "double kill.mp3"; path = "../../../../../../../../Desktop/unreal audio tracks/double kill.mp3"; sourceTree = "<group>"; };
+		02FF0D19235FAF2D0057FF1F /* dominating.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dominating.mp3; path = "../../../../../../../../Desktop/unreal audio tracks/dominating.mp3"; sourceTree = "<group>"; };
+		02FF0D1A235FAF2D0057FF1F /* first_blood.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = first_blood.mp3; path = "../../../../../../../../Desktop/unreal audio tracks/first_blood.mp3"; sourceTree = "<group>"; };
+		02FF0D1B235FAF2D0057FF1F /* killing_spreed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = killing_spreed.mp3; path = "../../../../../../../../Desktop/unreal audio tracks/killing_spreed.mp3"; sourceTree = "<group>"; };
+		02FF0D1C235FAF2D0057FF1F /* you_have_lost_the_match.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = you_have_lost_the_match.mp3; path = "../../../../../../../../Desktop/unreal audio tracks/you_have_lost_the_match.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,11 +220,13 @@
 		023900C4235B6D3700325717 /* Audios */ = {
 			isa = PBXGroup;
 			children = (
+				02FF0D13235FAF1F0057FF1F /* unreal */,
 				023900C6235B6D4800325717 /* denied.mp3 */,
 				023900C9235B6D4800325717 /* holy_shit.mp3 */,
 				023900C7235B6D4800325717 /* humiliation.mp3 */,
 				023900C5235B6D4800325717 /* impressive.mp3 */,
 				023900C8235B6D4800325717 /* prepare_to_fight.mp3 */,
+				02FF0D11235FA9170057FF1F /* one_frag_left.mp3 */,
 			);
 			path = Audios;
 			sourceTree = "<group>";
@@ -267,6 +289,22 @@
 				02F383E8231AB55900FF8F69 /* Info.plist */,
 			);
 			path = KickerKillUITests;
+			sourceTree = "<group>";
+		};
+		02FF0D13235FAF1F0057FF1F /* unreal */ = {
+			isa = PBXGroup;
+			children = (
+				02FF0D19235FAF2D0057FF1F /* dominating.mp3 */,
+				02FF0D18235FAF2D0057FF1F /* double kill.mp3 */,
+				02FF0D1A235FAF2D0057FF1F /* first_blood.mp3 */,
+				02FF0D15235FAF2D0057FF1F /* god_like.mp3 */,
+				02FF0D14235FAF2D0057FF1F /* head_shot.mp3 */,
+				02FF0D1B235FAF2D0057FF1F /* killing_spreed.mp3 */,
+				02FF0D16235FAF2D0057FF1F /* monster_kill.mp3 */,
+				02FF0D17235FAF2D0057FF1F /* unstopable.mp3 */,
+				02FF0D1C235FAF2D0057FF1F /* you_have_lost_the_match.mp3 */,
+			);
+			path = unreal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,11 +411,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02FF0D24235FAF2D0057FF1F /* killing_spreed.mp3 in Resources */,
+				02FF0D21235FAF2D0057FF1F /* double kill.mp3 in Resources */,
 				02255191232420E500B7A42A /* SoundEffects.storyboard in Resources */,
+				02FF0D20235FAF2D0057FF1F /* unstopable.mp3 in Resources */,
+				02FF0D25235FAF2D0057FF1F /* you_have_lost_the_match.mp3 in Resources */,
 				023900CC235B6D4800325717 /* humiliation.mp3 in Resources */,
+				02FF0D23235FAF2D0057FF1F /* first_blood.mp3 in Resources */,
 				023900CB235B6D4800325717 /* denied.mp3 in Resources */,
 				023900CA235B6D4800325717 /* impressive.mp3 in Resources */,
+				02FF0D22235FAF2D0057FF1F /* dominating.mp3 in Resources */,
+				02FF0D1E235FAF2D0057FF1F /* god_like.mp3 in Resources */,
+				02FF0D12235FA9170057FF1F /* one_frag_left.mp3 in Resources */,
+				02FF0D1D235FAF2D0057FF1F /* head_shot.mp3 in Resources */,
 				023900CD235B6D4800325717 /* prepare_to_fight.mp3 in Resources */,
+				02FF0D1F235FAF2D0057FF1F /* monster_kill.mp3 in Resources */,
 				02F383D1231AB55800FF8F69 /* LaunchScreen.storyboard in Resources */,
 				02F383CE231AB55800FF8F69 /* Assets.xcassets in Resources */,
 				023900CE235B6D4800325717 /* holy_shit.mp3 in Resources */,

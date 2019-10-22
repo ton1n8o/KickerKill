@@ -19,23 +19,23 @@ final class SoundEffectsViewController: UIViewController {
 
 }
 extension SoundEffectsViewController: UICollectionViewDelegateFlowLayout {
-    
+
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         let landscape = view.frame.width > view.frame.height
-        let width = landscape ? view.frame.height : view.frame.width
+        let width = view.frame.width
         let items: CGFloat = landscape ? 5 : 3
 
         let leftInset: CGFloat = sectionInsets.left
         let rightInset: CGFloat = sectionInsets.right
         let insets = leftInset + rightInset
-        let dimension = (width - ((items - 1) * cellItemSpace + insets)) / items
+        let dimension = Int((width - ((items - 1) * cellItemSpace + insets)) / items)
 
         return CGSize(width: dimension, height: dimension)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -48,7 +48,7 @@ extension SoundEffectsViewController: UICollectionViewDelegateFlowLayout {
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return cellItemSpace
     }
-    
+
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -92,9 +92,11 @@ extension SoundEffectsViewController: UICollectionViewDelegate {
             let selectedView = UIView()
             selectedView.backgroundColor = .red
             cell.selectedBackgroundView = selectedView
-            UIView.animate(withDuration: 1.2) {
+            UIView.animate(withDuration: 0.5, animations: {
                 cell.selectedBackgroundView?.alpha = 0.0
-            }
+            }, completion: { _ in
+                collectionView.deselectItem(at: indexPath, animated: false)
+            })
         }
         presenter.didSelecItem(presenter.item(at: indexPath))
     }
