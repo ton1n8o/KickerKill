@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020069DF23DCB1FE00FB2EA8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 020069DD23DCB1F600FB2EA8 /* GoogleService-Info.plist */; };
 		02172A46235335D900CE66B8 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02172A45235335D900CE66B8 /* Identifiable.swift */; };
 		02255178232414B200B7A42A /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02255177232414B200B7A42A /* BaseNavigationController.swift */; };
 		0225517B2324151D00B7A42A /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0225517A2324151D00B7A42A /* BaseWireframe.swift */; };
@@ -45,6 +46,9 @@
 		02FF0D23235FAF2D0057FF1F /* first_blood.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02FF0D1A235FAF2D0057FF1F /* first_blood.mp3 */; };
 		02FF0D24235FAF2D0057FF1F /* killing_spreed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02FF0D1B235FAF2D0057FF1F /* killing_spreed.mp3 */; };
 		02FF0D25235FAF2D0057FF1F /* you_have_lost_the_match.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02FF0D1C235FAF2D0057FF1F /* you_have_lost_the_match.mp3 */; };
+		0964D69190A77EDFD805B7BC /* Pods_KickerKillTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AB08E744141C4883417CAA /* Pods_KickerKillTests.framework */; };
+		13E7FE70E44831F1FAC8F0D1 /* Pods_KickerKill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B653DCDBB7A830A85F4EEA5 /* Pods_KickerKill.framework */; };
+		2F18C4B3C80ADB5B301AF402 /* Pods_KickerKill_KickerKillUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A41B6E43DCC586C77EF1F0 /* Pods_KickerKill_KickerKillUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		020069DD23DCB1F600FB2EA8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		02172A45235335D900CE66B8 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		02255177232414B200B7A42A /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		0225517A2324151D00B7A42A /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
@@ -109,6 +114,15 @@
 		02FF0D1A235FAF2D0057FF1F /* first_blood.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = first_blood.mp3; path = "../../../../../../../../Desktop/unreal audio tracks/first_blood.mp3"; sourceTree = "<group>"; };
 		02FF0D1B235FAF2D0057FF1F /* killing_spreed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = killing_spreed.mp3; path = "../../../../../../../../Desktop/unreal audio tracks/killing_spreed.mp3"; sourceTree = "<group>"; };
 		02FF0D1C235FAF2D0057FF1F /* you_have_lost_the_match.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = you_have_lost_the_match.mp3; path = "../../../../../../../../Desktop/unreal audio tracks/you_have_lost_the_match.mp3"; sourceTree = "<group>"; };
+		2B653DCDBB7A830A85F4EEA5 /* Pods_KickerKill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KickerKill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AE8B7B6A4DD26A1431155A6 /* Pods-KickerKill-KickerKillUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKill-KickerKillUITests.debug.xcconfig"; path = "Target Support Files/Pods-KickerKill-KickerKillUITests/Pods-KickerKill-KickerKillUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		76E8A76E20C73009FAF34060 /* Pods-KickerKillTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKillTests.release.xcconfig"; path = "Target Support Files/Pods-KickerKillTests/Pods-KickerKillTests.release.xcconfig"; sourceTree = "<group>"; };
+		8CACA1EE6FD1485560BA0683 /* Pods-KickerKill-KickerKillUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKill-KickerKillUITests.release.xcconfig"; path = "Target Support Files/Pods-KickerKill-KickerKillUITests/Pods-KickerKill-KickerKillUITests.release.xcconfig"; sourceTree = "<group>"; };
+		90AB08E744141C4883417CAA /* Pods_KickerKillTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KickerKillTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD630E94FE8D9C278F64A4F5 /* Pods-KickerKillTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKillTests.debug.xcconfig"; path = "Target Support Files/Pods-KickerKillTests/Pods-KickerKillTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D7A41B6E43DCC586C77EF1F0 /* Pods_KickerKill_KickerKillUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KickerKill_KickerKillUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D82586FA2CA5345E4D1C7A2C /* Pods-KickerKill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKill.release.xcconfig"; path = "Target Support Files/Pods-KickerKill/Pods-KickerKill.release.xcconfig"; sourceTree = "<group>"; };
+		E7513EED8118E1B051D4BD5A /* Pods-KickerKill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKill.debug.xcconfig"; path = "Target Support Files/Pods-KickerKill/Pods-KickerKill.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				023900D3235B72A300325717 /* AVFoundation.framework in Frameworks */,
+				13E7FE70E44831F1FAC8F0D1 /* Pods_KickerKill.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0964D69190A77EDFD805B7BC /* Pods_KickerKillTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,15 +147,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F18C4B3C80ADB5B301AF402 /* Pods_KickerKill_KickerKillUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		020069DC23DCB1F600FB2EA8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				020069DD23DCB1F600FB2EA8 /* GoogleService-Info.plist */,
+			);
+			name = Resources;
+			path = KickerKill/Resources;
+			sourceTree = SOURCE_ROOT;
+		};
 		022551762324148D00B7A42A /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				020069DC23DCB1F600FB2EA8 /* Resources */,
 				023900C4235B6D3700325717 /* Audios */,
 				02F383C6231AB55700FF8F69 /* AppDelegate.swift */,
 				02255177232414B200B7A42A /* BaseNavigationController.swift */,
@@ -235,6 +262,9 @@
 			isa = PBXGroup;
 			children = (
 				023900D2235B72A300325717 /* AVFoundation.framework */,
+				2B653DCDBB7A830A85F4EEA5 /* Pods_KickerKill.framework */,
+				D7A41B6E43DCC586C77EF1F0 /* Pods_KickerKill_KickerKillUITests.framework */,
+				90AB08E744141C4883417CAA /* Pods_KickerKillTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -247,6 +277,7 @@
 				02F383E5231AB55900FF8F69 /* KickerKillUITests */,
 				02F383C4231AB55700FF8F69 /* Products */,
 				023900D1235B72A300325717 /* Frameworks */,
+				43645DBE04AFFC919373B75A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -307,6 +338,19 @@
 			path = unreal;
 			sourceTree = "<group>";
 		};
+		43645DBE04AFFC919373B75A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7513EED8118E1B051D4BD5A /* Pods-KickerKill.debug.xcconfig */,
+				D82586FA2CA5345E4D1C7A2C /* Pods-KickerKill.release.xcconfig */,
+				3AE8B7B6A4DD26A1431155A6 /* Pods-KickerKill-KickerKillUITests.debug.xcconfig */,
+				8CACA1EE6FD1485560BA0683 /* Pods-KickerKill-KickerKillUITests.release.xcconfig */,
+				AD630E94FE8D9C278F64A4F5 /* Pods-KickerKillTests.debug.xcconfig */,
+				76E8A76E20C73009FAF34060 /* Pods-KickerKillTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -314,9 +358,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02F383EB231AB55900FF8F69 /* Build configuration list for PBXNativeTarget "KickerKill" */;
 			buildPhases = (
+				45C4BF897293981BD6DE9508 /* [CP] Check Pods Manifest.lock */,
 				02F383BF231AB55700FF8F69 /* Sources */,
 				02F383C0231AB55700FF8F69 /* Frameworks */,
 				02F383C1231AB55700FF8F69 /* Resources */,
+				FD9DB68701FBA0E1C4A19702 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -331,6 +377,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02F383EE231AB55900FF8F69 /* Build configuration list for PBXNativeTarget "KickerKillTests" */;
 			buildPhases = (
+				32CEB107D9BC94F52516D271 /* [CP] Check Pods Manifest.lock */,
 				02F383D3231AB55800FF8F69 /* Sources */,
 				02F383D4231AB55800FF8F69 /* Frameworks */,
 				02F383D5231AB55800FF8F69 /* Resources */,
@@ -349,9 +396,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02F383F1231AB55900FF8F69 /* Build configuration list for PBXNativeTarget "KickerKillUITests" */;
 			buildPhases = (
+				DEB3C9D24B0D7E851CA0A0D8 /* [CP] Check Pods Manifest.lock */,
 				02F383DE231AB55800FF8F69 /* Sources */,
 				02F383DF231AB55800FF8F69 /* Frameworks */,
 				02F383E0231AB55800FF8F69 /* Resources */,
+				A21099724BD5D64A78CC5B60 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -428,6 +477,7 @@
 				02FF0D1F235FAF2D0057FF1F /* monster_kill.mp3 in Resources */,
 				02F383D1231AB55800FF8F69 /* LaunchScreen.storyboard in Resources */,
 				02F383CE231AB55800FF8F69 /* Assets.xcassets in Resources */,
+				020069DF23DCB1FE00FB2EA8 /* GoogleService-Info.plist in Resources */,
 				023900CE235B6D4800325717 /* holy_shit.mp3 in Resources */,
 				02729C1F2353341D0065C833 /* SoundItemCollectionViewCell.xib in Resources */,
 			);
@@ -448,6 +498,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32CEB107D9BC94F52516D271 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KickerKillTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45C4BF897293981BD6DE9508 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KickerKill-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A21099724BD5D64A78CC5B60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KickerKill-KickerKillUITests/Pods-KickerKill-KickerKillUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KickerKill-KickerKillUITests/Pods-KickerKill-KickerKillUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KickerKill-KickerKillUITests/Pods-KickerKill-KickerKillUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEB3C9D24B0D7E851CA0A0D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KickerKill-KickerKillUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD9DB68701FBA0E1C4A19702 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KickerKill/Pods-KickerKill-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KickerKill/Pods-KickerKill-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KickerKill/Pods-KickerKill-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		02F383BF231AB55700FF8F69 /* Sources */ = {
@@ -634,6 +787,7 @@
 		};
 		02F383EC231AB55900FF8F69 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7513EED8118E1B051D4BD5A /* Pods-KickerKill.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -653,6 +807,7 @@
 		};
 		02F383ED231AB55900FF8F69 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D82586FA2CA5345E4D1C7A2C /* Pods-KickerKill.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -672,6 +827,7 @@
 		};
 		02F383EF231AB55900FF8F69 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD630E94FE8D9C278F64A4F5 /* Pods-KickerKillTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -693,6 +849,7 @@
 		};
 		02F383F0231AB55900FF8F69 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76E8A76E20C73009FAF34060 /* Pods-KickerKillTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -714,6 +871,7 @@
 		};
 		02F383F2231AB55900FF8F69 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AE8B7B6A4DD26A1431155A6 /* Pods-KickerKill-KickerKillUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -734,6 +892,7 @@
 		};
 		02F383F3231AB55900FF8F69 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CACA1EE6FD1485560BA0683 /* Pods-KickerKill-KickerKillUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
