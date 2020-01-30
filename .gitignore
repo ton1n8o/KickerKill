@@ -56,3 +56,5 @@ fastlane/screenshots
 .DS_Store
 
 .idea/
+IDEWorkspaceChecks.plist
+contents.xcworkspacedata

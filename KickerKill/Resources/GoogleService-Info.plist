@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>444286752233-r5is124af6b8sm5aegm87mgiilbeq7b5.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.444286752233-r5is124af6b8sm5aegm87mgiilbeq7b5</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDA41IHJgt09AqSrc8L_-E2RZ_BkJ5jwY4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>444286752233</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>br.com.tntstudios.KickerKill</string>
+	<key>PROJECT_ID</key>
+	<string>kickerkillsx</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kickerkillsx.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:444286752233:ios:d9415b08ddcc3af95fe778</string>
+	<key>DATABASE_URL</key>
+	<string>https://kickerkillsx.firebaseio.com</string>
+</dict>
+</plist>
