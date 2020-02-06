@@ -19,6 +19,10 @@
 		02255189232419D800B7A42A /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02255188232419D800B7A42A /* PresenterInterface.swift */; };
 		0225518B23241A0A00B7A42A /* SoundEffectsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0225518A23241A0A00B7A42A /* SoundEffectsPresenter.swift */; };
 		02255191232420E500B7A42A /* SoundEffects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02255190232420E500B7A42A /* SoundEffects.storyboard */; };
+		0233761B23EC9CA8009B1B16 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0233761A23EC9CA8009B1B16 /* SignIn.storyboard */; };
+		0233761D23EC9D55009B1B16 /* SignInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233761C23EC9D55009B1B16 /* SignInBuilder.swift */; };
+		0233762023EC9E19009B1B16 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233761F23EC9E19009B1B16 /* SignInViewController.swift */; };
+		0233762323ECA5D5009B1B16 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233762223ECA5D5009B1B16 /* Player.swift */; };
 		02343578232D38D30007C98E /* SoundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02343577232D38D30007C98E /* SoundEffect.swift */; };
 		0234357D232D3C3F0007C98E /* SoundEffectData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0234357C232D3C3F0007C98E /* SoundEffectData.swift */; };
 		02343580232D3F010007C98E /* SoundItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0234357F232D3F010007C98E /* SoundItemCollectionViewCell.swift */; };
@@ -81,6 +85,10 @@
 		02255188232419D800B7A42A /* PresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
 		0225518A23241A0A00B7A42A /* SoundEffectsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffectsPresenter.swift; sourceTree = "<group>"; };
 		02255190232420E500B7A42A /* SoundEffects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SoundEffects.storyboard; sourceTree = "<group>"; };
+		0233761A23EC9CA8009B1B16 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		0233761C23EC9D55009B1B16 /* SignInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInBuilder.swift; sourceTree = "<group>"; };
+		0233761F23EC9E19009B1B16 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		0233762223ECA5D5009B1B16 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		02343577232D38D30007C98E /* SoundEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffect.swift; sourceTree = "<group>"; };
 		0234357C232D3C3F0007C98E /* SoundEffectData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffectData.swift; sourceTree = "<group>"; };
 		0234357F232D3F010007C98E /* SoundItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundItemCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -190,6 +198,7 @@
 		0225517C232416AC00B7A42A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0233761923EC9C47009B1B16 /* SignIn */,
 				0225517D232416CD00B7A42A /* SoundEffects */,
 			);
 			path = Modules;
@@ -206,6 +215,32 @@
 				02343579232D3B700007C98E /* Interactor */,
 			);
 			path = SoundEffects;
+			sourceTree = "<group>";
+		};
+		0233761923EC9C47009B1B16 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				0233761E23EC9DE7009B1B16 /* View */,
+				0233761C23EC9D55009B1B16 /* SignInBuilder.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		0233761E23EC9DE7009B1B16 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0233761A23EC9CA8009B1B16 /* SignIn.storyboard */,
+				0233761F23EC9E19009B1B16 /* SignInViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0233762123ECA5BB009B1B16 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0233762223ECA5D5009B1B16 /* Player.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		02343579232D3B700007C98E /* Interactor */ = {
@@ -295,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				022551762324148D00B7A42A /* Application */,
+				0233762123ECA5BB009B1B16 /* Models */,
 				0225517C232416AC00B7A42A /* Modules */,
 				022551792324150400B7A42A /* VIPER */,
 				02F383CD231AB55800FF8F69 /* Assets.xcassets */,
@@ -363,6 +399,7 @@
 				02F383C0231AB55700FF8F69 /* Frameworks */,
 				02F383C1231AB55700FF8F69 /* Resources */,
 				FD9DB68701FBA0E1C4A19702 /* [CP] Embed Pods Frameworks */,
+				3697ABEB0DA33E104A3AB1A2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -401,6 +438,7 @@
 				02F383DF231AB55800FF8F69 /* Frameworks */,
 				02F383E0231AB55800FF8F69 /* Resources */,
 				A21099724BD5D64A78CC5B60 /* [CP] Embed Pods Frameworks */,
+				919B65EDC687B2DCB9C3B8A9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -479,6 +517,7 @@
 				02F383CE231AB55800FF8F69 /* Assets.xcassets in Resources */,
 				020069DF23DCB1FE00FB2EA8 /* GoogleService-Info.plist in Resources */,
 				023900CE235B6D4800325717 /* holy_shit.mp3 in Resources */,
+				0233761B23EC9CA8009B1B16 /* SignIn.storyboard in Resources */,
 				02729C1F2353341D0065C833 /* SoundItemCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,6 +561,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3697ABEB0DA33E104A3AB1A2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KickerKill/Pods-KickerKill-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KickerKill/Pods-KickerKill-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KickerKill/Pods-KickerKill-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		45C4BF897293981BD6DE9508 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -542,6 +598,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		919B65EDC687B2DCB9C3B8A9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KickerKill-KickerKillUITests/Pods-KickerKill-KickerKillUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KickerKill-KickerKillUITests/Pods-KickerKill-KickerKillUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KickerKill-KickerKillUITests/Pods-KickerKill-KickerKillUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A21099724BD5D64A78CC5B60 /* [CP] Embed Pods Frameworks */ = {
@@ -615,12 +688,15 @@
 				0225517F2324174700B7A42A /* SoundEffectsWireframe.swift in Sources */,
 				0234357D232D3C3F0007C98E /* SoundEffectData.swift in Sources */,
 				022551812324185500B7A42A /* UIStoryboardExtension.swift in Sources */,
+				0233761D23EC9D55009B1B16 /* SignInBuilder.swift in Sources */,
 				02255178232414B200B7A42A /* BaseNavigationController.swift in Sources */,
 				02255183232418B200B7A42A /* SoundEffectsViewController.swift in Sources */,
 				022551852324192600B7A42A /* SoundEffectsInteractor.swift in Sources */,
 				0225518B23241A0A00B7A42A /* SoundEffectsPresenter.swift in Sources */,
 				02F383C7231AB55700FF8F69 /* AppDelegate.swift in Sources */,
+				0233762023EC9E19009B1B16 /* SignInViewController.swift in Sources */,
 				02172A46235335D900CE66B8 /* Identifiable.swift in Sources */,
+				0233762323ECA5D5009B1B16 /* Player.swift in Sources */,
 				02343580232D3F010007C98E /* SoundItemCollectionViewCell.swift in Sources */,
 				02255189232419D800B7A42A /* PresenterInterface.swift in Sources */,
 			);

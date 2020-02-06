@@ -9,6 +9,9 @@ target 'KickerKill' do
   pod 'Crashlytics', '~> 3.14.0'
   pod 'Firebase/Analytics'
 
+  pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI/Google'
+
   target 'KickerKillTests' do
     inherit! :search_paths
     # Pods for testing
