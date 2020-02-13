@@ -35,6 +35,8 @@
 		023900D3235B72A300325717 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023900D2235B72A300325717 /* AVFoundation.framework */; };
 		023900D5235B7BD100325717 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023900D4235B7BD100325717 /* UICollectionView+Extensions.swift */; };
 		02729C1F2353341D0065C833 /* SoundItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02729C1E2353341D0065C833 /* SoundItemCollectionViewCell.xib */; };
+		029AF9C023F5DC1B00C9B52E /* UI+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AF9BF23F5DC1B00C9B52E /* UI+Extensions.swift */; };
+		029AF9C223F5DC7300C9B52E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AF9C123F5DC7300C9B52E /* Localizable.swift */; };
 		02F383C7231AB55700FF8F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F383C6231AB55700FF8F69 /* AppDelegate.swift */; };
 		02F383CE231AB55800FF8F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F383CD231AB55800FF8F69 /* Assets.xcassets */; };
 		02F383D1231AB55800FF8F69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F383CF231AB55800FF8F69 /* LaunchScreen.storyboard */; };
@@ -101,6 +103,8 @@
 		023900D2235B72A300325717 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		023900D4235B7BD100325717 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		02729C1E2353341D0065C833 /* SoundItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		029AF9BF23F5DC1B00C9B52E /* UI+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UI+Extensions.swift"; sourceTree = "<group>"; };
+		029AF9C123F5DC7300C9B52E /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		02F383C3231AB55700FF8F69 /* KickerKill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KickerKill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F383C6231AB55700FF8F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02F383CD231AB55800FF8F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -180,7 +184,7 @@
 				02255177232414B200B7A42A /* BaseNavigationController.swift */,
 				02172A45235335D900CE66B8 /* Identifiable.swift */,
 				023900CF235B6E1F00325717 /* AudioPlayer.swift */,
-				023900D4235B7BD100325717 /* UICollectionView+Extensions.swift */,
+				029AF9C123F5DC7300C9B52E /* Localizable.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -304,6 +308,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		029AF9BE23F5DBFF00C9B52E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				023900D4235B7BD100325717 /* UICollectionView+Extensions.swift */,
+				029AF9BF23F5DC1B00C9B52E /* UI+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		02F383BA231AB55700FF8F69 = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +342,7 @@
 		02F383C5231AB55700FF8F69 /* KickerKill */ = {
 			isa = PBXGroup;
 			children = (
+				029AF9BE23F5DBFF00C9B52E /* Extensions */,
 				022551762324148D00B7A42A /* Application */,
 				0233762123ECA5BB009B1B16 /* Models */,
 				0225517C232416AC00B7A42A /* Modules */,
@@ -681,8 +695,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				022551872324199400B7A42A /* SoundEffectsInterfaces.swift in Sources */,
+				029AF9C223F5DC7300C9B52E /* Localizable.swift in Sources */,
 				0225517B2324151D00B7A42A /* BaseWireframe.swift in Sources */,
 				023900D0235B6E1F00325717 /* AudioPlayer.swift in Sources */,
+				029AF9C023F5DC1B00C9B52E /* UI+Extensions.swift in Sources */,
 				023900D5235B7BD100325717 /* UICollectionView+Extensions.swift in Sources */,
 				02343578232D38D30007C98E /* SoundEffect.swift in Sources */,
 				0225517F2324174700B7A42A /* SoundEffectsWireframe.swift in Sources */,
