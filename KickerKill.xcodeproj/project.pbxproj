@@ -37,6 +37,15 @@
 		02729C1F2353341D0065C833 /* SoundItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02729C1E2353341D0065C833 /* SoundItemCollectionViewCell.xib */; };
 		029AF9C023F5DC1B00C9B52E /* UI+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AF9BF23F5DC1B00C9B52E /* UI+Extensions.swift */; };
 		029AF9C223F5DC7300C9B52E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AF9C123F5DC7300C9B52E /* Localizable.swift */; };
+		029AF9D523F5E28D00C9B52E /* PlayersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AF9C823F5E28D00C9B52E /* PlayersListPresenter.swift */; };
+		029AF9D623F5E28D00C9B52E /* PlayersListInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AF9C923F5E28D00C9B52E /* PlayersListInterfaces.swift */; };
+		029AF9D723F5E28D00C9B52E /* PlayersList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029AF9CB23F5E28D00C9B52E /* PlayersList.storyboard */; };
+		029AF9D823F5E28D00C9B52E /* PlayersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AF9CC23F5E28D00C9B52E /* PlayersListViewController.swift */; };
+		029AF9D923F5E28D00C9B52E /* PlayersListModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AF9CE23F5E28D00C9B52E /* PlayersListModuleBuilder.swift */; };
+		029AF9DA23F5E28D00C9B52E /* PlayersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AF9D023F5E28D00C9B52E /* PlayersListInteractor.swift */; };
+		029AF9DB23F5E28D00C9B52E /* PlayersListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AF9D123F5E28D00C9B52E /* PlayersListInteractorOutput.swift */; };
+		029AF9DC23F5E28D00C9B52E /* PlayersListInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AF9D223F5E28D00C9B52E /* PlayersListInteractorInput.swift */; };
+		029AF9DD23F5E28D00C9B52E /* PlayersListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AF9D423F5E28D00C9B52E /* PlayersListRouter.swift */; };
 		02F383C7231AB55700FF8F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F383C6231AB55700FF8F69 /* AppDelegate.swift */; };
 		02F383CE231AB55800FF8F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F383CD231AB55800FF8F69 /* Assets.xcassets */; };
 		02F383D1231AB55800FF8F69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F383CF231AB55800FF8F69 /* LaunchScreen.storyboard */; };
@@ -105,6 +114,15 @@
 		02729C1E2353341D0065C833 /* SoundItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		029AF9BF23F5DC1B00C9B52E /* UI+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UI+Extensions.swift"; sourceTree = "<group>"; };
 		029AF9C123F5DC7300C9B52E /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		029AF9C823F5E28D00C9B52E /* PlayersListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListPresenter.swift; sourceTree = "<group>"; };
+		029AF9C923F5E28D00C9B52E /* PlayersListInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListInterfaces.swift; sourceTree = "<group>"; };
+		029AF9CB23F5E28D00C9B52E /* PlayersList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlayersList.storyboard; sourceTree = "<group>"; };
+		029AF9CC23F5E28D00C9B52E /* PlayersListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListViewController.swift; sourceTree = "<group>"; };
+		029AF9CE23F5E28D00C9B52E /* PlayersListModuleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListModuleBuilder.swift; sourceTree = "<group>"; };
+		029AF9D023F5E28D00C9B52E /* PlayersListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListInteractor.swift; sourceTree = "<group>"; };
+		029AF9D123F5E28D00C9B52E /* PlayersListInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListInteractorOutput.swift; sourceTree = "<group>"; };
+		029AF9D223F5E28D00C9B52E /* PlayersListInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListInteractorInput.swift; sourceTree = "<group>"; };
+		029AF9D423F5E28D00C9B52E /* PlayersListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListRouter.swift; sourceTree = "<group>"; };
 		02F383C3231AB55700FF8F69 /* KickerKill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KickerKill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F383C6231AB55700FF8F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02F383CD231AB55800FF8F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -204,6 +222,7 @@
 			children = (
 				0233761923EC9C47009B1B16 /* SignIn */,
 				0225517D232416CD00B7A42A /* SoundEffects */,
+				029AF9C623F5E28D00C9B52E /* PlayersList */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -317,6 +336,62 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		029AF9C623F5E28D00C9B52E /* PlayersList */ = {
+			isa = PBXGroup;
+			children = (
+				029AF9C723F5E28D00C9B52E /* Presenter */,
+				029AF9C923F5E28D00C9B52E /* PlayersListInterfaces.swift */,
+				029AF9CA23F5E28D00C9B52E /* View */,
+				029AF9CD23F5E28D00C9B52E /* Builder */,
+				029AF9CF23F5E28D00C9B52E /* Interactor */,
+				029AF9D323F5E28D00C9B52E /* Router */,
+			);
+			path = PlayersList;
+			sourceTree = "<group>";
+		};
+		029AF9C723F5E28D00C9B52E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				029AF9C823F5E28D00C9B52E /* PlayersListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		029AF9CA23F5E28D00C9B52E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				029AF9CB23F5E28D00C9B52E /* PlayersList.storyboard */,
+				029AF9CC23F5E28D00C9B52E /* PlayersListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		029AF9CD23F5E28D00C9B52E /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				029AF9CE23F5E28D00C9B52E /* PlayersListModuleBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		029AF9CF23F5E28D00C9B52E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				029AF9D023F5E28D00C9B52E /* PlayersListInteractor.swift */,
+				029AF9D123F5E28D00C9B52E /* PlayersListInteractorOutput.swift */,
+				029AF9D223F5E28D00C9B52E /* PlayersListInteractorInput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		029AF9D323F5E28D00C9B52E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				029AF9D423F5E28D00C9B52E /* PlayersListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		02F383BA231AB55700FF8F69 = {
 			isa = PBXGroup;
 			children = (
@@ -414,6 +489,7 @@
 				02F383C1231AB55700FF8F69 /* Resources */,
 				FD9DB68701FBA0E1C4A19702 /* [CP] Embed Pods Frameworks */,
 				3697ABEB0DA33E104A3AB1A2 /* [CP] Copy Pods Resources */,
+				029AF9C323F5E20D00C9B52E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -521,6 +597,7 @@
 				02FF0D23235FAF2D0057FF1F /* first_blood.mp3 in Resources */,
 				023900CB235B6D4800325717 /* denied.mp3 in Resources */,
 				023900CA235B6D4800325717 /* impressive.mp3 in Resources */,
+				029AF9D723F5E28D00C9B52E /* PlayersList.storyboard in Resources */,
 				02FF0D22235FAF2D0057FF1F /* dominating.mp3 in Resources */,
 				02FF0D1E235FAF2D0057FF1F /* god_like.mp3 in Resources */,
 				02FF0D12235FA9170057FF1F /* one_frag_left.mp3 in Resources */,
@@ -553,6 +630,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		029AF9C323F5E20D00C9B52E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p ~/Library/Developer/Xcode/Templates/File\\ Templates/Source\nfor D in ${PROJECT_DIR}/xCodeTemplates/*; do\nif [ -d \"${D}\" ]; then\nln -s -f \"${D}\" ~/Library/Developer/Xcode/Templates/File\\ Templates/Source\nfi\ndone\n";
+		};
 		32CEB107D9BC94F52516D271 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -698,13 +792,20 @@
 				029AF9C223F5DC7300C9B52E /* Localizable.swift in Sources */,
 				0225517B2324151D00B7A42A /* BaseWireframe.swift in Sources */,
 				023900D0235B6E1F00325717 /* AudioPlayer.swift in Sources */,
+				029AF9D623F5E28D00C9B52E /* PlayersListInterfaces.swift in Sources */,
 				029AF9C023F5DC1B00C9B52E /* UI+Extensions.swift in Sources */,
 				023900D5235B7BD100325717 /* UICollectionView+Extensions.swift in Sources */,
 				02343578232D38D30007C98E /* SoundEffect.swift in Sources */,
+				029AF9D523F5E28D00C9B52E /* PlayersListPresenter.swift in Sources */,
 				0225517F2324174700B7A42A /* SoundEffectsWireframe.swift in Sources */,
 				0234357D232D3C3F0007C98E /* SoundEffectData.swift in Sources */,
 				022551812324185500B7A42A /* UIStoryboardExtension.swift in Sources */,
 				0233761D23EC9D55009B1B16 /* SignInBuilder.swift in Sources */,
+				029AF9D923F5E28D00C9B52E /* PlayersListModuleBuilder.swift in Sources */,
+				029AF9D823F5E28D00C9B52E /* PlayersListViewController.swift in Sources */,
+				029AF9DB23F5E28D00C9B52E /* PlayersListInteractorOutput.swift in Sources */,
+				029AF9DC23F5E28D00C9B52E /* PlayersListInteractorInput.swift in Sources */,
+				029AF9DA23F5E28D00C9B52E /* PlayersListInteractor.swift in Sources */,
 				02255178232414B200B7A42A /* BaseNavigationController.swift in Sources */,
 				02255183232418B200B7A42A /* SoundEffectsViewController.swift in Sources */,
 				022551852324192600B7A42A /* SoundEffectsInteractor.swift in Sources */,
@@ -712,6 +813,7 @@
 				02F383C7231AB55700FF8F69 /* AppDelegate.swift in Sources */,
 				0233762023EC9E19009B1B16 /* SignInViewController.swift in Sources */,
 				02172A46235335D900CE66B8 /* Identifiable.swift in Sources */,
+				029AF9DD23F5E28D00C9B52E /* PlayersListRouter.swift in Sources */,
 				0233762323ECA5D5009B1B16 /* Player.swift in Sources */,
 				02343580232D3F010007C98E /* SoundItemCollectionViewCell.swift in Sources */,
 				02255189232419D800B7A42A /* PresenterInterface.swift in Sources */,
