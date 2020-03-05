@@ -8,6 +8,8 @@ target 'KickerKill' do
   # Pods for KickerKill
   pod 'Crashlytics', '~> 3.14.0'
   pod 'Firebase/Analytics'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
 
   pod 'FirebaseUI/Auth'
   pod 'FirebaseUI/Google'

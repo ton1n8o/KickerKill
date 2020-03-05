@@ -35,6 +35,10 @@
 		023900D3235B72A300325717 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023900D2235B72A300325717 /* AVFoundation.framework */; };
 		023900D5235B7BD100325717 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023900D4235B7BD100325717 /* UICollectionView+Extensions.swift */; };
 		02729C1F2353341D0065C833 /* SoundItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02729C1E2353341D0065C833 /* SoundItemCollectionViewCell.xib */; };
+		0280815D23FF227D00B431BD /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0280815C23FF227D00B431BD /* WebService.swift */; };
+		0280815F23FF22EA00B431BD /* FirebaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0280815E23FF22EA00B431BD /* FirebaseWebService.swift */; };
+		0280816223FF247400B431BD /* PlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0280816123FF247400B431BD /* PlayerService.swift */; };
+		0280816423FF24F600B431BD /* PlayerServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0280816323FF24F600B431BD /* PlayerServiceImpl.swift */; };
 		029AF9C023F5DC1B00C9B52E /* UI+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AF9BF23F5DC1B00C9B52E /* UI+Extensions.swift */; };
 		029AF9C223F5DC7300C9B52E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AF9C123F5DC7300C9B52E /* Localizable.swift */; };
 		029AF9D523F5E28D00C9B52E /* PlayersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AF9C823F5E28D00C9B52E /* PlayersListPresenter.swift */; };
@@ -112,6 +116,10 @@
 		023900D2235B72A300325717 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		023900D4235B7BD100325717 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		02729C1E2353341D0065C833 /* SoundItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		0280815C23FF227D00B431BD /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		0280815E23FF22EA00B431BD /* FirebaseWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseWebService.swift; sourceTree = "<group>"; };
+		0280816123FF247400B431BD /* PlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerService.swift; sourceTree = "<group>"; };
+		0280816323FF24F600B431BD /* PlayerServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerServiceImpl.swift; sourceTree = "<group>"; };
 		029AF9BF23F5DC1B00C9B52E /* UI+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UI+Extensions.swift"; sourceTree = "<group>"; };
 		029AF9C123F5DC7300C9B52E /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		029AF9C823F5E28D00C9B52E /* PlayersListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListPresenter.swift; sourceTree = "<group>"; };
@@ -327,6 +335,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0280815A23FF225100B431BD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0280816023FF245900B431BD /* PlayerService */,
+				0280815E23FF22EA00B431BD /* FirebaseWebService.swift */,
+				0280815C23FF227D00B431BD /* WebService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0280815B23FF225900B431BD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0280815A23FF225100B431BD /* Services */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0280816023FF245900B431BD /* PlayerService */ = {
+			isa = PBXGroup;
+			children = (
+				0280816123FF247400B431BD /* PlayerService.swift */,
+				0280816323FF24F600B431BD /* PlayerServiceImpl.swift */,
+			);
+			path = PlayerService;
+			sourceTree = "<group>";
+		};
 		029AF9BE23F5DBFF00C9B52E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +457,7 @@
 				0233762123ECA5BB009B1B16 /* Models */,
 				0225517C232416AC00B7A42A /* Modules */,
 				022551792324150400B7A42A /* VIPER */,
+				0280815B23FF225900B431BD /* Network */,
 				02F383CD231AB55800FF8F69 /* Assets.xcassets */,
 				02F383CF231AB55800FF8F69 /* LaunchScreen.storyboard */,
 				02F383D2231AB55800FF8F69 /* Info.plist */,
@@ -800,12 +836,16 @@
 				0225517F2324174700B7A42A /* SoundEffectsWireframe.swift in Sources */,
 				0234357D232D3C3F0007C98E /* SoundEffectData.swift in Sources */,
 				022551812324185500B7A42A /* UIStoryboardExtension.swift in Sources */,
+				0280816223FF247400B431BD /* PlayerService.swift in Sources */,
 				0233761D23EC9D55009B1B16 /* SignInBuilder.swift in Sources */,
 				029AF9D923F5E28D00C9B52E /* PlayersListModuleBuilder.swift in Sources */,
 				029AF9D823F5E28D00C9B52E /* PlayersListViewController.swift in Sources */,
 				029AF9DB23F5E28D00C9B52E /* PlayersListInteractorOutput.swift in Sources */,
 				029AF9DC23F5E28D00C9B52E /* PlayersListInteractorInput.swift in Sources */,
+				0280815F23FF22EA00B431BD /* FirebaseWebService.swift in Sources */,
 				029AF9DA23F5E28D00C9B52E /* PlayersListInteractor.swift in Sources */,
+				0280816423FF24F600B431BD /* PlayerServiceImpl.swift in Sources */,
+				0280815D23FF227D00B431BD /* WebService.swift in Sources */,
 				02255178232414B200B7A42A /* BaseNavigationController.swift in Sources */,
 				02255183232418B200B7A42A /* SoundEffectsViewController.swift in Sources */,
 				022551852324192600B7A42A /* SoundEffectsInteractor.swift in Sources */,

@@ -14,6 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         FirebaseApp.configure()
 
+//        logout()
+
         Auth.auth().addStateDidChangeListener { [weak self] (auth, user) in
             self?.window?.rootViewController = self?.startupUI(firebaseUser: user)
             self?.window?.makeKeyAndVisible()
@@ -30,7 +32,32 @@ private extension AppDelegate {
         if let user = firebaseUser {
             let player = Player(user)
 //            navigationController.setRootWireframe(PrayerListWireframe(user: pray4meUser))
+
+            let playerService = PlayerServiceImpl(webService: FirebaseWebService())
+
+            let playerDTO = CreatePlayerDTO(player: player)
+            
+            playerService.createPlayer(playerDTO) { result in
+                switch result {
+                case .success(()):
+                    print("success! 😎")
+                case .failure(let error):
+                    print("Error: \(error.localizedDescription)")
+                }
+            }
+
+            // 1 - checar se usuário existe no nosso banco/firestore
+            // 2 - criar/atualizar usuário
         }
         return SignInBuilder().build()
+    }
+
+    private func logout() {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
     }
 }
