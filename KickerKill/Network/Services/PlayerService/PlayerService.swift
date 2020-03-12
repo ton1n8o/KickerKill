@@ -3,19 +3,13 @@
 import Foundation
 
 protocol PlayerService {
-    func createPlayer(_ playerDTO: CreatePlayerDTO, completion: @escaping (Result<Void, Error>) -> Void)
-}
 
+    func createPlayer(_ playerDTO: CreatePlayerDTO,
+                      completion: @escaping (Result<Void, Error>) -> Void)
 
-struct CreatePlayerDTO: Encodable {
+    func createOrUpdate(_ playerDTO: CreatePlayerDTO,
+                        completion: @escaping (Result<Void, Error>) -> Void)
 
-    let name: String
-    let email: String
-    let firestoreUID: String
-
-    init(player: Player) {
-        self.name = player.name
-        self.email = player.email
-        self.firestoreUID = player.id
-    }
+    func fetchPlayerWith(firestoreUID: String,
+                         completion: @escaping (Result<FetchPlayerDTO?, Error>) -> Void)
 }

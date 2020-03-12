@@ -8,11 +8,14 @@ import FirebaseAuth
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    private var playerService: PlayerServiceImpl!
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         window = UIWindow()
         FirebaseApp.configure()
+        playerService = PlayerServiceImpl(webService: FirebaseWebService())
 
 //        logout()
 
@@ -33,23 +36,23 @@ private extension AppDelegate {
             let player = Player(user)
 //            navigationController.setRootWireframe(PrayerListWireframe(user: pray4meUser))
 
-            let playerService = PlayerServiceImpl(webService: FirebaseWebService())
-
-            let playerDTO = CreatePlayerDTO(player: player)
-            
-            playerService.createPlayer(playerDTO) { result in
-                switch result {
-                case .success(()):
-                    print("success! 😎")
-                case .failure(let error):
-                    print("Error: \(error.localizedDescription)")
-                }
-            }
-
-            // 1 - checar se usuário existe no nosso banco/firestore
-            // 2 - criar/atualizar usuário
+             createOrUpdatePlayer(player)
         }
         return SignInBuilder().build()
+    }
+
+    private func createOrUpdatePlayer(_ player: Player) {
+
+        let playerDTO = CreatePlayerDTO(player: player)
+
+        playerService.createOrUpdate(playerDTO) { result in
+            switch result {
+            case .success(()):
+                print("success! 😎")
+            case .failure(let error):
+                print("Error: \(error.localizedDescription)")
+            }
+        }
     }
 
     private func logout() {

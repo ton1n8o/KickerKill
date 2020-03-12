@@ -18,16 +18,46 @@ final class PlayerServiceImpl: PlayerService {
 
         let documentData: [String: Any]
         do {
-            let data = try JSONEncoder().encode(playerDTO)
-            documentData = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: Any]
+            documentData = try playerDTO.toDictionary()
         } catch let error {
-            print("Failed to encode reservation details during reservation update: \(error)")
             completion(.failure(error))
             return
         }
 
         webService.createDocument(documentData, intoCollection: Collections.players) { result in
             completion(result)
+        }
+    }
+
+    func createOrUpdate(_ playerDTO: CreatePlayerDTO, completion: @escaping (Result<Void, Error>) -> Void) {
+
+        let documentData: [String: Any]
+        do {
+            documentData = try playerDTO.toDictionary()
+        } catch let error {
+            completion(.failure(error))
+            return
+        }
+
+        let path = "\(Collections.players)/\(playerDTO.firestoreUID)"
+        webService.createOrUpdate(document: documentData, documentPath: path) { result in
+            completion(result)
+        }
+    }
+
+    func fetchPlayerWith(firestoreUID: String, completion: @escaping (Result<FetchPlayerDTO?, Error>) -> Void) {
+
+        webService.fetchDocument(firestoreUID: firestoreUID,
+                                 from: Collections.players) { result in
+
+                                    switch result {
+                                    case .success(let document):
+
+                                        let fetchPlayerDTO = document == nil ? nil : FetchPlayerDTO(document!)
+                                        completion(.success(fetchPlayerDTO))
+                                    case .failure(let error):
+                                        completion(.failure(error))
+                                    }
         }
     }
 }
