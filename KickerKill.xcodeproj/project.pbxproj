@@ -34,6 +34,11 @@
 		023900D0235B6E1F00325717 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023900CF235B6E1F00325717 /* AudioPlayer.swift */; };
 		023900D3235B72A300325717 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023900D2235B72A300325717 /* AVFoundation.framework */; };
 		023900D5235B7BD100325717 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023900D4235B7BD100325717 /* UICollectionView+Extensions.swift */; };
+		02627B8F241ABF2F0026CEAA /* PlayerServiceImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02627B8E241ABF2E0026CEAA /* PlayerServiceImplTests.swift */; };
+		02627B95241AC4890026CEAA /* HasInvocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02627B91241AC43C0026CEAA /* HasInvocations.swift */; };
+		02627B96241AC48E0026CEAA /* FakeEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02627B93241AC4460026CEAA /* FakeEquatable.swift */; };
+		02627B98241AD0FD0026CEAA /* MockWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02627B97241AD0FD0026CEAA /* MockWebService.swift */; };
+		02627B9A241AD1330026CEAA /* Test+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02627B99241AD1330026CEAA /* Test+Extensions.swift */; };
 		02729C1F2353341D0065C833 /* SoundItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02729C1E2353341D0065C833 /* SoundItemCollectionViewCell.xib */; };
 		0273456A241189A600D39039 /* FetchPlayerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02734569241189A600D39039 /* FetchPlayerDTO.swift */; };
 		0273456C241189BC00D39039 /* CreatePlayerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0273456B241189BC00D39039 /* CreatePlayerDTO.swift */; };
@@ -56,7 +61,6 @@
 		02F383C7231AB55700FF8F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F383C6231AB55700FF8F69 /* AppDelegate.swift */; };
 		02F383CE231AB55800FF8F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F383CD231AB55800FF8F69 /* Assets.xcassets */; };
 		02F383D1231AB55800FF8F69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F383CF231AB55800FF8F69 /* LaunchScreen.storyboard */; };
-		02F383DC231AB55800FF8F69 /* KickerKillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F383DB231AB55800FF8F69 /* KickerKillTests.swift */; };
 		02F383E7231AB55900FF8F69 /* KickerKillUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F383E6231AB55900FF8F69 /* KickerKillUITests.swift */; };
 		02FF0D12235FA9170057FF1F /* one_frag_left.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02FF0D11235FA9170057FF1F /* one_frag_left.mp3 */; };
 		02FF0D1D235FAF2D0057FF1F /* head_shot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02FF0D14235FAF2D0057FF1F /* head_shot.mp3 */; };
@@ -118,6 +122,11 @@
 		023900CF235B6E1F00325717 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		023900D2235B72A300325717 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		023900D4235B7BD100325717 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		02627B8E241ABF2E0026CEAA /* PlayerServiceImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerServiceImplTests.swift; sourceTree = "<group>"; };
+		02627B91241AC43C0026CEAA /* HasInvocations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasInvocations.swift; sourceTree = "<group>"; };
+		02627B93241AC4460026CEAA /* FakeEquatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeEquatable.swift; sourceTree = "<group>"; };
+		02627B97241AD0FD0026CEAA /* MockWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWebService.swift; sourceTree = "<group>"; };
+		02627B99241AD1330026CEAA /* Test+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Test+Extensions.swift"; sourceTree = "<group>"; };
 		02729C1E2353341D0065C833 /* SoundItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		02734569241189A600D39039 /* FetchPlayerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPlayerDTO.swift; sourceTree = "<group>"; };
 		0273456B241189BC00D39039 /* CreatePlayerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlayerDTO.swift; sourceTree = "<group>"; };
@@ -143,7 +152,6 @@
 		02F383D0231AB55800FF8F69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02F383D2231AB55800FF8F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02F383D7231AB55800FF8F69 /* KickerKillTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KickerKillTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		02F383DB231AB55800FF8F69 /* KickerKillTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickerKillTests.swift; sourceTree = "<group>"; };
 		02F383DD231AB55800FF8F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02F383E2231AB55800FF8F69 /* KickerKillUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KickerKillUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F383E6231AB55900FF8F69 /* KickerKillUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickerKillUITests.swift; sourceTree = "<group>"; };
@@ -341,6 +349,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		02627B8B241ABEE30026CEAA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				02627B8C241ABEEB0026CEAA /* Services */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		02627B8C241ABEEB0026CEAA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				02627B8D241ABEFA0026CEAA /* PlayerService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		02627B8D241ABEFA0026CEAA /* PlayerService */ = {
+			isa = PBXGroup;
+			children = (
+				02627B8E241ABF2E0026CEAA /* PlayerServiceImplTests.swift */,
+				02627B97241AD0FD0026CEAA /* MockWebService.swift */,
+			);
+			path = PlayerService;
+			sourceTree = "<group>";
+		};
+		02627B90241AC4300026CEAA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				02627B91241AC43C0026CEAA /* HasInvocations.swift */,
+				02627B93241AC4460026CEAA /* FakeEquatable.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		027345682411899700D39039 /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,6 +405,7 @@
 		0280815B23FF225900B431BD /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				02627B90241AC4300026CEAA /* Utils */,
 				027345682411899700D39039 /* DTOs */,
 				0280815A23FF225100B431BD /* Services */,
 			);
@@ -485,8 +528,9 @@
 		02F383DA231AB55800FF8F69 /* KickerKillTests */ = {
 			isa = PBXGroup;
 			children = (
-				02F383DB231AB55800FF8F69 /* KickerKillTests.swift */,
+				02627B8B241ABEE30026CEAA /* Network */,
 				02F383DD231AB55800FF8F69 /* Info.plist */,
+				02627B99241AD1330026CEAA /* Test+Extensions.swift */,
 			);
 			path = KickerKillTests;
 			sourceTree = "<group>";
@@ -608,6 +652,7 @@
 					};
 					02F383D6231AB55800FF8F69 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1130;
 						TestTargetID = 02F383C2231AB55700FF8F69;
 					};
 					02F383E1231AB55800FF8F69 = {
@@ -884,7 +929,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02F383DC231AB55800FF8F69 /* KickerKillTests.swift in Sources */,
+				02627B98241AD0FD0026CEAA /* MockWebService.swift in Sources */,
+				02627B9A241AD1330026CEAA /* Test+Extensions.swift in Sources */,
+				02627B95241AC4890026CEAA /* HasInvocations.swift in Sources */,
+				02627B8F241ABF2F0026CEAA /* PlayerServiceImplTests.swift in Sources */,
+				02627B96241AC48E0026CEAA /* FakeEquatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1085,6 +1134,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MG2UCY5382;
 				INFOPLIST_FILE = KickerKillTests/Info.plist;
@@ -1095,6 +1145,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.tntstudios.KickerKillTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KickerKill.app/KickerKill";
@@ -1107,6 +1158,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MG2UCY5382;
 				INFOPLIST_FILE = KickerKillTests/Info.plist;
