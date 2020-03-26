@@ -27,19 +27,17 @@ final class PlayerServiceImplTests: XCTestCase {
         let createPlayerDTO = CreatePlayerDTO(player: player)
         let expectedDocumentPath = "players/\(player.id)"
 
-        webService.resultCreateOrUpdate = .success(())
+        webService.resultCreateOrUpdate = nil
 
         let ex = expectation(description: "createOrUpdate should succeed")
         ex.expectedFulfillmentCount = 1
 
         // Act
-        sut.createOrUpdate(createPlayerDTO) { result in
-            switch result {
-            case .success(()):
-                ex.fulfill()
-            case .failure(let error):
+        sut.createOrUpdate(createPlayerDTO) { error in
+            if let error = error {
                 XCTFail("CreateOrUpdate failed but it should succeeded: \(error.localizedDescription)")
             }
+            ex.fulfill()
         }
 
         // Assert
@@ -63,20 +61,15 @@ final class PlayerServiceImplTests: XCTestCase {
         let userInfo = [NSLocalizedDescriptionKey: "error description"]
         let expectedError = NSError(domain: "0", code: 0, userInfo: userInfo)
 
-        webService.resultCreateOrUpdate = .failure(expectedError)
+        webService.resultCreateOrUpdate = expectedError
 
         let ex = expectation(description: "createOrUpdate should fail")
         ex.expectedFulfillmentCount = 1
 
         // Act
-        sut.createOrUpdate(createPlayerDTO) { result in
-            switch result {
-            case .success(()):
-                XCTFail("createOrUpdate succeeded but should fail")
-            case .failure(let error):
-                self.assertEqual(expectedError, error)
-                ex.fulfill()
-            }
+        sut.createOrUpdate(createPlayerDTO) { error in
+            XCTAssertNotNil(error, "createOrUpdate succeeded but should fail")
+            ex.fulfill()
         }
 
         // Assert

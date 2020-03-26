@@ -24,16 +24,12 @@ final class FirebaseWebService: WebService {
 
     func createOrUpdate(document: [String : Any],
                         documentPath: String,
-                        completion: @escaping WebServiceCompletion) {
+                        completion: @escaping (Error?) -> Void) {
 
         let collectionReference = firestore.document(documentPath)
 
         collectionReference.setData(document) { error in
-            if let error = error {
-                completion(.failure(error)) //TODO: in case of error, a user was not created! (cover PlayerServiceImpl with tests)
-            } else {
-                completion(.success(()))
-            }
+            completion(error)
         }
     }
 

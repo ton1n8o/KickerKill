@@ -29,19 +29,19 @@ final class PlayerServiceImpl: PlayerService {
         }
     }
 
-    func createOrUpdate(_ playerDTO: CreatePlayerDTO, completion: @escaping (Result<Void, Error>) -> Void) {
+    func createOrUpdate(_ playerDTO: CreatePlayerDTO, completion: @escaping (Error?) -> Void) {
 
         let documentData: [String: Any]
         do {
             documentData = try playerDTO.toDictionary()
         } catch let error {
-            completion(.failure(error))
+            completion(error)
             return
         }
 
         let path = "\(Collections.players)/\(playerDTO.firestoreUID)"
-        webService.createOrUpdate(document: documentData, documentPath: path) { result in
-            completion(result)
+        webService.createOrUpdate(document: documentData, documentPath: path) { error in
+            completion(error)
         }
     }
 

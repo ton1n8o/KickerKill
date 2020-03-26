@@ -14,10 +14,10 @@ final class MockWebService: WebService, HasInvocations {
 
     }
 
-    var resultCreateOrUpdate: Result<Void, Error>!
+    var resultCreateOrUpdate: Error?
     func createOrUpdate(document: [String : Any],
                         documentPath: String,
-                        completion: @escaping WebServiceCompletion) {
+                        completion: @escaping (Error?) -> Void) {
 
         invocations.append(.createOrUpdate(document, documentPath: documentPath))
         completion(resultCreateOrUpdate)

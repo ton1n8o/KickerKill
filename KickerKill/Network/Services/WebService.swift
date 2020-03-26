@@ -13,7 +13,7 @@ protocol WebService {
 
     func createOrUpdate(document: [String : Any],
                         documentPath: String,
-                        completion: @escaping WebServiceCompletion)
+                        completion: @escaping (Error?) -> Void)
 
     func fetchDocument(firestoreUID: String,
                        from collection: String,

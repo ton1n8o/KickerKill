@@ -20,8 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        logout()
 
         Auth.auth().addStateDidChangeListener { [weak self] (auth, user) in
-            self?.window?.rootViewController = self?.startupUI(firebaseUser: user)
-            self?.window?.makeKeyAndVisible()
+            self?.startupUI(firebaseUser: user)
         }
 
         return true
@@ -30,27 +29,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 private extension AppDelegate {
 
-    private func startupUI(firebaseUser: FirebaseAuth.User?) -> UIViewController {
+    private func startupUI(firebaseUser: FirebaseAuth.User?) {
 
-        if let user = firebaseUser {
-            let player = Player(user)
-//            navigationController.setRootWireframe(PrayerListWireframe(user: pray4meUser))
+        window?.rootViewController = SignInBuilder().build()
+        window?.makeKeyAndVisible()
 
-             createOrUpdatePlayer(player)
+        guard let user = firebaseUser else {
+            return
         }
-        return SignInBuilder().build()
-    }
 
-    private func createOrUpdatePlayer(_ player: Player) {
+        // intermediate state??
 
+        let player = Player(user)
         let playerDTO = CreatePlayerDTO(player: player)
 
-        playerService.createOrUpdate(playerDTO) { result in
-            switch result {
-            case .success(()):
-                print("success! 😎")
-            case .failure(let error):
-                print("Error: \(error.localizedDescription)")
+        playerService.createOrUpdate(playerDTO) { error in
+            if let error = error {
+                // window?.rootViewController . // toma aqui o erro
+                print("\(#function): >>> \(error.localizedDescription)")
+            } else {
+                print("\(#function): >>> success! 😎")
+                let playerList = PlayersListModuleBuilder().build()
+                self.window?.rootViewController = playerList
             }
         }
     }

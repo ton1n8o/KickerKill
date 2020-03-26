@@ -8,7 +8,7 @@ protocol PlayerService {
                       completion: @escaping (Result<Void, Error>) -> Void)
 
     func createOrUpdate(_ playerDTO: CreatePlayerDTO,
-                        completion: @escaping (Result<Void, Error>) -> Void)
+                        completion: @escaping (Error?) -> Void)
 
     func fetchPlayerWith(firestoreUID: String,
                          completion: @escaping (Result<FetchPlayerDTO?, Error>) -> Void)
