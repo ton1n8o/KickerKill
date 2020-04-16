@@ -18,4 +18,8 @@ protocol WebService {
     func fetchDocument(firestoreUID: String,
                        from collection: String,
                        completion: @escaping (Result<[String: Any]?, Error>) -> Void)
+
+    func fetchDocumentsFrom(collectionPath: String,
+                            queryParams: PlayerServiceQueryParams,
+                            completion: @escaping (Result<[[String: Any]], Error>) -> Void)
 }

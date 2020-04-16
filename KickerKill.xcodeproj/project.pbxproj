@@ -19,6 +19,9 @@
 		02255189232419D800B7A42A /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02255188232419D800B7A42A /* PresenterInterface.swift */; };
 		0225518B23241A0A00B7A42A /* SoundEffectsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0225518A23241A0A00B7A42A /* SoundEffectsPresenter.swift */; };
 		02255191232420E500B7A42A /* SoundEffects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02255190232420E500B7A42A /* SoundEffects.storyboard */; };
+		02258F1D2448CFDA006C23D4 /* PlayerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02258F1C2448CFDA006C23D4 /* PlayerListCell.swift */; };
+		02258F1F2448D0BA006C23D4 /* PlayerListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02258F1E2448D0BA006C23D4 /* PlayerListCell.xib */; };
+		02258F212448D499006C23D4 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02258F202448D499006C23D4 /* UITableView+Extensions.swift */; };
 		0233761B23EC9CA8009B1B16 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0233761A23EC9CA8009B1B16 /* SignIn.storyboard */; };
 		0233761D23EC9D55009B1B16 /* SignInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233761C23EC9D55009B1B16 /* SignInBuilder.swift */; };
 		0233762023EC9E19009B1B16 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233761F23EC9E19009B1B16 /* SignInViewController.swift */; };
@@ -58,6 +61,7 @@
 		029AF9DB23F5E28D00C9B52E /* PlayersListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AF9D123F5E28D00C9B52E /* PlayersListInteractorOutput.swift */; };
 		029AF9DC23F5E28D00C9B52E /* PlayersListInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AF9D223F5E28D00C9B52E /* PlayersListInteractorInput.swift */; };
 		029AF9DD23F5E28D00C9B52E /* PlayersListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AF9D423F5E28D00C9B52E /* PlayersListRouter.swift */; };
+		02D0283E243666390017D5A5 /* QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0283D243666390017D5A5 /* QueryParameters.swift */; };
 		02F383C7231AB55700FF8F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F383C6231AB55700FF8F69 /* AppDelegate.swift */; };
 		02F383CE231AB55800FF8F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F383CD231AB55800FF8F69 /* Assets.xcassets */; };
 		02F383D1231AB55800FF8F69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F383CF231AB55800FF8F69 /* LaunchScreen.storyboard */; };
@@ -107,6 +111,9 @@
 		02255188232419D800B7A42A /* PresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
 		0225518A23241A0A00B7A42A /* SoundEffectsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffectsPresenter.swift; sourceTree = "<group>"; };
 		02255190232420E500B7A42A /* SoundEffects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SoundEffects.storyboard; sourceTree = "<group>"; };
+		02258F1C2448CFDA006C23D4 /* PlayerListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListCell.swift; sourceTree = "<group>"; };
+		02258F1E2448D0BA006C23D4 /* PlayerListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerListCell.xib; sourceTree = "<group>"; };
+		02258F202448D499006C23D4 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		0233761A23EC9CA8009B1B16 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		0233761C23EC9D55009B1B16 /* SignInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInBuilder.swift; sourceTree = "<group>"; };
 		0233761F23EC9E19009B1B16 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +153,7 @@
 		029AF9D123F5E28D00C9B52E /* PlayersListInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListInteractorOutput.swift; sourceTree = "<group>"; };
 		029AF9D223F5E28D00C9B52E /* PlayersListInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListInteractorInput.swift; sourceTree = "<group>"; };
 		029AF9D423F5E28D00C9B52E /* PlayersListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListRouter.swift; sourceTree = "<group>"; };
+		02D0283D243666390017D5A5 /* QueryParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryParameters.swift; sourceTree = "<group>"; };
 		02F383C3231AB55700FF8F69 /* KickerKill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KickerKill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F383C6231AB55700FF8F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02F383CD231AB55800FF8F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -397,6 +405,7 @@
 			children = (
 				0280816023FF245900B431BD /* PlayerService */,
 				0280815E23FF22EA00B431BD /* FirebaseWebService.swift */,
+				02D0283D243666390017D5A5 /* QueryParameters.swift */,
 				0280815C23FF227D00B431BD /* WebService.swift */,
 			);
 			path = Services;
@@ -427,6 +436,7 @@
 				023900D4235B7BD100325717 /* UICollectionView+Extensions.swift */,
 				029AF9BF23F5DC1B00C9B52E /* UI+Extensions.swift */,
 				0273456D241199FA00D39039 /* Encodable+Extensions.swift */,
+				02258F202448D499006C23D4 /* UITableView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -457,6 +467,8 @@
 			children = (
 				029AF9CB23F5E28D00C9B52E /* PlayersList.storyboard */,
 				029AF9CC23F5E28D00C9B52E /* PlayersListViewController.swift */,
+				02258F1C2448CFDA006C23D4 /* PlayerListCell.swift */,
+				02258F1E2448D0BA006C23D4 /* PlayerListCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -696,6 +708,7 @@
 				023900CB235B6D4800325717 /* denied.mp3 in Resources */,
 				023900CA235B6D4800325717 /* impressive.mp3 in Resources */,
 				029AF9D723F5E28D00C9B52E /* PlayersList.storyboard in Resources */,
+				02258F1F2448D0BA006C23D4 /* PlayerListCell.xib in Resources */,
 				02FF0D22235FAF2D0057FF1F /* dominating.mp3 in Resources */,
 				02FF0D1E235FAF2D0057FF1F /* god_like.mp3 in Resources */,
 				02FF0D12235FA9170057FF1F /* one_frag_left.mp3 in Resources */,
@@ -907,9 +920,12 @@
 				029AF9DB23F5E28D00C9B52E /* PlayersListInteractorOutput.swift in Sources */,
 				029AF9DC23F5E28D00C9B52E /* PlayersListInteractorInput.swift in Sources */,
 				0280815F23FF22EA00B431BD /* FirebaseWebService.swift in Sources */,
+				02258F212448D499006C23D4 /* UITableView+Extensions.swift in Sources */,
 				029AF9DA23F5E28D00C9B52E /* PlayersListInteractor.swift in Sources */,
+				02258F1D2448CFDA006C23D4 /* PlayerListCell.swift in Sources */,
 				0280816423FF24F600B431BD /* PlayerServiceImpl.swift in Sources */,
 				0280815D23FF227D00B431BD /* WebService.swift in Sources */,
+				02D0283E243666390017D5A5 /* QueryParameters.swift in Sources */,
 				02255178232414B200B7A42A /* BaseNavigationController.swift in Sources */,
 				02255183232418B200B7A42A /* SoundEffectsViewController.swift in Sources */,
 				022551852324192600B7A42A /* SoundEffectsInteractor.swift in Sources */,

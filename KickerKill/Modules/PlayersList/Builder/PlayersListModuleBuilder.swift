@@ -17,13 +17,13 @@ final class PlayersListModuleBuilder {
         presenter.view = viewController
         presenter.router = router
         
-        let interactor = PlayersListInteractor()
+        let interactor = PlayersListInteractor(webService: FirebaseWebService())
         interactor.output = presenter
         
         presenter.interactor = interactor
         viewController.output = presenter
-        
-        return viewController
+
+        return UINavigationController(rootViewController: viewController)
     }
     
 }

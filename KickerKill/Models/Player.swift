@@ -17,4 +17,10 @@ extension Player {
         self.email = firebaseUser.email ?? ""
         self.name = firebaseUser.displayName ?? ""
     }
+
+    init(_ fetchPlayer: FetchPlayerDTO) {
+        self.id = fetchPlayer.firestoreUID
+        self.email = fetchPlayer.email
+        self.name = fetchPlayer.name
+    }
 }

@@ -48,7 +48,6 @@ private extension AppDelegate {
                 // window?.rootViewController . // toma aqui o erro
                 print("\(#function): >>> \(error.localizedDescription)")
             } else {
-                print("\(#function): >>> success! 😎")
                 let playerList = PlayersListModuleBuilder().build()
                 self.window?.rootViewController = playerList
             }
