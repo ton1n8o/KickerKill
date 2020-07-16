@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlayerListCell" rowHeight="105" id="5aa-ln-PKQ" customClass="PlayerListCell" customModule="KickerKill" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="440" height="105"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5aa-ln-PKQ" id="ahO-dr-NCt">
+                <rect key="frame" x="0.0" y="0.0" width="440" height="105"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YNF-Gh-kBx">
+                        <rect key="frame" x="8" y="8" width="424" height="89"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6u-L5-hPL">
+                                <rect key="frame" x="0.0" y="0.0" width="424" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqq-0b-h5b">
+                                <rect key="frame" x="0.0" y="31.5" width="424" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bj0-R3-fYR">
+                                <rect key="frame" x="0.0" y="62.5" width="424" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="YNF-Gh-kBx" firstAttribute="leading" secondItem="ahO-dr-NCt" secondAttribute="leading" constant="8" id="GtH-uS-NXp"/>
+                    <constraint firstAttribute="bottom" secondItem="YNF-Gh-kBx" secondAttribute="bottom" constant="8" id="Jf3-Qr-mdG"/>
+                    <constraint firstAttribute="trailing" secondItem="YNF-Gh-kBx" secondAttribute="trailing" constant="8" id="OLF-cT-ELg"/>
+                    <constraint firstItem="YNF-Gh-kBx" firstAttribute="top" secondItem="ahO-dr-NCt" secondAttribute="top" constant="8" id="kxZ-7V-Ael"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="emailLabel" destination="nqq-0b-h5b" id="lOY-l5-KOx"/>
+                <outlet property="idLabel" destination="bj0-R3-fYR" id="gdI-rH-5Kw"/>
+                <outlet property="nameLabel" destination="H6u-L5-hPL" id="sil-pW-IwX"/>
+            </connections>
+            <point key="canvasLocation" x="-275.36231884057975" y="14.397321428571427"/>
+        </tableViewCell>
+    </objects>
+</document>

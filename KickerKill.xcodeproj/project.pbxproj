@@ -3,17 +3,50 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C48073B5BFACA30953057DC /* Pods_KickerKillTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD803936657EA73B7410F71 /* Pods_KickerKillTests.framework */; };
 		919FA10B24C0BC95004EEE15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919FA10A24C0BC95004EEE15 /* AppDelegate.swift */; };
-		919FA10D24C0BC95004EEE15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919FA10C24C0BC95004EEE15 /* SceneDelegate.swift */; };
-		919FA10F24C0BC95004EEE15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919FA10E24C0BC95004EEE15 /* ViewController.swift */; };
-		919FA11224C0BC95004EEE15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 919FA11024C0BC95004EEE15 /* Main.storyboard */; };
 		919FA11424C0BC97004EEE15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 919FA11324C0BC97004EEE15 /* Assets.xcassets */; };
 		919FA11724C0BC97004EEE15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 919FA11524C0BC97004EEE15 /* LaunchScreen.storyboard */; };
 		919FA12224C0BC97004EEE15 /* KickerKillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919FA12124C0BC97004EEE15 /* KickerKillTests.swift */; };
+		91D40E4424C0BF8700E5888E /* CreatePlayerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E3924C0BF8700E5888E /* CreatePlayerDTO.swift */; };
+		91D40E4524C0BF8700E5888E /* FetchPlayerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E3A24C0BF8700E5888E /* FetchPlayerDTO.swift */; };
+		91D40E4624C0BF8700E5888E /* PlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E3D24C0BF8700E5888E /* PlayerService.swift */; };
+		91D40E4724C0BF8700E5888E /* PlayerServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E3E24C0BF8700E5888E /* PlayerServiceImpl.swift */; };
+		91D40E4824C0BF8700E5888E /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E3F24C0BF8700E5888E /* WebService.swift */; };
+		91D40E4924C0BF8700E5888E /* QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E4024C0BF8700E5888E /* QueryParameters.swift */; };
+		91D40E4A24C0BF8700E5888E /* FirebaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E4124C0BF8700E5888E /* FirebaseWebService.swift */; };
+		91D40E4B24C0C0E600E5888E /* HasInvocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E3724C0BF8700E5888E /* HasInvocations.swift */; };
+		91D40E4C24C0C10000E5888E /* FakeEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E3624C0BF8700E5888E /* FakeEquatable.swift */; };
+		91D40E7424C0C14800E5888E /* SignInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E4F24C0C14800E5888E /* SignInBuilder.swift */; };
+		91D40E7524C0C14800E5888E /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91D40E5124C0C14800E5888E /* SignIn.storyboard */; };
+		91D40E7624C0C14800E5888E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E5224C0C14800E5888E /* SignInViewController.swift */; };
+		91D40E7724C0C14800E5888E /* PlayersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E5524C0C14800E5888E /* PlayersListPresenter.swift */; };
+		91D40E7824C0C14800E5888E /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E5624C0C14800E5888E /* Team.swift */; };
+		91D40E7924C0C14800E5888E /* PlayersListInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E5724C0C14800E5888E /* PlayersListInterfaces.swift */; };
+		91D40E7A24C0C14800E5888E /* PlayerListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91D40E5924C0C14800E5888E /* PlayerListCell.xib */; };
+		91D40E7B24C0C14800E5888E /* PlayerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E5A24C0C14800E5888E /* PlayerListCell.swift */; };
+		91D40E7C24C0C14800E5888E /* PlayersList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91D40E5B24C0C14800E5888E /* PlayersList.storyboard */; };
+		91D40E7D24C0C14800E5888E /* PlayersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E5C24C0C14800E5888E /* PlayersListViewController.swift */; };
+		91D40E7E24C0C14800E5888E /* PlayersListModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E5E24C0C14800E5888E /* PlayersListModuleBuilder.swift */; };
+		91D40E7F24C0C14800E5888E /* PlayersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E6024C0C14800E5888E /* PlayersListInteractor.swift */; };
+		91D40E8024C0C14800E5888E /* PlayersListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E6124C0C14800E5888E /* PlayersListInteractorOutput.swift */; };
+		91D40E8124C0C14800E5888E /* PlayersListInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E6224C0C14800E5888E /* PlayersListInteractorInput.swift */; };
+		91D40E8224C0C14800E5888E /* PlayersListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E6424C0C14800E5888E /* PlayersListRouter.swift */; };
+		91D40E8F24C0C16300E5888E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E8E24C0C16300E5888E /* Player.swift */; };
+		91D40E9524C0C1AC00E5888E /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E9224C0C1AC00E5888E /* UIStoryboardExtension.swift */; };
+		91D40E9624C0C1AC00E5888E /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E9324C0C1AC00E5888E /* PresenterInterface.swift */; };
+		91D40E9C24C0C22300E5888E /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E9824C0C22200E5888E /* Encodable+Extensions.swift */; };
+		91D40E9D24C0C22300E5888E /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E9924C0C22200E5888E /* UITableView+Extensions.swift */; };
+		91D40E9E24C0C22300E5888E /* UI+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E9A24C0C22200E5888E /* UI+Extensions.swift */; };
+		91D40E9F24C0C22300E5888E /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E9B24C0C22200E5888E /* UICollectionView+Extensions.swift */; };
+		91D40EA224C0C27C00E5888E /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40EA124C0C27C00E5888E /* Identifiable.swift */; };
+		91D40EA424C0C29600E5888E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40EA324C0C29600E5888E /* Localizable.swift */; };
+		91D40EA724C0C3D400E5888E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91D40EA624C0C3D400E5888E /* GoogleService-Info.plist */; };
+		DB5A8C5054A90971E30755E2 /* Pods_KickerKill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80AD92F50F804D576DEC7C1C /* Pods_KickerKill.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +60,54 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DD803936657EA73B7410F71 /* Pods_KickerKillTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KickerKillTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3185238AA1917019A29AC6CA /* Pods-KickerKill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKill.debug.xcconfig"; path = "Target Support Files/Pods-KickerKill/Pods-KickerKill.debug.xcconfig"; sourceTree = "<group>"; };
+		5372C891215B43F2A4FCE009 /* Pods-KickerKillTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKillTests.release.xcconfig"; path = "Target Support Files/Pods-KickerKillTests/Pods-KickerKillTests.release.xcconfig"; sourceTree = "<group>"; };
+		5CB76173BA80BE83E893A348 /* Pods-KickerKillTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKillTests.debug.xcconfig"; path = "Target Support Files/Pods-KickerKillTests/Pods-KickerKillTests.debug.xcconfig"; sourceTree = "<group>"; };
+		80AD92F50F804D576DEC7C1C /* Pods_KickerKill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KickerKill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		919FA10724C0BC95004EEE15 /* KickerKill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KickerKill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		919FA10A24C0BC95004EEE15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		919FA10C24C0BC95004EEE15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		919FA10E24C0BC95004EEE15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		919FA11124C0BC95004EEE15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		919FA11324C0BC97004EEE15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		919FA11624C0BC97004EEE15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		919FA11824C0BC97004EEE15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		919FA11D24C0BC97004EEE15 /* KickerKillTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KickerKillTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		919FA12124C0BC97004EEE15 /* KickerKillTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickerKillTests.swift; sourceTree = "<group>"; };
 		919FA12324C0BC97004EEE15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91D40E3624C0BF8700E5888E /* FakeEquatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeEquatable.swift; sourceTree = "<group>"; };
+		91D40E3724C0BF8700E5888E /* HasInvocations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasInvocations.swift; sourceTree = "<group>"; };
+		91D40E3924C0BF8700E5888E /* CreatePlayerDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePlayerDTO.swift; sourceTree = "<group>"; };
+		91D40E3A24C0BF8700E5888E /* FetchPlayerDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchPlayerDTO.swift; sourceTree = "<group>"; };
+		91D40E3D24C0BF8700E5888E /* PlayerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerService.swift; sourceTree = "<group>"; };
+		91D40E3E24C0BF8700E5888E /* PlayerServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerServiceImpl.swift; sourceTree = "<group>"; };
+		91D40E3F24C0BF8700E5888E /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		91D40E4024C0BF8700E5888E /* QueryParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryParameters.swift; sourceTree = "<group>"; };
+		91D40E4124C0BF8700E5888E /* FirebaseWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseWebService.swift; sourceTree = "<group>"; };
+		91D40E4F24C0C14800E5888E /* SignInBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInBuilder.swift; sourceTree = "<group>"; };
+		91D40E5124C0C14800E5888E /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		91D40E5224C0C14800E5888E /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		91D40E5524C0C14800E5888E /* PlayersListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListPresenter.swift; sourceTree = "<group>"; };
+		91D40E5624C0C14800E5888E /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		91D40E5724C0C14800E5888E /* PlayersListInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListInterfaces.swift; sourceTree = "<group>"; };
+		91D40E5924C0C14800E5888E /* PlayerListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerListCell.xib; sourceTree = "<group>"; };
+		91D40E5A24C0C14800E5888E /* PlayerListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerListCell.swift; sourceTree = "<group>"; };
+		91D40E5B24C0C14800E5888E /* PlayersList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlayersList.storyboard; sourceTree = "<group>"; };
+		91D40E5C24C0C14800E5888E /* PlayersListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListViewController.swift; sourceTree = "<group>"; };
+		91D40E5E24C0C14800E5888E /* PlayersListModuleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListModuleBuilder.swift; sourceTree = "<group>"; };
+		91D40E6024C0C14800E5888E /* PlayersListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListInteractor.swift; sourceTree = "<group>"; };
+		91D40E6124C0C14800E5888E /* PlayersListInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListInteractorOutput.swift; sourceTree = "<group>"; };
+		91D40E6224C0C14800E5888E /* PlayersListInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListInteractorInput.swift; sourceTree = "<group>"; };
+		91D40E6424C0C14800E5888E /* PlayersListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListRouter.swift; sourceTree = "<group>"; };
+		91D40E8E24C0C16300E5888E /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		91D40E9224C0C1AC00E5888E /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
+		91D40E9324C0C1AC00E5888E /* PresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
+		91D40E9824C0C22200E5888E /* Encodable+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encodable+Extensions.swift"; sourceTree = "<group>"; };
+		91D40E9924C0C22200E5888E /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		91D40E9A24C0C22200E5888E /* UI+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UI+Extensions.swift"; sourceTree = "<group>"; };
+		91D40E9B24C0C22200E5888E /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		91D40EA124C0C27C00E5888E /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		91D40EA324C0C29600E5888E /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		91D40EA624C0C3D400E5888E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		920AC06EBCE24F0C0161A1B4 /* Pods-KickerKill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKill.release.xcconfig"; path = "Target Support Files/Pods-KickerKill/Pods-KickerKill.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5A8C5054A90971E30755E2 /* Pods_KickerKill.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C48073B5BFACA30953057DC /* Pods_KickerKillTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +136,8 @@
 				919FA10924C0BC95004EEE15 /* KickerKill */,
 				919FA12024C0BC97004EEE15 /* KickerKillTests */,
 				919FA10824C0BC95004EEE15 /* Products */,
+				A5D291B3D85CFFF7AEA9C0BD /* Pods */,
+				97C3AF9141945812D23E0FA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +153,15 @@
 		919FA10924C0BC95004EEE15 /* KickerKill */ = {
 			isa = PBXGroup;
 			children = (
-				919FA10A24C0BC95004EEE15 /* AppDelegate.swift */,
-				919FA10C24C0BC95004EEE15 /* SceneDelegate.swift */,
-				919FA10E24C0BC95004EEE15 /* ViewController.swift */,
-				919FA11024C0BC95004EEE15 /* Main.storyboard */,
-				919FA11324C0BC97004EEE15 /* Assets.xcassets */,
-				919FA11524C0BC97004EEE15 /* LaunchScreen.storyboard */,
+				91D40EA024C0C26E00E5888E /* Application */,
+				91D40E9724C0C22200E5888E /* Extensions */,
+				91D40E8D24C0C16300E5888E /* Models */,
+				91D40E4D24C0C14800E5888E /* Modules */,
+				91D40E9024C0C1AC00E5888E /* VIPER */,
+				91D40E3424C0BF8700E5888E /* Network */,
 				919FA11824C0BC97004EEE15 /* Info.plist */,
+				919FA11524C0BC97004EEE15 /* LaunchScreen.storyboard */,
+				919FA11324C0BC97004EEE15 /* Assets.xcassets */,
 			);
 			path = KickerKill;
 			sourceTree = "<group>";
@@ -99,6 +175,207 @@
 			path = KickerKillTests;
 			sourceTree = "<group>";
 		};
+		91D40E3424C0BF8700E5888E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				91D40E3524C0BF8700E5888E /* Utils */,
+				91D40E3824C0BF8700E5888E /* DTOs */,
+				91D40E3B24C0BF8700E5888E /* Services */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		91D40E3524C0BF8700E5888E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				91D40E3624C0BF8700E5888E /* FakeEquatable.swift */,
+				91D40E3724C0BF8700E5888E /* HasInvocations.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		91D40E3824C0BF8700E5888E /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				91D40E3924C0BF8700E5888E /* CreatePlayerDTO.swift */,
+				91D40E3A24C0BF8700E5888E /* FetchPlayerDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		91D40E3B24C0BF8700E5888E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				91D40E3C24C0BF8700E5888E /* PlayerService */,
+				91D40E3F24C0BF8700E5888E /* WebService.swift */,
+				91D40E4024C0BF8700E5888E /* QueryParameters.swift */,
+				91D40E4124C0BF8700E5888E /* FirebaseWebService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		91D40E3C24C0BF8700E5888E /* PlayerService */ = {
+			isa = PBXGroup;
+			children = (
+				91D40E3D24C0BF8700E5888E /* PlayerService.swift */,
+				91D40E3E24C0BF8700E5888E /* PlayerServiceImpl.swift */,
+			);
+			path = PlayerService;
+			sourceTree = "<group>";
+		};
+		91D40E4D24C0C14800E5888E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				91D40E4E24C0C14800E5888E /* SignIn */,
+				91D40E5324C0C14800E5888E /* PlayersList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		91D40E4E24C0C14800E5888E /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				91D40E4F24C0C14800E5888E /* SignInBuilder.swift */,
+				91D40E5024C0C14800E5888E /* View */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		91D40E5024C0C14800E5888E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				91D40E5124C0C14800E5888E /* SignIn.storyboard */,
+				91D40E5224C0C14800E5888E /* SignInViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		91D40E5324C0C14800E5888E /* PlayersList */ = {
+			isa = PBXGroup;
+			children = (
+				91D40E5424C0C14800E5888E /* Presenter */,
+				91D40E5724C0C14800E5888E /* PlayersListInterfaces.swift */,
+				91D40E5824C0C14800E5888E /* View */,
+				91D40E5D24C0C14800E5888E /* Builder */,
+				91D40E5F24C0C14800E5888E /* Interactor */,
+				91D40E6324C0C14800E5888E /* Router */,
+			);
+			path = PlayersList;
+			sourceTree = "<group>";
+		};
+		91D40E5424C0C14800E5888E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				91D40E5524C0C14800E5888E /* PlayersListPresenter.swift */,
+				91D40E5624C0C14800E5888E /* Team.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		91D40E5824C0C14800E5888E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				91D40E5924C0C14800E5888E /* PlayerListCell.xib */,
+				91D40E5A24C0C14800E5888E /* PlayerListCell.swift */,
+				91D40E5B24C0C14800E5888E /* PlayersList.storyboard */,
+				91D40E5C24C0C14800E5888E /* PlayersListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		91D40E5D24C0C14800E5888E /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				91D40E5E24C0C14800E5888E /* PlayersListModuleBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		91D40E5F24C0C14800E5888E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				91D40E6024C0C14800E5888E /* PlayersListInteractor.swift */,
+				91D40E6124C0C14800E5888E /* PlayersListInteractorOutput.swift */,
+				91D40E6224C0C14800E5888E /* PlayersListInteractorInput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		91D40E6324C0C14800E5888E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				91D40E6424C0C14800E5888E /* PlayersListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		91D40E8D24C0C16300E5888E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				91D40E8E24C0C16300E5888E /* Player.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		91D40E9024C0C1AC00E5888E /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				91D40E9224C0C1AC00E5888E /* UIStoryboardExtension.swift */,
+				91D40E9324C0C1AC00E5888E /* PresenterInterface.swift */,
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
+		91D40E9724C0C22200E5888E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				91D40E9824C0C22200E5888E /* Encodable+Extensions.swift */,
+				91D40E9924C0C22200E5888E /* UITableView+Extensions.swift */,
+				91D40E9A24C0C22200E5888E /* UI+Extensions.swift */,
+				91D40E9B24C0C22200E5888E /* UICollectionView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		91D40EA024C0C26E00E5888E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				91D40EA524C0C3D400E5888E /* Resources */,
+				919FA10A24C0BC95004EEE15 /* AppDelegate.swift */,
+				91D40EA324C0C29600E5888E /* Localizable.swift */,
+				91D40EA124C0C27C00E5888E /* Identifiable.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		91D40EA524C0C3D400E5888E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				91D40EA624C0C3D400E5888E /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		97C3AF9141945812D23E0FA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80AD92F50F804D576DEC7C1C /* Pods_KickerKill.framework */,
+				0DD803936657EA73B7410F71 /* Pods_KickerKillTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5D291B3D85CFFF7AEA9C0BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3185238AA1917019A29AC6CA /* Pods-KickerKill.debug.xcconfig */,
+				920AC06EBCE24F0C0161A1B4 /* Pods-KickerKill.release.xcconfig */,
+				5CB76173BA80BE83E893A348 /* Pods-KickerKillTests.debug.xcconfig */,
+				5372C891215B43F2A4FCE009 /* Pods-KickerKillTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +383,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 919FA12624C0BC97004EEE15 /* Build configuration list for PBXNativeTarget "KickerKill" */;
 			buildPhases = (
+				A4DF47BA63343124CE10D9D3 /* [CP] Check Pods Manifest.lock */,
 				919FA10324C0BC95004EEE15 /* Sources */,
 				919FA10424C0BC95004EEE15 /* Frameworks */,
 				919FA10524C0BC95004EEE15 /* Resources */,
+				A529AB2C869937F447086046 /* [CP] Embed Pods Frameworks */,
+				179F438DC81B8F2514643297 /* [CP] Copy Pods Resources */,
+				91D40EAA24C0C92700E5888E /* Import VIPER modules */,
 			);
 			buildRules = (
 			);
@@ -123,6 +404,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 919FA12924C0BC97004EEE15 /* Build configuration list for PBXNativeTarget "KickerKillTests" */;
 			buildPhases = (
+				78DB62F1B22A5814F30F3C78 /* [CP] Check Pods Manifest.lock */,
 				919FA11924C0BC97004EEE15 /* Sources */,
 				919FA11A24C0BC97004EEE15 /* Frameworks */,
 				919FA11B24C0BC97004EEE15 /* Resources */,
@@ -180,9 +462,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91D40E7524C0C14800E5888E /* SignIn.storyboard in Resources */,
+				91D40E7A24C0C14800E5888E /* PlayerListCell.xib in Resources */,
 				919FA11724C0BC97004EEE15 /* LaunchScreen.storyboard in Resources */,
+				91D40E7C24C0C14800E5888E /* PlayersList.storyboard in Resources */,
 				919FA11424C0BC97004EEE15 /* Assets.xcassets in Resources */,
-				919FA11224C0BC95004EEE15 /* Main.storyboard in Resources */,
+				91D40EA724C0C3D400E5888E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,14 +480,139 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		179F438DC81B8F2514643297 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KickerKill/Pods-KickerKill-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KickerKill/Pods-KickerKill-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KickerKill/Pods-KickerKill-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78DB62F1B22A5814F30F3C78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KickerKillTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91D40EAA24C0C92700E5888E /* Import VIPER modules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Import VIPER modules";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p ~/Library/Developer/Xcode/Templates/File\\ Templates/Source\nfor D in ${PROJECT_DIR}/xCodeTemplates/*; do\nif [ -d \"${D}\" ]; then\nln -s -f \"${D}\" ~/Library/Developer/Xcode/Templates/File\\ Templates/Source\nfi\ndone\n";
+		};
+		A4DF47BA63343124CE10D9D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KickerKill-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A529AB2C869937F447086046 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KickerKill/Pods-KickerKill-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KickerKill/Pods-KickerKill-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KickerKill/Pods-KickerKill-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		919FA10324C0BC95004EEE15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				919FA10F24C0BC95004EEE15 /* ViewController.swift in Sources */,
+				91D40E7724C0C14800E5888E /* PlayersListPresenter.swift in Sources */,
+				91D40E9F24C0C22300E5888E /* UICollectionView+Extensions.swift in Sources */,
+				91D40E7824C0C14800E5888E /* Team.swift in Sources */,
+				91D40E8224C0C14800E5888E /* PlayersListRouter.swift in Sources */,
+				91D40E4524C0BF8700E5888E /* FetchPlayerDTO.swift in Sources */,
+				91D40E7924C0C14800E5888E /* PlayersListInterfaces.swift in Sources */,
+				91D40EA224C0C27C00E5888E /* Identifiable.swift in Sources */,
+				91D40E7424C0C14800E5888E /* SignInBuilder.swift in Sources */,
+				91D40E9624C0C1AC00E5888E /* PresenterInterface.swift in Sources */,
+				91D40E4424C0BF8700E5888E /* CreatePlayerDTO.swift in Sources */,
+				91D40E4924C0BF8700E5888E /* QueryParameters.swift in Sources */,
+				91D40E8F24C0C16300E5888E /* Player.swift in Sources */,
+				91D40EA424C0C29600E5888E /* Localizable.swift in Sources */,
+				91D40E7F24C0C14800E5888E /* PlayersListInteractor.swift in Sources */,
+				91D40E8124C0C14800E5888E /* PlayersListInteractorInput.swift in Sources */,
+				91D40E7B24C0C14800E5888E /* PlayerListCell.swift in Sources */,
+				91D40E9D24C0C22300E5888E /* UITableView+Extensions.swift in Sources */,
+				91D40E4624C0BF8700E5888E /* PlayerService.swift in Sources */,
+				91D40E4724C0BF8700E5888E /* PlayerServiceImpl.swift in Sources */,
+				91D40E8024C0C14800E5888E /* PlayersListInteractorOutput.swift in Sources */,
+				91D40E9E24C0C22300E5888E /* UI+Extensions.swift in Sources */,
 				919FA10B24C0BC95004EEE15 /* AppDelegate.swift in Sources */,
-				919FA10D24C0BC95004EEE15 /* SceneDelegate.swift in Sources */,
+				91D40E7624C0C14800E5888E /* SignInViewController.swift in Sources */,
+				91D40E4824C0BF8700E5888E /* WebService.swift in Sources */,
+				91D40E9C24C0C22300E5888E /* Encodable+Extensions.swift in Sources */,
+				91D40E9524C0C1AC00E5888E /* UIStoryboardExtension.swift in Sources */,
+				91D40E4A24C0BF8700E5888E /* FirebaseWebService.swift in Sources */,
+				91D40E7E24C0C14800E5888E /* PlayersListModuleBuilder.swift in Sources */,
+				91D40E7D24C0C14800E5888E /* PlayersListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +620,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91D40E4B24C0C0E600E5888E /* HasInvocations.swift in Sources */,
 				919FA12224C0BC97004EEE15 /* KickerKillTests.swift in Sources */,
+				91D40E4C24C0C10000E5888E /* FakeEquatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,14 +637,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		919FA11024C0BC95004EEE15 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				919FA11124C0BC95004EEE15 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		919FA11524C0BC97004EEE15 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -360,16 +764,18 @@
 		};
 		919FA12724C0BC97004EEE15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3185238AA1917019A29AC6CA /* Pods-KickerKill.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MG2UCY5382;
 				INFOPLIST_FILE = KickerKill/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tntstudios.com.br.KickerKill;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.tntstudios.KickerKill;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -378,16 +784,18 @@
 		};
 		919FA12824C0BC97004EEE15 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 920AC06EBCE24F0C0161A1B4 /* Pods-KickerKill.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MG2UCY5382;
 				INFOPLIST_FILE = KickerKill/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tntstudios.com.br.KickerKill;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.tntstudios.KickerKill;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -396,13 +804,14 @@
 		};
 		919FA12A24C0BC97004EEE15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CB76173BA80BE83E893A348 /* Pods-KickerKillTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MG2UCY5382;
 				INFOPLIST_FILE = KickerKillTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -418,13 +827,14 @@
 		};
 		919FA12B24C0BC97004EEE15 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5372C891215B43F2A4FCE009 /* Pods-KickerKillTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MG2UCY5382;
 				INFOPLIST_FILE = KickerKillTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
