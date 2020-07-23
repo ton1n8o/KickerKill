@@ -8,8 +8,8 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
     private var recordsPerPage = 10
     private var firstPage = false
 
-    private var team1: Team? = Team(player1: nil, player2: nil)
-    private var team2: Team? = Team(player1: nil, player2: nil)
+    private var team1: Team = Team(player1: nil, player2: nil)
+    private var team2: Team = Team(player1: nil, player2: nil)
 
     // MARK: - PlayersListViewOutput
     
@@ -18,34 +18,39 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
     }
 
     func didSelectPlayer(_ player: Player) {
-
-        if team1?.player1 == nil {
-            team1?.player1 = player
-        } else if team2?.player1 == nil {
-            team2?.player1 = player
-        } else if team1?.player2 == nil {
-            team1?.player2 = player
+        
+        guard !(team1.isFull && team2.isFull) else { return }
+        guard !team1.hasPlayer(player) && !team2.hasPlayer(player) else { return }
+        
+        if team1.player1 == nil {
+            team1.player1 = player
+        } else if team2.player1 == nil {
+            team2.player1 = player
+        } else if team1.player2 == nil {
+            team1.player2 = player
         } else {
-            team2?.player2 = player
+            team2.player2 = player
         }
-
-        view?.showInitials(team1: team1?.initials ?? (nil, nil), team2: team2?.initials ?? (nil, nil))
+        
+        view?.showInitials(team1: team1.initials,
+                           team2: team2.initials)
     }
 
     func removePlayer(at: PlayerPosition) {
 
         switch at {
         case .firstPlayer:
-            team1?.player1 = nil
+            team1.player1 = nil
         case .secondPlayer:
-            team2?.player1 = nil
+            team2.player1 = nil
         case .thirdPlayer:
-            team1?.player2 = nil
+            team1.player2 = nil
         case .forthPlayer:
-            team2?.player2 = nil
+            team2.player2 = nil
         }
 
-        view?.showInitials(team1: team1?.initials ?? (nil, nil), team2: team2?.initials ?? (nil, nil))
+        view?.showInitials(team1: team1.initials,
+                           team2: team2.initials)
     }
     
     // MARK: - PlayersListInteractorOutput

@@ -101,6 +101,60 @@ final class PlayersListPresenterTests: XCTestCase {
                                .showInitials(team1: ("M", "R"), team2: ("P", "C"))])
     }
 
+    func test_DidSelectPlayer_More_Than_Four_Players() {
+
+        // Arrange
+        let players = [Player(id: "id", name: "Marco", email: "email@email.com"),
+                       Player(id: "id2", name: "Pedro", email: "email@email.com"),
+                       Player(id: "id3", name: "Rodrigo", email: "email@email.com"),
+                       Player(id: "id4", name: "Carlos", email: "email@email.com"),
+                       Player(id: "id5", name: "Joao", email: "email@email.com")
+        ]
+
+        // Act
+        players.forEach {
+            sut.didSelectPlayer($0)
+        }
+
+        // Assert
+        view.checkInvocations([.showInitials(team1: ("M", nil), team2: (nil, nil)),
+                               .showInitials(team1: ("M", nil), team2: ("P", nil)),
+                               .showInitials(team1: ("M", "R"), team2: ("P", nil)),
+                               .showInitials(team1: ("M", "R"), team2: ("P", "C"))])
+    }
+
+    func test_When_Player_Added_Dont_Add_Again() {
+
+        // Arrange
+        let player = Player(id: "id", name: "Marco Souza", email: "email@email.com")
+
+        // Act
+        sut.didSelectPlayer(player)
+        sut.didSelectPlayer(player) // would be added to team2
+
+        // Assert
+        view.checkInvocations([.showInitials(team1: ("M", nil), team2: (nil, nil))])
+
+    }
+
+    func test_When_Player_Added_Dont_Add_Again_To_Second_Team() {
+
+        // Arrange
+        let player1 = Player(id: "id", name: "Marco Souza", email: "email@email.com")
+        let player2 = Player(id: "id_2", name: "Souza F", email: "email@email.com")
+
+        // Act
+        sut.didSelectPlayer(player1)
+        sut.didSelectPlayer(player2)
+
+        sut.didSelectPlayer(player2) // would be added to team1
+
+        // Assert
+        view.checkInvocations([.showInitials(team1: ("M", nil), team2: (nil, nil)),
+                               .showInitials(team1: ("M", nil), team2: ("S", nil))])
+
+    }
+
     func test_Remove_Players() {
 
         // Arrange
