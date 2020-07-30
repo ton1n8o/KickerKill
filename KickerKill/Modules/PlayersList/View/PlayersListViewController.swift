@@ -71,6 +71,10 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
 
     // MARK: PlayersListViewInput
 
+    func startGame(enabled: Bool) {
+        startGameButton.isEnabled = enabled
+    }
+
     func showPlayers(_ players: [Player]) {
         self.players = players
         tableView.reloadData()

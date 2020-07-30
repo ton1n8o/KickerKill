@@ -16,6 +16,10 @@ struct Team {
         return player1 != nil && player2 != nil
     }
 
+    var hasOnePlayer: Bool {
+        return [player1, player2].compactMap { $0 }.count == 1
+    }
+
     func hasPlayer(_ player: Player) -> Bool {
         return player1 == player || player2 == player
     }
