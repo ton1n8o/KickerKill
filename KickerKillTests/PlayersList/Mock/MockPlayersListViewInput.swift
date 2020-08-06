@@ -7,6 +7,7 @@ final class MockPlayersListViewInput: PlayersListViewInput, HasInvocations {
     enum Invocation: FakeEquatable {
         case showInitials(team1: (String?, String?), team2: (String?, String?))
         case showError(PlayerViewErrors)
+        case startGame(enabled: Bool)
     }
 
     var invocations: [Invocation] = []
@@ -24,4 +25,7 @@ final class MockPlayersListViewInput: PlayersListViewInput, HasInvocations {
         invocations.append(.showError(error))
     }
 
+    func startGame(enabled: Bool) {
+        invocations.append(.startGame(enabled: enabled))
+    }
 }

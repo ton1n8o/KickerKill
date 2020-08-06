@@ -31,9 +31,19 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
         } else {
             team2.player2 = player
         }
-        
+
         view?.showInitials(team1: team1.initials,
                            team2: team2.initials)
+
+        view?.startGame(enabled: enableStartGame)
+    }
+
+    private var enableStartGame: Bool {
+
+        let twoPlayersEach = team2.isFull && team1.isFull
+        let onePlayerEach = team1.hasOnePlayer && team2.hasOnePlayer
+
+        return onePlayerEach || twoPlayersEach
     }
 
     func removePlayer(at: PlayerPosition) {
@@ -51,6 +61,8 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
 
         view?.showInitials(team1: team1.initials,
                            team2: team2.initials)
+
+        view?.startGame(enabled: enableStartGame)
     }
     
     // MARK: - PlayersListInteractorOutput

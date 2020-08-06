@@ -41,7 +41,8 @@ final class PlayersListPresenterTests: XCTestCase {
         sut.didSelectPlayer(player)
 
         // Assert
-        view.checkInvocations([.showInitials(team1: ("M", nil), team2: (nil, nil))])
+        view.checkInvocations([.showInitials(team1: ("M", nil), team2: (nil, nil)),
+                               .startGame(enabled: false)])
     }
 
     func test_DidSelectPlayer_Two_Players() {
@@ -58,7 +59,9 @@ final class PlayersListPresenterTests: XCTestCase {
 
         // Assert
         view.checkInvocations([.showInitials(team1: ("M", nil), team2: (nil, nil)),
-                               .showInitials(team1: ("M", nil), team2: ("P", nil))])
+                               .startGame(enabled: false),
+                               .showInitials(team1: ("M", nil), team2: ("P", nil)),
+                               .startGame(enabled: true)])
     }
 
     func test_DidSelectPlayer_Three_Players() {
@@ -76,8 +79,11 @@ final class PlayersListPresenterTests: XCTestCase {
 
         // Assert
         view.checkInvocations([.showInitials(team1: ("M", nil), team2: (nil, nil)),
+                               .startGame(enabled: false),
                                .showInitials(team1: ("M", nil), team2: ("P", nil)),
-                               .showInitials(team1: ("M", "R"), team2: ("P", nil))])
+                               .startGame(enabled: true),
+                               .showInitials(team1: ("M", "R"), team2: ("P", nil)),
+                               .startGame(enabled: false)])
     }
 
     func test_DidSelectPlayer_Four_Players() {
@@ -96,9 +102,13 @@ final class PlayersListPresenterTests: XCTestCase {
 
         // Assert
         view.checkInvocations([.showInitials(team1: ("M", nil), team2: (nil, nil)),
+                               .startGame(enabled: false),
                                .showInitials(team1: ("M", nil), team2: ("P", nil)),
+                               .startGame(enabled: true),
                                .showInitials(team1: ("M", "R"), team2: ("P", nil)),
-                               .showInitials(team1: ("M", "R"), team2: ("P", "C"))])
+                               .startGame(enabled: false),
+                               .showInitials(team1: ("M", "R"), team2: ("P", "C")),
+                               .startGame(enabled: true)])
     }
 
     func test_DidSelectPlayer_More_Than_Four_Players() {
@@ -118,9 +128,13 @@ final class PlayersListPresenterTests: XCTestCase {
 
         // Assert
         view.checkInvocations([.showInitials(team1: ("M", nil), team2: (nil, nil)),
+                               .startGame(enabled: false),
                                .showInitials(team1: ("M", nil), team2: ("P", nil)),
+                               .startGame(enabled: true),
                                .showInitials(team1: ("M", "R"), team2: ("P", nil)),
-                               .showInitials(team1: ("M", "R"), team2: ("P", "C"))])
+                               .startGame(enabled: false),
+                               .showInitials(team1: ("M", "R"), team2: ("P", "C")),
+                               .startGame(enabled: true)])
     }
 
     func test_When_Player_Added_Dont_Add_Again() {
@@ -133,7 +147,8 @@ final class PlayersListPresenterTests: XCTestCase {
         sut.didSelectPlayer(player) // would be added to team2
 
         // Assert
-        view.checkInvocations([.showInitials(team1: ("M", nil), team2: (nil, nil))])
+        view.checkInvocations([.showInitials(team1: ("M", nil), team2: (nil, nil)),
+                               .startGame(enabled: false)])
 
     }
 
@@ -151,7 +166,9 @@ final class PlayersListPresenterTests: XCTestCase {
 
         // Assert
         view.checkInvocations([.showInitials(team1: ("M", nil), team2: (nil, nil)),
-                               .showInitials(team1: ("M", nil), team2: ("S", nil))])
+                               .startGame(enabled: false),
+                               .showInitials(team1: ("M", nil), team2: ("S", nil)),
+                               .startGame(enabled: true)])
 
     }
 
@@ -176,8 +193,12 @@ final class PlayersListPresenterTests: XCTestCase {
 
         // Assert
         view.checkInvocations([.showInitials(team1: (nil, "R"), team2: ("P", "C")),
+                               .startGame(enabled: false),
                                .showInitials(team1: (nil, "R"), team2: (nil, "C")),
+                               .startGame(enabled: true),
                                .showInitials(team1: (nil, nil), team2: (nil, "C")),
-                               .showInitials(team1: (nil, nil), team2: (nil, nil))])
+                               .startGame(enabled: false),
+                               .showInitials(team1: (nil, nil), team2: (nil, nil)),
+                               .startGame(enabled: false)])
     }
 }
