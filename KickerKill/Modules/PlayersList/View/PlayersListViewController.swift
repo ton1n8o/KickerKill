@@ -71,28 +71,34 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
 
     // MARK: PlayersListViewInput
 
-    func startGame(enabled: Bool) {
-        startGameButton.isEnabled = enabled
-    }
-
     func showPlayers(_ players: [Player]) {
         self.players = players
         tableView.reloadData()
     }
 
-    func showInitials(team1: (String?, String?), team2: (String?, String?)) {
+    func updateWithDataModel(_ dataModel: PlayersListViewDataModel) {
 
-        player1Label.text = team1.0
-        showHidePlayerUI(playerView: playerView1, btnRemove: buttonRemovePlayer1, hide: team1.0 == nil)
+        startGameButton.isEnabled = dataModel.startGameEnabled
 
-        player3Label.text = team1.1
-        showHidePlayerUI(playerView: playerView3, btnRemove: buttonRemovePlayer3, hide: team1.1 == nil)
+        player1Label.text = dataModel.team1Initials.0
+        showHidePlayerUI(playerView: playerView1,
+                         btnRemove: buttonRemovePlayer1,
+                         hide: dataModel.team1Initials.0 == nil)
 
-        player2Label.text = team2.0
-        showHidePlayerUI(playerView: playerView2, btnRemove: buttonRemovePlayer2, hide: team2.0 == nil)
+        player3Label.text = dataModel.team1Initials.1
+        showHidePlayerUI(playerView: playerView3,
+                         btnRemove: buttonRemovePlayer3,
+                         hide: dataModel.team1Initials.1 == nil)
 
-        player4Label.text = team2.1
-        showHidePlayerUI(playerView: playerView4, btnRemove: buttonRemovePlayer4, hide: team2.1 == nil)
+        player2Label.text = dataModel.team2Initials.0
+        showHidePlayerUI(playerView: playerView2,
+                         btnRemove: buttonRemovePlayer2,
+                         hide: dataModel.team2Initials.0 == nil)
+
+        player4Label.text = dataModel.team2Initials.1
+        showHidePlayerUI(playerView: playerView4,
+                         btnRemove: buttonRemovePlayer4,
+                         hide: dataModel.team2Initials.1 == nil)
     }
 
     private func showHidePlayerUI(playerView: UIView, btnRemove: UIButton, hide: Bool) {

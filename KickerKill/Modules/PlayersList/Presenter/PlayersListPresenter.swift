@@ -32,10 +32,16 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
             team2.player2 = player
         }
 
-        view?.showInitials(team1: team1.initials,
-                           team2: team2.initials)
+        view?.updateWithDataModel(viewDataModel)
+    }
 
-        view?.startGame(enabled: enableStartGame)
+    private var viewDataModel: PlayersListViewDataModel {
+
+        return PlayersListViewDataModel(
+            team1Initials: team1.initials,
+            team2Initials: team2.initials,
+            startGameEnabled: enableStartGame
+        )
     }
 
     private var enableStartGame: Bool {
@@ -59,10 +65,7 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
             team2.player2 = nil
         }
 
-        view?.showInitials(team1: team1.initials,
-                           team2: team2.initials)
-
-        view?.startGame(enabled: enableStartGame)
+        view?.updateWithDataModel(viewDataModel)
     }
     
     // MARK: - PlayersListInteractorOutput

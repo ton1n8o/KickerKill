@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7C48073B5BFACA30953057DC /* Pods_KickerKillTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD803936657EA73B7410F71 /* Pods_KickerKillTests.framework */; };
+		910C6FFD24DC74AE0071919F /* PlayersListViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910C6FFC24DC74AE0071919F /* PlayersListViewDataModel.swift */; };
 		919FA10B24C0BC95004EEE15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919FA10A24C0BC95004EEE15 /* AppDelegate.swift */; };
 		919FA11424C0BC97004EEE15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 919FA11324C0BC97004EEE15 /* Assets.xcassets */; };
 		919FA11724C0BC97004EEE15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 919FA11524C0BC97004EEE15 /* LaunchScreen.storyboard */; };
@@ -77,6 +78,7 @@
 		5372C891215B43F2A4FCE009 /* Pods-KickerKillTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKillTests.release.xcconfig"; path = "Target Support Files/Pods-KickerKillTests/Pods-KickerKillTests.release.xcconfig"; sourceTree = "<group>"; };
 		5CB76173BA80BE83E893A348 /* Pods-KickerKillTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKillTests.debug.xcconfig"; path = "Target Support Files/Pods-KickerKillTests/Pods-KickerKillTests.debug.xcconfig"; sourceTree = "<group>"; };
 		80AD92F50F804D576DEC7C1C /* Pods_KickerKill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KickerKill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		910C6FFC24DC74AE0071919F /* PlayersListViewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersListViewDataModel.swift; sourceTree = "<group>"; };
 		919FA10724C0BC95004EEE15 /* KickerKill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KickerKill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		919FA10A24C0BC95004EEE15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		919FA11324C0BC97004EEE15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -154,6 +156,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		910C6FFB24DC72330071919F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				910C6FFC24DC74AE0071919F /* PlayersListViewDataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		919FA0FE24C0BC95004EEE15 = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +379,7 @@
 		91D40E5324C0C14800E5888E /* PlayersList */ = {
 			isa = PBXGroup;
 			children = (
+				910C6FFB24DC72330071919F /* Models */,
 				91D40E5424C0C14800E5888E /* Presenter */,
 				91D40E5724C0C14800E5888E /* PlayersListInterfaces.swift */,
 				91D40E5824C0C14800E5888E /* View */,
@@ -723,6 +734,7 @@
 				91D40E9E24C0C22300E5888E /* UI+Extensions.swift in Sources */,
 				919FA10B24C0BC95004EEE15 /* AppDelegate.swift in Sources */,
 				91D40E7624C0C14800E5888E /* SignInViewController.swift in Sources */,
+				910C6FFD24DC74AE0071919F /* PlayersListViewDataModel.swift in Sources */,
 				91D40E4824C0BF8700E5888E /* WebService.swift in Sources */,
 				91D40E9C24C0C22300E5888E /* Encodable+Extensions.swift in Sources */,
 				91D40E9524C0C1AC00E5888E /* UIStoryboardExtension.swift in Sources */,

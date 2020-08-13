@@ -36,13 +36,15 @@ final class PlayersListPresenterTests: XCTestCase {
 
         // Arrange
         let player = Player(id: "id", name: "Marco Souza", email: "email@email.com")
+        let expectedModel = PlayersListViewDataModel(team1Initials: ("M", nil),
+                                                     team2Initials: (nil, nil),
+                                                     startGameEnabled: false)
 
         // Act
         sut.didSelectPlayer(player)
 
         // Assert
-        view.checkInvocations([.showInitials(team1: ("M", nil), team2: (nil, nil)),
-                               .startGame(enabled: false)])
+        view.checkInvocations([.updateWithDataModel(expectedModel)])
     }
 
     func test_DidSelectPlayer_Two_Players() {
@@ -51,6 +53,16 @@ final class PlayersListPresenterTests: XCTestCase {
         let players = [Player(id: "id", name: "Marco", email: "email@email.com"),
                        Player(id: "id2", name: "Pedro", email: "email@email.com")
         ]
+        let expectedModel1 = PlayersListViewDataModel(
+            team1Initials: ("M", nil),
+            team2Initials: (nil, nil),
+            startGameEnabled: false
+        )
+        let expectedModel2 = PlayersListViewDataModel(
+            team1Initials: ("M", nil),
+            team2Initials: ("P", nil),
+            startGameEnabled: true
+        )
 
         // Act
         players.forEach {
@@ -58,10 +70,8 @@ final class PlayersListPresenterTests: XCTestCase {
         }
 
         // Assert
-        view.checkInvocations([.showInitials(team1: ("M", nil), team2: (nil, nil)),
-                               .startGame(enabled: false),
-                               .showInitials(team1: ("M", nil), team2: ("P", nil)),
-                               .startGame(enabled: true)])
+        view.checkInvocations([.updateWithDataModel(expectedModel1),
+                               .updateWithDataModel(expectedModel2)])
     }
 
     func test_DidSelectPlayer_Three_Players() {
@@ -71,6 +81,21 @@ final class PlayersListPresenterTests: XCTestCase {
                        Player(id: "id2", name: "Pedro", email: "email@email.com"),
                        Player(id: "id3", name: "Rodrigo", email: "email@email.com")
         ]
+        let expectedModel1 = PlayersListViewDataModel(
+            team1Initials: ("M", nil),
+            team2Initials: (nil, nil),
+            startGameEnabled: false
+        )
+        let expectedModel2 = PlayersListViewDataModel(
+            team1Initials: ("M", nil),
+            team2Initials: ("P", nil),
+            startGameEnabled: true
+        )
+        let expectedModel3 = PlayersListViewDataModel(
+            team1Initials: ("M", "R"),
+            team2Initials: ("P", nil),
+            startGameEnabled: false
+        )
 
         // Act
         players.forEach {
@@ -78,12 +103,9 @@ final class PlayersListPresenterTests: XCTestCase {
         }
 
         // Assert
-        view.checkInvocations([.showInitials(team1: ("M", nil), team2: (nil, nil)),
-                               .startGame(enabled: false),
-                               .showInitials(team1: ("M", nil), team2: ("P", nil)),
-                               .startGame(enabled: true),
-                               .showInitials(team1: ("M", "R"), team2: ("P", nil)),
-                               .startGame(enabled: false)])
+        view.checkInvocations([.updateWithDataModel(expectedModel1),
+                               .updateWithDataModel(expectedModel2),
+                               .updateWithDataModel(expectedModel3)])
     }
 
     func test_DidSelectPlayer_Four_Players() {
@@ -94,6 +116,26 @@ final class PlayersListPresenterTests: XCTestCase {
                        Player(id: "id3", name: "Rodrigo", email: "email@email.com"),
                        Player(id: "id4", name: "Carlos", email: "email@email.com")
         ]
+        let expectedModel1 = PlayersListViewDataModel(
+            team1Initials: ("M", nil),
+            team2Initials: (nil, nil),
+            startGameEnabled: false
+        )
+        let expectedModel2 = PlayersListViewDataModel(
+            team1Initials: ("M", nil),
+            team2Initials: ("P", nil),
+            startGameEnabled: true
+        )
+        let expectedModel3 = PlayersListViewDataModel(
+            team1Initials: ("M", "R"),
+            team2Initials: ("P", nil),
+            startGameEnabled: false
+        )
+        let expectedModel4 = PlayersListViewDataModel(
+            team1Initials: ("M", "R"),
+            team2Initials: ("P", "C"),
+            startGameEnabled: true
+        )
 
         // Act
         players.forEach {
@@ -101,14 +143,10 @@ final class PlayersListPresenterTests: XCTestCase {
         }
 
         // Assert
-        view.checkInvocations([.showInitials(team1: ("M", nil), team2: (nil, nil)),
-                               .startGame(enabled: false),
-                               .showInitials(team1: ("M", nil), team2: ("P", nil)),
-                               .startGame(enabled: true),
-                               .showInitials(team1: ("M", "R"), team2: ("P", nil)),
-                               .startGame(enabled: false),
-                               .showInitials(team1: ("M", "R"), team2: ("P", "C")),
-                               .startGame(enabled: true)])
+        view.checkInvocations([.updateWithDataModel(expectedModel1),
+                               .updateWithDataModel(expectedModel2),
+                               .updateWithDataModel(expectedModel3),
+                               .updateWithDataModel(expectedModel4)])
     }
 
     func test_DidSelectPlayer_More_Than_Four_Players() {
@@ -120,6 +158,26 @@ final class PlayersListPresenterTests: XCTestCase {
                        Player(id: "id4", name: "Carlos", email: "email@email.com"),
                        Player(id: "id5", name: "Joao", email: "email@email.com")
         ]
+        let expectedModel1 = PlayersListViewDataModel(
+            team1Initials: ("M", nil),
+            team2Initials: (nil, nil),
+            startGameEnabled: false
+        )
+        let expectedModel2 = PlayersListViewDataModel(
+            team1Initials: ("M", nil),
+            team2Initials: ("P", nil),
+            startGameEnabled: true
+        )
+        let expectedModel3 = PlayersListViewDataModel(
+            team1Initials: ("M", "R"),
+            team2Initials: ("P", nil),
+            startGameEnabled: false
+        )
+        let expectedModel4 = PlayersListViewDataModel(
+            team1Initials: ("M", "R"),
+            team2Initials: ("P", "C"),
+            startGameEnabled: true
+        )
 
         // Act
         players.forEach {
@@ -127,28 +185,28 @@ final class PlayersListPresenterTests: XCTestCase {
         }
 
         // Assert
-        view.checkInvocations([.showInitials(team1: ("M", nil), team2: (nil, nil)),
-                               .startGame(enabled: false),
-                               .showInitials(team1: ("M", nil), team2: ("P", nil)),
-                               .startGame(enabled: true),
-                               .showInitials(team1: ("M", "R"), team2: ("P", nil)),
-                               .startGame(enabled: false),
-                               .showInitials(team1: ("M", "R"), team2: ("P", "C")),
-                               .startGame(enabled: true)])
+        view.checkInvocations([.updateWithDataModel(expectedModel1),
+                               .updateWithDataModel(expectedModel2),
+                               .updateWithDataModel(expectedModel3),
+                               .updateWithDataModel(expectedModel4)])
     }
 
     func test_When_Player_Added_Dont_Add_Again() {
 
         // Arrange
         let player = Player(id: "id", name: "Marco Souza", email: "email@email.com")
+        let expectedModel1 = PlayersListViewDataModel(
+            team1Initials: ("M", nil),
+            team2Initials: (nil, nil),
+            startGameEnabled: false
+        )
 
         // Act
         sut.didSelectPlayer(player)
         sut.didSelectPlayer(player) // would be added to team2
 
         // Assert
-        view.checkInvocations([.showInitials(team1: ("M", nil), team2: (nil, nil)),
-                               .startGame(enabled: false)])
+        view.checkInvocations([.updateWithDataModel(expectedModel1)])
 
     }
 
@@ -158,6 +216,17 @@ final class PlayersListPresenterTests: XCTestCase {
         let player1 = Player(id: "id", name: "Marco Souza", email: "email@email.com")
         let player2 = Player(id: "id_2", name: "Souza F", email: "email@email.com")
 
+        let expectedModel1 = PlayersListViewDataModel(
+            team1Initials: ("M", nil),
+            team2Initials: (nil, nil),
+            startGameEnabled: false
+        )
+        let expectedModel2 = PlayersListViewDataModel(
+            team1Initials: ("M", nil),
+            team2Initials: ("S", nil),
+            startGameEnabled: true
+        )
+
         // Act
         sut.didSelectPlayer(player1)
         sut.didSelectPlayer(player2)
@@ -165,10 +234,8 @@ final class PlayersListPresenterTests: XCTestCase {
         sut.didSelectPlayer(player2) // would be added to team1
 
         // Assert
-        view.checkInvocations([.showInitials(team1: ("M", nil), team2: (nil, nil)),
-                               .startGame(enabled: false),
-                               .showInitials(team1: ("M", nil), team2: ("S", nil)),
-                               .startGame(enabled: true)])
+        view.checkInvocations([.updateWithDataModel(expectedModel1),
+                               .updateWithDataModel(expectedModel2)])
 
     }
 
@@ -180,6 +247,28 @@ final class PlayersListPresenterTests: XCTestCase {
                        Player(id: "id3", name: "Rodrigo", email: "email@email.com"),
                        Player(id: "id4", name: "Carlos", email: "email@email.com")
         ]
+
+        let expectedModel1 = PlayersListViewDataModel(
+            team1Initials: (nil, "R"),
+            team2Initials: ("P", "C"),
+            startGameEnabled: false
+        )
+        let expectedModel2 = PlayersListViewDataModel(
+            team1Initials: (nil, "R"),
+            team2Initials: (nil, "C"),
+            startGameEnabled: true
+        )
+        let expectedModel3 = PlayersListViewDataModel(
+            team1Initials: (nil, nil),
+            team2Initials: (nil, "C"),
+            startGameEnabled: false
+        )
+        let expectedModel4 = PlayersListViewDataModel(
+            team1Initials: (nil, nil),
+            team2Initials: (nil, nil),
+            startGameEnabled: false
+        )
+
         players.forEach {
             sut.didSelectPlayer($0)
         }
@@ -192,13 +281,9 @@ final class PlayersListPresenterTests: XCTestCase {
         sut.removePlayer(at: .forthPlayer)
 
         // Assert
-        view.checkInvocations([.showInitials(team1: (nil, "R"), team2: ("P", "C")),
-                               .startGame(enabled: false),
-                               .showInitials(team1: (nil, "R"), team2: (nil, "C")),
-                               .startGame(enabled: true),
-                               .showInitials(team1: (nil, nil), team2: (nil, "C")),
-                               .startGame(enabled: false),
-                               .showInitials(team1: (nil, nil), team2: (nil, nil)),
-                               .startGame(enabled: false)])
+        view.checkInvocations([.updateWithDataModel(expectedModel1),
+                               .updateWithDataModel(expectedModel2),
+                               .updateWithDataModel(expectedModel3),
+                               .updateWithDataModel(expectedModel4)])
     }
 }
