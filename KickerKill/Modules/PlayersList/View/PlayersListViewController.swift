@@ -32,6 +32,8 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
     @IBOutlet private var buttonRemovePlayer2: UIButton!
     @IBOutlet private var buttonRemovePlayer3: UIButton!
     @IBOutlet private var buttonRemovePlayer4: UIButton!
+    @IBOutlet private weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet private var gameTypeInputText: UITextField!
 
     var output: PlayersListViewOutput!
     private var players: [Player] = []
@@ -41,9 +43,41 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupKeyBoardDismissButton()
         tableView.registerCell(PlayerListCell.self)
         output.viewIsReady()
         roundAndHideElements()
+        subscribeToKeyboardNotifications()
+    }
+
+    private func setupKeyBoardDismissButton() {
+
+        let width = UIScreen.main.bounds.width
+        let frame = CGRect(x: 0, y: 0, width: width, height: 50)
+
+        let doneToolbar = UIToolbar(frame: frame)
+        doneToolbar.barStyle = .default
+
+        var flexSpace: UIBarButtonItem {
+            UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                            target: nil,
+                            action: nil)
+        }
+
+        var done: UIBarButtonItem {
+            UIBarButtonItem(title: "Done", style: .done,
+                            target: self,
+                            action: #selector(doneButtonAction))
+        }
+
+        doneToolbar.items = [flexSpace, done]
+        doneToolbar.sizeToFit()
+        gameTypeInputText.inputAccessoryView = doneToolbar
+    }
+
+    @objc
+    private func doneButtonAction() {
+        gameTypeInputText.resignFirstResponder()
     }
 
     private func roundAndHideElements() {
@@ -59,6 +93,46 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
             $0?.isHidden = true
             $0?.addTarget(self, action: #selector(removePlayer), for: .touchUpInside)
         }
+    }
+
+    private func subscribeToKeyboardNotifications() {
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
+    }
+
+    @objc func keyboardWillShow(_ notification: Notification) {
+        bottomConstraint.constant = getKeyboardHeight(notification)
+    }
+
+    @objc func keyboardWillHide(_ notification: Notification) {
+        bottomConstraint.constant = 0
+    }
+
+    private func getKeyboardHeight(_ notification: Notification) -> CGFloat {
+
+        let window = UIApplication.shared.keyWindow
+        let bottomPadding = window?.safeAreaInsets.bottom
+
+        let userInfo = notification.userInfo
+        let keyboardSize = userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue // of CGRect
+        return keyboardSize.cgRectValue.height - (bottomPadding ?? 0)
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        unsubscribeFromKeyboardNotifications()
+    }
+
+    private func unsubscribeFromKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     @objc private func removePlayer(sender: UIButton) {

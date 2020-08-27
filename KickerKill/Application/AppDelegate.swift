@@ -35,6 +35,7 @@ private extension AppDelegate {
         window?.makeKeyAndVisible()
 
         guard let user = firebaseUser else {
+            print("\(#function): >>> no Firebase user")
             return
         }
 
