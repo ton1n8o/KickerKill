@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7C48073B5BFACA30953057DC /* Pods_KickerKillTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD803936657EA73B7410F71 /* Pods_KickerKillTests.framework */; };
 		910C6FFD24DC74AE0071919F /* PlayersListViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910C6FFC24DC74AE0071919F /* PlayersListViewDataModel.swift */; };
+		914EAECD24E5AB6B00553724 /* SnapshotTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914EAECC24E5AB6B00553724 /* SnapshotTestCase.swift */; };
 		919FA10B24C0BC95004EEE15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919FA10A24C0BC95004EEE15 /* AppDelegate.swift */; };
 		919FA11424C0BC97004EEE15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 919FA11324C0BC97004EEE15 /* Assets.xcassets */; };
 		919FA11724C0BC97004EEE15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 919FA11524C0BC97004EEE15 /* LaunchScreen.storyboard */; };
@@ -79,6 +80,7 @@
 		5CB76173BA80BE83E893A348 /* Pods-KickerKillTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKillTests.debug.xcconfig"; path = "Target Support Files/Pods-KickerKillTests/Pods-KickerKillTests.debug.xcconfig"; sourceTree = "<group>"; };
 		80AD92F50F804D576DEC7C1C /* Pods_KickerKill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KickerKill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		910C6FFC24DC74AE0071919F /* PlayersListViewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersListViewDataModel.swift; sourceTree = "<group>"; };
+		914EAECC24E5AB6B00553724 /* SnapshotTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTestCase.swift; sourceTree = "<group>"; };
 		919FA10724C0BC95004EEE15 /* KickerKill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KickerKill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		919FA10A24C0BC95004EEE15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		919FA11324C0BC97004EEE15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				91CBABD424C0CF9C00D64578 /* PlayersList */,
 				919FA12324C0BC97004EEE15 /* Info.plist */,
 				91CBABF624C0CFBA00D64578 /* Test+Extensions.swift */,
+				914EAECC24E5AB6B00553724 /* SnapshotTestCase.swift */,
 			);
 			path = KickerKillTests;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				919FA11924C0BC97004EEE15 /* Sources */,
 				919FA11A24C0BC97004EEE15 /* Frameworks */,
 				919FA11B24C0BC97004EEE15 /* Resources */,
+				BA93BA21793C21C1B7ABD09B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -704,6 +708,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KickerKill/Pods-KickerKill-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BA93BA21793C21C1B7ABD09B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KickerKillTests/Pods-KickerKillTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KickerKillTests/Pods-KickerKillTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KickerKillTests/Pods-KickerKillTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -761,6 +782,7 @@
 				91CBABE624C0CF9C00D64578 /* MockPlayersListViewInput.swift in Sources */,
 				91D40E4C24C0C10000E5888E /* FakeEquatable.swift in Sources */,
 				91CBABEA24C0CF9C00D64578 /* PlayersListPresenterTests.swift in Sources */,
+				914EAECD24E5AB6B00553724 /* SnapshotTestCase.swift in Sources */,
 				91CBABEB24C0CF9C00D64578 /* PlayersListViewControllerTests.swift in Sources */,
 				91CBABEC24C0CF9C00D64578 /* PlayersListModuleBuilderTests.swift in Sources */,
 			);
