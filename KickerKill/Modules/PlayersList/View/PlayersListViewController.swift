@@ -13,6 +13,11 @@ enum PlayerPosition: Int, CaseIterable {
     case forthPlayer
 }
 
+enum GameType {
+    case timeBased(minutes: Int)
+    case goalBased(totalGoals: Int)
+}
+
 final class PlayersListViewController: UIViewController, PlayersListViewInput {
 
     @IBOutlet private var tableView: UITableView!
@@ -34,6 +39,8 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
     @IBOutlet private var buttonRemovePlayer4: UIButton!
     @IBOutlet private weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet private var gameTypeInputText: UITextField!
+    @IBOutlet private var gameTypeSwitch: UISwitch!
+    @IBOutlet weak var gameTypeLabel: UILabel!
 
     var output: PlayersListViewOutput!
     private var players: [Player] = []
@@ -43,11 +50,17 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupGameTypeInputText()
         setupKeyBoardDismissButton()
         tableView.registerCell(PlayerListCell.self)
         output.viewIsReady()
         roundAndHideElements()
         subscribeToKeyboardNotifications()
+    }
+
+    private func setupGameTypeInputText(){
+        gameTypeInputText.text = "10"
+        gameTypeInputText.delegate = self
     }
 
     private func setupKeyBoardDismissButton() {
@@ -183,6 +196,15 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
     func showError(error: PlayerViewErrors) {
         // podemos mudar a cor da tableView e desabilitala: tooManyPlayers
     }
+
+    // MARK: - Actions
+
+    @IBAction func didChangeGameType(_ sender: UISwitch) {
+        gameTypeLabel.text = "Time based"
+        if !sender.isOn {
+            gameTypeLabel.text = "Goal based"
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -206,5 +228,20 @@ extension PlayersListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         output.didSelectPlayer(players[indexPath.row])
+    }
+}
+
+// MARK: - UITextFieldDelegate
+extension PlayersListViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let textValue = textField.text, let value = Int(textValue) else {
+            //TODO: show error message
+            return
+        }
+
+        let gameType: GameType = gameTypeSwitch.isOn ? .timeBased(minutes: value) : .goalBased(totalGoals: value)
+        print(value)
+        print(gameType)
+        output.didSelectGameType(gameType)
     }
 }

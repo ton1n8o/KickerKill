@@ -11,6 +11,8 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
     private var team1: Team = Team(player1: nil, player2: nil)
     private var team2: Team = Team(player1: nil, player2: nil)
 
+    private var gameType: GameType?
+
     // MARK: - PlayersListViewOutput
     
     func viewIsReady() {
@@ -66,6 +68,11 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
         }
 
         view?.updateWithDataModel(viewDataModel)
+    }
+
+    func didSelectGameType(_ gameType: GameType){
+        self.gameType = gameType
+        //TODO: associate this property with the start button enable/desable state
     }
     
     // MARK: - PlayersListInteractorOutput
