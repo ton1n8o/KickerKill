@@ -13,6 +13,11 @@ enum PlayerPosition: Int, CaseIterable {
     case forthPlayer
 }
 
+enum GameType {
+    case timeBased(minutes: Int)
+    case goalBased(totalGoals: Int)
+}
+
 final class PlayersListViewController: UIViewController, PlayersListViewInput {
 
     @IBOutlet private var tableView: UITableView!
@@ -32,6 +37,10 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
     @IBOutlet private var buttonRemovePlayer2: UIButton!
     @IBOutlet private var buttonRemovePlayer3: UIButton!
     @IBOutlet private var buttonRemovePlayer4: UIButton!
+    @IBOutlet private weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet private var gameTypeInputText: UITextField!
+    @IBOutlet private var gameTypeSwitch: UISwitch!
+    @IBOutlet weak var gameTypeLabel: UILabel!
 
     var output: PlayersListViewOutput!
     private var players: [Player] = []
@@ -41,9 +50,47 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupGameTypeInputText()
+        setupKeyBoardDismissButton()
         tableView.registerCell(PlayerListCell.self)
         output.viewIsReady()
         roundAndHideElements()
+        subscribeToKeyboardNotifications()
+    }
+
+    private func setupGameTypeInputText(){
+        gameTypeInputText.text = "10"
+        gameTypeInputText.delegate = self
+    }
+
+    private func setupKeyBoardDismissButton() {
+
+        let width = UIScreen.main.bounds.width
+        let frame = CGRect(x: 0, y: 0, width: width, height: 50)
+
+        let doneToolbar = UIToolbar(frame: frame)
+        doneToolbar.barStyle = .default
+
+        var flexSpace: UIBarButtonItem {
+            UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                            target: nil,
+                            action: nil)
+        }
+
+        var done: UIBarButtonItem {
+            UIBarButtonItem(title: "Done", style: .done,
+                            target: self,
+                            action: #selector(doneButtonAction))
+        }
+
+        doneToolbar.items = [flexSpace, done]
+        doneToolbar.sizeToFit()
+        gameTypeInputText.inputAccessoryView = doneToolbar
+    }
+
+    @objc
+    private func doneButtonAction() {
+        gameTypeInputText.resignFirstResponder()
     }
 
     private func roundAndHideElements() {
@@ -61,6 +108,46 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
         }
     }
 
+    private func subscribeToKeyboardNotifications() {
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
+    }
+
+    @objc func keyboardWillShow(_ notification: Notification) {
+        bottomConstraint.constant = getKeyboardHeight(notification)
+    }
+
+    @objc func keyboardWillHide(_ notification: Notification) {
+        bottomConstraint.constant = 0
+    }
+
+    private func getKeyboardHeight(_ notification: Notification) -> CGFloat {
+
+        let window = UIApplication.shared.keyWindow
+        let bottomPadding = window?.safeAreaInsets.bottom
+
+        let userInfo = notification.userInfo
+        let keyboardSize = userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue // of CGRect
+        return keyboardSize.cgRectValue.height - (bottomPadding ?? 0)
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        unsubscribeFromKeyboardNotifications()
+    }
+
+    private func unsubscribeFromKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
     @objc private func removePlayer(sender: UIButton) {
         guard let playerPosition = PlayerPosition(rawValue: sender.tag) else {
             assertionFailure("could not parse button tag into a PlayerPosition")
@@ -71,28 +158,34 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
 
     // MARK: PlayersListViewInput
 
-    func startGame(enabled: Bool) {
-        startGameButton.isEnabled = enabled
-    }
-
     func showPlayers(_ players: [Player]) {
         self.players = players
         tableView.reloadData()
     }
 
-    func showInitials(team1: (String?, String?), team2: (String?, String?)) {
+    func updateWithDataModel(_ dataModel: PlayersListViewDataModel) {
 
-        player1Label.text = team1.0
-        showHidePlayerUI(playerView: playerView1, btnRemove: buttonRemovePlayer1, hide: team1.0 == nil)
+        startGameButton.isEnabled = dataModel.startGameEnabled
 
-        player3Label.text = team1.1
-        showHidePlayerUI(playerView: playerView3, btnRemove: buttonRemovePlayer3, hide: team1.1 == nil)
+        player1Label.text = dataModel.team1Initials.0
+        showHidePlayerUI(playerView: playerView1,
+                         btnRemove: buttonRemovePlayer1,
+                         hide: dataModel.team1Initials.0 == nil)
 
-        player2Label.text = team2.0
-        showHidePlayerUI(playerView: playerView2, btnRemove: buttonRemovePlayer2, hide: team2.0 == nil)
+        player3Label.text = dataModel.team1Initials.1
+        showHidePlayerUI(playerView: playerView3,
+                         btnRemove: buttonRemovePlayer3,
+                         hide: dataModel.team1Initials.1 == nil)
 
-        player4Label.text = team2.1
-        showHidePlayerUI(playerView: playerView4, btnRemove: buttonRemovePlayer4, hide: team2.1 == nil)
+        player2Label.text = dataModel.team2Initials.0
+        showHidePlayerUI(playerView: playerView2,
+                         btnRemove: buttonRemovePlayer2,
+                         hide: dataModel.team2Initials.0 == nil)
+
+        player4Label.text = dataModel.team2Initials.1
+        showHidePlayerUI(playerView: playerView4,
+                         btnRemove: buttonRemovePlayer4,
+                         hide: dataModel.team2Initials.1 == nil)
     }
 
     private func showHidePlayerUI(playerView: UIView, btnRemove: UIButton, hide: Bool) {
@@ -102,6 +195,15 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
 
     func showError(error: PlayerViewErrors) {
         // podemos mudar a cor da tableView e desabilitala: tooManyPlayers
+    }
+
+    // MARK: - Actions
+
+    @IBAction func didChangeGameType(_ sender: UISwitch) {
+        gameTypeLabel.text = "Time based"
+        if !sender.isOn {
+            gameTypeLabel.text = "Goal based"
+        }
     }
 }
 
@@ -126,5 +228,20 @@ extension PlayersListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         output.didSelectPlayer(players[indexPath.row])
+    }
+}
+
+// MARK: - UITextFieldDelegate
+extension PlayersListViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let textValue = textField.text, let value = Int(textValue) else {
+            //TODO: show error message
+            return
+        }
+
+        let gameType: GameType = gameTypeSwitch.isOn ? .timeBased(minutes: value) : .goalBased(totalGoals: value)
+        print(value)
+        print(gameType)
+        output.didSelectGameType(gameType)
     }
 }

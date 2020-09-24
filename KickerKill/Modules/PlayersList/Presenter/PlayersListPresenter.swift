@@ -11,6 +11,8 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
     private var team1: Team = Team(player1: nil, player2: nil)
     private var team2: Team = Team(player1: nil, player2: nil)
 
+    private var gameType: GameType?
+
     // MARK: - PlayersListViewOutput
     
     func viewIsReady() {
@@ -32,10 +34,16 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
             team2.player2 = player
         }
 
-        view?.showInitials(team1: team1.initials,
-                           team2: team2.initials)
+        view?.updateWithDataModel(viewDataModel)
+    }
 
-        view?.startGame(enabled: enableStartGame)
+    private var viewDataModel: PlayersListViewDataModel {
+
+        return PlayersListViewDataModel(
+            team1Initials: team1.initials,
+            team2Initials: team2.initials,
+            startGameEnabled: enableStartGame
+        )
     }
 
     private var enableStartGame: Bool {
@@ -59,10 +67,12 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
             team2.player2 = nil
         }
 
-        view?.showInitials(team1: team1.initials,
-                           team2: team2.initials)
+        view?.updateWithDataModel(viewDataModel)
+    }
 
-        view?.startGame(enabled: enableStartGame)
+    func didSelectGameType(_ gameType: GameType){
+        self.gameType = gameType
+        //TODO: associate this property with the start button enable/desable state
     }
     
     // MARK: - PlayersListInteractorOutput

@@ -16,6 +16,7 @@ target 'KickerKill' do
   target 'KickerKillTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'iOSSnapshotTestCase'
   end
 
 end
