@@ -50,17 +50,14 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupGameTypeInputText()
+        gameTypeInputText.delegate = self
         setupKeyBoardDismissButton()
         tableView.registerCell(PlayerListCell.self)
+
         output.viewIsReady()
+
         roundAndHideElements()
         subscribeToKeyboardNotifications()
-    }
-
-    private func setupGameTypeInputText(){
-        gameTypeInputText.text = "10"
-        gameTypeInputText.delegate = self
     }
 
     private func setupKeyBoardDismissButton() {
@@ -197,6 +194,27 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
         // podemos mudar a cor da tableView e desabilitala: tooManyPlayers
     }
 
+    func updateGameType(_ gameType: GameType) {
+
+        let value: String
+        let timeBased: Bool
+
+        switch gameType {
+        case .goalBased(let goals):
+            value = "\(goals)"
+            timeBased = false
+
+        case .timeBased(let minutes):
+            value = "\(minutes)"
+            timeBased = true
+        }
+
+        gameTypeSwitch.setOn(timeBased, animated: true)
+        didChangeGameType(gameTypeSwitch)
+
+        gameTypeInputText.text = value
+    }
+
     // MARK: - Actions
 
     @IBAction func didChangeGameType(_ sender: UISwitch) {
@@ -232,9 +250,13 @@ extension PlayersListViewController: UITableViewDelegate {
 }
 
 // MARK: - UITextFieldDelegate
+
 extension PlayersListViewController: UITextFieldDelegate {
+
     func textFieldDidEndEditing(_ textField: UITextField) {
+
         guard let textValue = textField.text, let value = Int(textValue) else {
+            output.didSelectGameType(nil)
             //TODO: show error message
             return
         }

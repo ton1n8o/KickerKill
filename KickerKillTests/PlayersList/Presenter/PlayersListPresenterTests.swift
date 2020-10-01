@@ -286,4 +286,16 @@ final class PlayersListPresenterTests: XCTestCase {
                                .updateWithDataModel(expectedModel3),
                                .updateWithDataModel(expectedModel4)])
     }
+
+    func test_ViewIsReady_Updates_Default_GameType() {
+
+        // Arrange
+        let gameType: GameType = .goalBased(totalGoals: 5)
+
+        // Act
+        sut.viewIsReady()
+
+        // Assert
+        view.checkInvocations([.updateGameType(gameType)])
+    }
 }

@@ -50,4 +50,34 @@ final class SnapshotTestCase: FBSnapshotTestCase {
         FBSnapshotVerifyView(sut.view)
         FBSnapshotVerifyLayer(sut.view.layer)
     }
+
+    func test_UpdateGameType_With_GoalBased() {
+
+        let sut = loadViewController(
+            fromStoryBoard: "PlayersList",
+            andIdentifier: "PlayersListViewController") as! PlayersListViewController
+
+        sut.output = MockPlayersListViewOutput()
+        sut.loadViewIfNeeded()
+
+        sut.updateGameType(.goalBased(totalGoals: 8))
+
+        FBSnapshotVerifyView(sut.view)
+        FBSnapshotVerifyLayer(sut.view.layer)
+    }
+
+    func test_UpdateGameType_With_TimeBased() {
+
+        let sut = loadViewController(
+            fromStoryBoard: "PlayersList",
+            andIdentifier: "PlayersListViewController") as! PlayersListViewController
+
+        sut.output = MockPlayersListViewOutput()
+        sut.loadViewIfNeeded()
+
+        sut.updateGameType(.timeBased(minutes: 10))
+
+        FBSnapshotVerifyView(sut.view)
+        FBSnapshotVerifyLayer(sut.view.layer)
+    }
 }
