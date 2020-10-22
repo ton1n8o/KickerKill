@@ -7,6 +7,7 @@ final class MockPlayersListViewInput: PlayersListViewInput, HasInvocations {
     enum Invocation: FakeEquatable {
         case showError(PlayerViewErrors)
         case updateWithDataModel(PlayersListViewDataModel)
+        case updateGameType(GameType)
     }
 
     var invocations: [Invocation] = []
@@ -22,5 +23,9 @@ final class MockPlayersListViewInput: PlayersListViewInput, HasInvocations {
 
     func updateWithDataModel(_ dataModel: PlayersListViewDataModel) {
         invocations.append(.updateWithDataModel(dataModel))
+    }
+
+    func updateGameType(_ gameType: GameType) {
+        invocations.append(.updateGameType(gameType))
     }
 }

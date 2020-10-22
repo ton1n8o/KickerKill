@@ -50,4 +50,17 @@ final class PlayersListViewControllerTests: XCTestCase {
         output.checkInvocations([.removePlayer(.firstPlayer)])
     }
 
+    func test_DidChangeGameType_Updates_Presenter_GameType() {
+
+        // Arrange
+        sut.updateGameType(.goalBased(totalGoals: 5))
+        output.clearInvocations()
+
+        // Act
+        sut.didChangeGameType(UISwitch())
+
+        // Assert
+        output.checkInvocations([.didSelectGameType(.goalBased(totalGoals: 5))])
+    }
+
 }
