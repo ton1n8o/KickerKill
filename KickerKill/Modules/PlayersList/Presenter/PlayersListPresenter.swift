@@ -18,7 +18,8 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
     func viewIsReady() {
 
         interactor.fetchAllPlayers(limit: recordsPerPage, firstPage: firstPage)
-        view?.updateGameType(.goalBased(totalGoals: 5))
+        gameType = .goalBased(totalGoals: 5)
+        view?.updateWithDataModel(viewDataModel)
     }
 
     func didSelectPlayer(_ player: Player) {
@@ -44,7 +45,8 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
         return PlayersListViewDataModel(
             team1Initials: team1.initials,
             team2Initials: team2.initials,
-            startGameEnabled: enableStartGame
+            startGameEnabled: enableStartGame,
+            gameType: gameType
         )
     }
 
@@ -53,7 +55,7 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
         let twoPlayersEach = team2.isFull && team1.isFull
         let onePlayerEach = team1.hasOnePlayer && team2.hasOnePlayer
 
-        return onePlayerEach || twoPlayersEach
+        return (onePlayerEach || twoPlayersEach) && gameType != nil
     }
 
     func removePlayer(at: PlayerPosition) {
@@ -74,8 +76,7 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
 
     func didSelectGameType(_ gameType: GameType?) {
         self.gameType = gameType
-        //TODO: associate this property with the start button enable/desable state
-        view?.updateWithDataModel(viewDataModel) //TODO: be tested 😎
+        view?.updateWithDataModel(viewDataModel)
     }
     
     // MARK: - PlayersListInteractorOutput

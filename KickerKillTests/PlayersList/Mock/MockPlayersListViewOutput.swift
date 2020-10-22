@@ -7,6 +7,7 @@ final class MockPlayersListViewOutput: PlayersListViewOutput, HasInvocations {
     enum Invocation: FakeEquatable {
         case viewIsReady
         case removePlayer(PlayerPosition)
+        case didSelectGameType(GameType?)
     }
     var invocations: [Invocation] = []
 
@@ -25,6 +26,6 @@ final class MockPlayersListViewOutput: PlayersListViewOutput, HasInvocations {
     }
 
     func didSelectGameType(_ gameType: GameType?) {
-
+        invocations.append(.didSelectGameType(gameType))
     }
 }

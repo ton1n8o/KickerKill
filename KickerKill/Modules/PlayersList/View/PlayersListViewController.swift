@@ -13,11 +13,6 @@ enum PlayerPosition: Int, CaseIterable {
     case forthPlayer
 }
 
-enum GameType {
-    case timeBased(minutes: Int)
-    case goalBased(totalGoals: Int)
-}
-
 final class PlayersListViewController: UIViewController, PlayersListViewInput {
 
     @IBOutlet private var tableView: UITableView!
@@ -162,6 +157,8 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
 
     func updateWithDataModel(_ dataModel: PlayersListViewDataModel) {
 
+        print("\(#function): >>> \(dataModel)")
+
         startGameButton.isEnabled = dataModel.startGameEnabled
 
         player1Label.text = dataModel.team1Initials.0
@@ -183,6 +180,10 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
         showHidePlayerUI(playerView: playerView4,
                          btnRemove: buttonRemovePlayer4,
                          hide: dataModel.team2Initials.1 == nil)
+
+        if let gameType = dataModel.gameType {
+            updateGameType(gameType)
+        }
     }
 
     private func showHidePlayerUI(playerView: UIView, btnRemove: UIButton, hide: Bool) {
@@ -210,18 +211,33 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
         }
 
         gameTypeSwitch.setOn(timeBased, animated: true)
-        didChangeGameType(gameTypeSwitch)
-
+        updateGameTypeSwitch(gameTypeSwitch)
         gameTypeInputText.text = value
     }
 
     // MARK: - Actions
 
-    @IBAction func didChangeGameType(_ sender: UISwitch) {
+    private func updateGameTypeSwitch(_ sender: UISwitch) {
         gameTypeLabel.text = "Time based"
         if !sender.isOn {
             gameTypeLabel.text = "Goal based"
         }
+    }
+
+    @IBAction func didChangeGameType(_ sender: UISwitch) {
+        updateGameTypeSwitch(sender)
+        let gameType = gameTypeWith(gameTypeInputText)
+        output.didSelectGameType(gameType)
+    }
+
+    private func gameTypeWith(_ textField: UITextField) -> GameType? {
+
+        guard let textValue = textField.text, let value = Int(textValue) else {
+            return nil
+        }
+
+        return gameTypeSwitch.isOn ?
+            .timeBased(minutes: value) : .goalBased(totalGoals: value)
     }
 }
 
@@ -254,16 +270,6 @@ extension PlayersListViewController: UITableViewDelegate {
 extension PlayersListViewController: UITextFieldDelegate {
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-
-        guard let textValue = textField.text, let value = Int(textValue) else {
-            output.didSelectGameType(nil)
-            //TODO: show error message
-            return
-        }
-
-        let gameType: GameType = gameTypeSwitch.isOn ? .timeBased(minutes: value) : .goalBased(totalGoals: value)
-        print(value)
-        print(gameType)
-        output.didSelectGameType(gameType)
+        output.didSelectGameType(gameTypeWith(textField))
     }
 }

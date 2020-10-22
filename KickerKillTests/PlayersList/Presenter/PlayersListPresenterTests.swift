@@ -38,7 +38,8 @@ final class PlayersListPresenterTests: XCTestCase {
         let player = Player(id: "id", name: "Marco Souza", email: "email@email.com")
         let expectedModel = PlayersListViewDataModel(team1Initials: ("M", nil),
                                                      team2Initials: (nil, nil),
-                                                     startGameEnabled: false)
+                                                     startGameEnabled: false,
+                                                     gameType: nil)
 
         // Act
         sut.didSelectPlayer(player)
@@ -56,12 +57,14 @@ final class PlayersListPresenterTests: XCTestCase {
         let expectedModel1 = PlayersListViewDataModel(
             team1Initials: ("M", nil),
             team2Initials: (nil, nil),
-            startGameEnabled: false
+            startGameEnabled: false,
+            gameType: nil
         )
         let expectedModel2 = PlayersListViewDataModel(
             team1Initials: ("M", nil),
             team2Initials: ("P", nil),
-            startGameEnabled: true
+            startGameEnabled: false,
+            gameType: nil
         )
 
         // Act
@@ -84,17 +87,20 @@ final class PlayersListPresenterTests: XCTestCase {
         let expectedModel1 = PlayersListViewDataModel(
             team1Initials: ("M", nil),
             team2Initials: (nil, nil),
-            startGameEnabled: false
+            startGameEnabled: false,
+            gameType: nil
         )
         let expectedModel2 = PlayersListViewDataModel(
             team1Initials: ("M", nil),
             team2Initials: ("P", nil),
-            startGameEnabled: true
+            startGameEnabled: false,
+            gameType: nil
         )
         let expectedModel3 = PlayersListViewDataModel(
             team1Initials: ("M", "R"),
             team2Initials: ("P", nil),
-            startGameEnabled: false
+            startGameEnabled: false,
+            gameType: nil
         )
 
         // Act
@@ -119,22 +125,26 @@ final class PlayersListPresenterTests: XCTestCase {
         let expectedModel1 = PlayersListViewDataModel(
             team1Initials: ("M", nil),
             team2Initials: (nil, nil),
-            startGameEnabled: false
+            startGameEnabled: false,
+            gameType: nil
         )
         let expectedModel2 = PlayersListViewDataModel(
             team1Initials: ("M", nil),
             team2Initials: ("P", nil),
-            startGameEnabled: true
+            startGameEnabled: false,
+            gameType: nil
         )
         let expectedModel3 = PlayersListViewDataModel(
             team1Initials: ("M", "R"),
             team2Initials: ("P", nil),
-            startGameEnabled: false
+            startGameEnabled: false,
+            gameType: nil
         )
         let expectedModel4 = PlayersListViewDataModel(
             team1Initials: ("M", "R"),
             team2Initials: ("P", "C"),
-            startGameEnabled: true
+            startGameEnabled: false,
+            gameType: nil
         )
 
         // Act
@@ -161,22 +171,26 @@ final class PlayersListPresenterTests: XCTestCase {
         let expectedModel1 = PlayersListViewDataModel(
             team1Initials: ("M", nil),
             team2Initials: (nil, nil),
-            startGameEnabled: false
+            startGameEnabled: false,
+            gameType: nil
         )
         let expectedModel2 = PlayersListViewDataModel(
             team1Initials: ("M", nil),
             team2Initials: ("P", nil),
-            startGameEnabled: true
+            startGameEnabled: false,
+            gameType: nil
         )
         let expectedModel3 = PlayersListViewDataModel(
             team1Initials: ("M", "R"),
             team2Initials: ("P", nil),
-            startGameEnabled: false
+            startGameEnabled: false,
+            gameType: nil
         )
         let expectedModel4 = PlayersListViewDataModel(
             team1Initials: ("M", "R"),
             team2Initials: ("P", "C"),
-            startGameEnabled: true
+            startGameEnabled: false,
+            gameType: nil
         )
 
         // Act
@@ -198,7 +212,8 @@ final class PlayersListPresenterTests: XCTestCase {
         let expectedModel1 = PlayersListViewDataModel(
             team1Initials: ("M", nil),
             team2Initials: (nil, nil),
-            startGameEnabled: false
+            startGameEnabled: false,
+            gameType: nil
         )
 
         // Act
@@ -207,7 +222,6 @@ final class PlayersListPresenterTests: XCTestCase {
 
         // Assert
         view.checkInvocations([.updateWithDataModel(expectedModel1)])
-
     }
 
     func test_When_Player_Added_Dont_Add_Again_To_Second_Team() {
@@ -219,12 +233,14 @@ final class PlayersListPresenterTests: XCTestCase {
         let expectedModel1 = PlayersListViewDataModel(
             team1Initials: ("M", nil),
             team2Initials: (nil, nil),
-            startGameEnabled: false
+            startGameEnabled: false,
+            gameType: nil
         )
         let expectedModel2 = PlayersListViewDataModel(
             team1Initials: ("M", nil),
             team2Initials: ("S", nil),
-            startGameEnabled: true
+            startGameEnabled: false,
+            gameType: nil
         )
 
         // Act
@@ -251,22 +267,26 @@ final class PlayersListPresenterTests: XCTestCase {
         let expectedModel1 = PlayersListViewDataModel(
             team1Initials: (nil, "R"),
             team2Initials: ("P", "C"),
-            startGameEnabled: false
+            startGameEnabled: false,
+            gameType: nil
         )
         let expectedModel2 = PlayersListViewDataModel(
             team1Initials: (nil, "R"),
             team2Initials: (nil, "C"),
-            startGameEnabled: true
+            startGameEnabled: false,
+            gameType: nil
         )
         let expectedModel3 = PlayersListViewDataModel(
             team1Initials: (nil, nil),
             team2Initials: (nil, "C"),
-            startGameEnabled: false
+            startGameEnabled: false,
+            gameType: nil
         )
         let expectedModel4 = PlayersListViewDataModel(
             team1Initials: (nil, nil),
             team2Initials: (nil, nil),
-            startGameEnabled: false
+            startGameEnabled: false,
+            gameType: nil
         )
 
         players.forEach {
@@ -290,12 +310,54 @@ final class PlayersListPresenterTests: XCTestCase {
     func test_ViewIsReady_Updates_Default_GameType() {
 
         // Arrange
-        let gameType: GameType = .goalBased(totalGoals: 5)
+        let expectedModel1 = PlayersListViewDataModel(
+            team1Initials: (nil, nil),
+            team2Initials: (nil, nil),
+            startGameEnabled: false,
+            gameType: .goalBased(totalGoals: 5)
+        )
 
         // Act
         sut.viewIsReady()
 
         // Assert
-        view.checkInvocations([.updateGameType(gameType)])
+        view.checkInvocations([.updateWithDataModel(expectedModel1)])
+    }
+
+    func test_DidSelectGameType() {
+
+        // Arrange
+        let players = [Player(id: "id", name: "Marco", email: "email@email.com"),
+                       Player(id: "id2", name: "Pedro", email: "email@email.com")
+        ]
+        let expectedModel1 = PlayersListViewDataModel(
+            team1Initials: ("M", nil),
+            team2Initials: (nil, nil),
+            startGameEnabled: false,
+            gameType: nil
+        )
+        let expectedModel2 = PlayersListViewDataModel(
+            team1Initials: ("M", nil),
+            team2Initials: ("P", nil),
+            startGameEnabled: false,
+            gameType: nil
+        )
+        let expectedModel3 = PlayersListViewDataModel(
+            team1Initials: ("M", nil),
+            team2Initials: ("P", nil),
+            startGameEnabled: true,
+            gameType: .goalBased(totalGoals: 5)
+        )
+
+        // Act
+        sut.didSelectPlayer(players.first!)
+        sut.didSelectPlayer(players.last!)
+
+        sut.didSelectGameType(.goalBased(totalGoals: 5))
+
+        // Assert
+        view.checkInvocations([.updateWithDataModel(expectedModel1),
+                               .updateWithDataModel(expectedModel2),
+                               .updateWithDataModel(expectedModel3)])
     }
 }
