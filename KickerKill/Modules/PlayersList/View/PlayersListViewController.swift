@@ -157,8 +157,6 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
 
     func updateWithDataModel(_ dataModel: PlayersListViewDataModel) {
 
-        print("\(#function): >>> \(dataModel)")
-
         startGameButton.isEnabled = dataModel.startGameEnabled
 
         player1Label.text = dataModel.team1Initials.0
