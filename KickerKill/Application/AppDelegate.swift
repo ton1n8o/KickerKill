@@ -39,12 +39,11 @@ private extension AppDelegate {
             return
         }
 
-        // intermediate state??
-
         let player = Player(user)
         let playerDTO = CreatePlayerDTO(player: player)
 
         playerService.createOrUpdate(playerDTO) { error in
+            
             if let error = error {
                 // window?.rootViewController . // toma aqui o erro
                 print("\(#function): >>> \(error.localizedDescription)")

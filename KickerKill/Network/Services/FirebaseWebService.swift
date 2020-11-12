@@ -8,6 +8,12 @@ final class FirebaseWebService: WebService {
     private let firestore = Firestore.firestore()
     private var lastDocument: QueryDocumentSnapshot?
 
+    init() {
+        let settings = FirestoreSettings()
+        settings.isPersistenceEnabled = false
+        firestore.settings = settings
+    }
+
     func createDocument(_ documentData: [String : Any],
                         intoCollection path: String,
                         completion: @escaping WebServiceCompletion) {
@@ -23,15 +29,33 @@ final class FirebaseWebService: WebService {
         }
     }
 
+    private var listener: ListenerRegistration?
+
     func createOrUpdate(document: [String : Any],
                         documentPath: String,
                         completion: @escaping (Error?) -> Void) {
 
         let collectionReference = firestore.document(documentPath)
 
-        collectionReference.setData(document) { error in
-            completion(error)
+        listener = collectionReference.addSnapshotListener { [weak self] (docSnapShot, error) in
+
+            self?.listener?.remove()
+
+            guard error == nil else {
+                completion(error)
+                return
+            }
+
+            guard docSnapShot != nil else {
+                let userInfo = [NSLocalizedDescriptionKey: "could not update document: \(documentPath)"]
+                let error = NSError(domain: "error", code: 0, userInfo: userInfo)
+                completion(error)
+                return
+            }
+            completion(nil)
         }
+
+        collectionReference.setData(document)
     }
 
     func fetchDocument(firestoreUID: String,
