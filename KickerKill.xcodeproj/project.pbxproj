@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02615EB1255DB7AC00326EF0 /* MatchInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EA3255DB7AC00326EF0 /* MatchInterfaces.swift */; };
+		02615EB2255DB7AC00326EF0 /* MatchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EA5255DB7AC00326EF0 /* MatchPresenter.swift */; };
+		02615EB3255DB7AC00326EF0 /* Match.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02615EA7255DB7AC00326EF0 /* Match.storyboard */; };
+		02615EB4255DB7AC00326EF0 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EA8255DB7AC00326EF0 /* MatchViewController.swift */; };
+		02615EB5255DB7AC00326EF0 /* MatchModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EAA255DB7AC00326EF0 /* MatchModuleBuilder.swift */; };
+		02615EB6255DB7AC00326EF0 /* MatchInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EAC255DB7AC00326EF0 /* MatchInteractorInput.swift */; };
+		02615EB7255DB7AC00326EF0 /* MatchInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EAD255DB7AC00326EF0 /* MatchInteractorOutput.swift */; };
+		02615EB8255DB7AC00326EF0 /* MatchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EAE255DB7AC00326EF0 /* MatchInteractor.swift */; };
+		02615EB9255DB7AC00326EF0 /* MatchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EB0255DB7AC00326EF0 /* MatchRouter.swift */; };
 		7C48073B5BFACA30953057DC /* Pods_KickerKillTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD803936657EA73B7410F71 /* Pods_KickerKillTests.framework */; };
 		910C6FFD24DC74AE0071919F /* PlayersListViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910C6FFC24DC74AE0071919F /* PlayersListViewDataModel.swift */; };
 		914EAECD24E5AB6B00553724 /* SnapshotTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914EAECC24E5AB6B00553724 /* SnapshotTestCase.swift */; };
@@ -74,6 +83,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02615EA3255DB7AC00326EF0 /* MatchInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchInterfaces.swift; sourceTree = "<group>"; };
+		02615EA5255DB7AC00326EF0 /* MatchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchPresenter.swift; sourceTree = "<group>"; };
+		02615EA7255DB7AC00326EF0 /* Match.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Match.storyboard; sourceTree = "<group>"; };
+		02615EA8255DB7AC00326EF0 /* MatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
+		02615EAA255DB7AC00326EF0 /* MatchModuleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchModuleBuilder.swift; sourceTree = "<group>"; };
+		02615EAC255DB7AC00326EF0 /* MatchInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchInteractorInput.swift; sourceTree = "<group>"; };
+		02615EAD255DB7AC00326EF0 /* MatchInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchInteractorOutput.swift; sourceTree = "<group>"; };
+		02615EAE255DB7AC00326EF0 /* MatchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchInteractor.swift; sourceTree = "<group>"; };
+		02615EB0255DB7AC00326EF0 /* MatchRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchRouter.swift; sourceTree = "<group>"; };
 		0DD803936657EA73B7410F71 /* Pods_KickerKillTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KickerKillTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3185238AA1917019A29AC6CA /* Pods-KickerKill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKill.debug.xcconfig"; path = "Target Support Files/Pods-KickerKill/Pods-KickerKill.debug.xcconfig"; sourceTree = "<group>"; };
 		5372C891215B43F2A4FCE009 /* Pods-KickerKillTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKillTests.release.xcconfig"; path = "Target Support Files/Pods-KickerKillTests/Pods-KickerKillTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,7 +101,7 @@
 		914EAECC24E5AB6B00553724 /* SnapshotTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTestCase.swift; sourceTree = "<group>"; };
 		919FA10724C0BC95004EEE15 /* KickerKill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KickerKill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		919FA10A24C0BC95004EEE15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		919FA11324C0BC97004EEE15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		919FA11324C0BC97004EEE15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = KickerKill/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		919FA11624C0BC97004EEE15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		919FA11824C0BC97004EEE15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		919FA11D24C0BC97004EEE15 /* KickerKillTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KickerKillTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +176,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02615EA2255DB7AC00326EF0 /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				02615EA3255DB7AC00326EF0 /* MatchInterfaces.swift */,
+				02615EA4255DB7AC00326EF0 /* Presenter */,
+				02615EA6255DB7AC00326EF0 /* View */,
+				02615EA9255DB7AC00326EF0 /* Builder */,
+				02615EAB255DB7AC00326EF0 /* Interactor */,
+				02615EAF255DB7AC00326EF0 /* Router */,
+			);
+			path = Match;
+			sourceTree = "<group>";
+		};
+		02615EA4255DB7AC00326EF0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				02615EA5255DB7AC00326EF0 /* MatchPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		02615EA6255DB7AC00326EF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				02615EA7255DB7AC00326EF0 /* Match.storyboard */,
+				02615EA8255DB7AC00326EF0 /* MatchViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		02615EA9255DB7AC00326EF0 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				02615EAA255DB7AC00326EF0 /* MatchModuleBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		02615EAB255DB7AC00326EF0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				02615EAC255DB7AC00326EF0 /* MatchInteractorInput.swift */,
+				02615EAD255DB7AC00326EF0 /* MatchInteractorOutput.swift */,
+				02615EAE255DB7AC00326EF0 /* MatchInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		02615EAF255DB7AC00326EF0 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				02615EB0255DB7AC00326EF0 /* MatchRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		910C6FFB24DC72330071919F /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +431,7 @@
 			children = (
 				91D40E4E24C0C14800E5888E /* SignIn */,
 				91D40E5324C0C14800E5888E /* PlayersList */,
+				02615EA2255DB7AC00326EF0 /* Match */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -596,6 +671,7 @@
 				91D40E7524C0C14800E5888E /* SignIn.storyboard in Resources */,
 				91D40E7A24C0C14800E5888E /* PlayerListCell.xib in Resources */,
 				919FA11724C0BC97004EEE15 /* LaunchScreen.storyboard in Resources */,
+				02615EB3255DB7AC00326EF0 /* Match.storyboard in Resources */,
 				91D40E7C24C0C14800E5888E /* PlayersList.storyboard in Resources */,
 				919FA11424C0BC97004EEE15 /* Assets.xcassets in Resources */,
 				91D40EA724C0C3D400E5888E /* GoogleService-Info.plist in Resources */,
@@ -737,6 +813,7 @@
 				91D40E7824C0C14800E5888E /* Team.swift in Sources */,
 				91D40E8224C0C14800E5888E /* PlayersListRouter.swift in Sources */,
 				91D40E4524C0BF8700E5888E /* FetchPlayerDTO.swift in Sources */,
+				02615EB6255DB7AC00326EF0 /* MatchInteractorInput.swift in Sources */,
 				91D40E7924C0C14800E5888E /* PlayersListInterfaces.swift in Sources */,
 				91D40EA224C0C27C00E5888E /* Identifiable.swift in Sources */,
 				91D40E7424C0C14800E5888E /* SignInBuilder.swift in Sources */,
@@ -745,16 +822,23 @@
 				91D40E4924C0BF8700E5888E /* QueryParameters.swift in Sources */,
 				91D40E8F24C0C16300E5888E /* Player.swift in Sources */,
 				91D40EA424C0C29600E5888E /* Localizable.swift in Sources */,
+				02615EB5255DB7AC00326EF0 /* MatchModuleBuilder.swift in Sources */,
 				91D40E7F24C0C14800E5888E /* PlayersListInteractor.swift in Sources */,
 				91D40E8124C0C14800E5888E /* PlayersListInteractorInput.swift in Sources */,
+				02615EB8255DB7AC00326EF0 /* MatchInteractor.swift in Sources */,
 				91D40E7B24C0C14800E5888E /* PlayerListCell.swift in Sources */,
 				91D40E9D24C0C22300E5888E /* UITableView+Extensions.swift in Sources */,
+				02615EB7255DB7AC00326EF0 /* MatchInteractorOutput.swift in Sources */,
 				91D40E4624C0BF8700E5888E /* PlayerService.swift in Sources */,
+				02615EB4255DB7AC00326EF0 /* MatchViewController.swift in Sources */,
 				91D40E4724C0BF8700E5888E /* PlayerServiceImpl.swift in Sources */,
 				91D40E8024C0C14800E5888E /* PlayersListInteractorOutput.swift in Sources */,
+				02615EB2255DB7AC00326EF0 /* MatchPresenter.swift in Sources */,
+				02615EB9255DB7AC00326EF0 /* MatchRouter.swift in Sources */,
 				91D40E9E24C0C22300E5888E /* UI+Extensions.swift in Sources */,
 				919FA10B24C0BC95004EEE15 /* AppDelegate.swift in Sources */,
 				91D40E7624C0C14800E5888E /* SignInViewController.swift in Sources */,
+				02615EB1255DB7AC00326EF0 /* MatchInterfaces.swift in Sources */,
 				910C6FFD24DC74AE0071919F /* PlayersListViewDataModel.swift in Sources */,
 				91D40E4824C0BF8700E5888E /* WebService.swift in Sources */,
 				91D40E9C24C0C22300E5888E /* Encodable+Extensions.swift in Sources */,

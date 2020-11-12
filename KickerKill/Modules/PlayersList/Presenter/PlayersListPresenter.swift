@@ -78,6 +78,10 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
         self.gameType = gameType
         view?.updateWithDataModel(viewDataModel)
     }
+
+    func startGame() {
+        router.showMatchModule()
+    }
     
     // MARK: - PlayersListInteractorOutput
 

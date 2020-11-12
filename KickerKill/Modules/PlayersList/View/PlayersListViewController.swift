@@ -237,6 +237,11 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
         return gameTypeSwitch.isOn ?
             .timeBased(minutes: value) : .goalBased(totalGoals: value)
     }
+
+    @IBAction func startGame(sender: UIButton) {
+        //TODO: send all the data needed to launch the Match UI 😎 as a Struct
+        output.startGame()
+    }
 }
 
 // MARK: - UITableViewDataSource

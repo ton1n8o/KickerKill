@@ -3,13 +3,20 @@
 import UIKit
 
 protocol PlayersListRouterInput {
-
+    func showMatchModule()
 }
 
 final class PlayersListRouter: PlayersListRouterInput {
 
-	weak var viewController: UIViewController?
+    weak var viewController: UIViewController?
 
-	// MARK: - PlayersListRouterInput
-	
+    // MARK: - PlayersListRouterInput
+
+    func showMatchModule() {
+
+        let matchVC = MatchModuleBuilder().build()
+        matchVC.modalPresentationStyle = .fullScreen
+        viewController?.present(matchVC, animated: true)
+    }
+
 }
