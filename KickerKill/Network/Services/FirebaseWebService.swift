@@ -41,12 +41,15 @@ final class FirebaseWebService: WebService {
 
             self?.listener?.remove()
 
-            //TODO: add a better error description.
+            guard error == nil else {
+                completion(error)
+                return
+            }
 
             guard docSnapShot != nil else {
-                let userInfo = [NSLocalizedDescriptionKey: "error: no document found."]
-                let e = NSError(domain: "foo", code: 0, userInfo: userInfo)
-                completion(e)
+                let userInfo = [NSLocalizedDescriptionKey: "could not update document: \(documentPath)"]
+                let error = NSError(domain: "error", code: 0, userInfo: userInfo)
+                completion(error)
                 return
             }
             completion(nil)
