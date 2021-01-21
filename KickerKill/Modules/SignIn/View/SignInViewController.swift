@@ -25,7 +25,7 @@ final class SignInViewController: UIViewController {
     }
 
     private var providers: [FUIAuthProvider] {
-        return [FUIGoogleAuth()]
+        return [FUIGoogleAuth(), FUIEmailAuth()]
     }
 }
 

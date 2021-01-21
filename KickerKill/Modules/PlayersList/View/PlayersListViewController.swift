@@ -239,7 +239,6 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
     }
 
     @IBAction func startGame(sender: UIButton) {
-        //TODO: send all the data needed to launch the Match UI 😎 as a Struct
         output.startGame()
     }
 }

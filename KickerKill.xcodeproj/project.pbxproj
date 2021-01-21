@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		02615EB1255DB7AC00326EF0 /* MatchInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EA3255DB7AC00326EF0 /* MatchInterfaces.swift */; };
 		02615EB2255DB7AC00326EF0 /* MatchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EA5255DB7AC00326EF0 /* MatchPresenter.swift */; };
-		02615EB3255DB7AC00326EF0 /* Match.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02615EA7255DB7AC00326EF0 /* Match.storyboard */; };
 		02615EB4255DB7AC00326EF0 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EA8255DB7AC00326EF0 /* MatchViewController.swift */; };
 		02615EB5255DB7AC00326EF0 /* MatchModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EAA255DB7AC00326EF0 /* MatchModuleBuilder.swift */; };
 		02615EB6255DB7AC00326EF0 /* MatchInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EAC255DB7AC00326EF0 /* MatchInteractorInput.swift */; };
 		02615EB7255DB7AC00326EF0 /* MatchInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EAD255DB7AC00326EF0 /* MatchInteractorOutput.swift */; };
 		02615EB8255DB7AC00326EF0 /* MatchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EAE255DB7AC00326EF0 /* MatchInteractor.swift */; };
 		02615EB9255DB7AC00326EF0 /* MatchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EB0255DB7AC00326EF0 /* MatchRouter.swift */; };
+		028D2A8D25A7672A00D2A76A /* Match.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028D2A8C25A7672A00D2A76A /* Match.storyboard */; };
 		7C48073B5BFACA30953057DC /* Pods_KickerKillTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD803936657EA73B7410F71 /* Pods_KickerKillTests.framework */; };
 		910C6FFD24DC74AE0071919F /* PlayersListViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910C6FFC24DC74AE0071919F /* PlayersListViewDataModel.swift */; };
 		914EAECD24E5AB6B00553724 /* SnapshotTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914EAECC24E5AB6B00553724 /* SnapshotTestCase.swift */; };
@@ -85,13 +85,13 @@
 /* Begin PBXFileReference section */
 		02615EA3255DB7AC00326EF0 /* MatchInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchInterfaces.swift; sourceTree = "<group>"; };
 		02615EA5255DB7AC00326EF0 /* MatchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchPresenter.swift; sourceTree = "<group>"; };
-		02615EA7255DB7AC00326EF0 /* Match.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Match.storyboard; sourceTree = "<group>"; };
 		02615EA8255DB7AC00326EF0 /* MatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 		02615EAA255DB7AC00326EF0 /* MatchModuleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchModuleBuilder.swift; sourceTree = "<group>"; };
 		02615EAC255DB7AC00326EF0 /* MatchInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchInteractorInput.swift; sourceTree = "<group>"; };
 		02615EAD255DB7AC00326EF0 /* MatchInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchInteractorOutput.swift; sourceTree = "<group>"; };
 		02615EAE255DB7AC00326EF0 /* MatchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchInteractor.swift; sourceTree = "<group>"; };
 		02615EB0255DB7AC00326EF0 /* MatchRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchRouter.swift; sourceTree = "<group>"; };
+		028D2A8C25A7672A00D2A76A /* Match.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Match.storyboard; sourceTree = "<group>"; };
 		0DD803936657EA73B7410F71 /* Pods_KickerKillTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KickerKillTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3185238AA1917019A29AC6CA /* Pods-KickerKill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKill.debug.xcconfig"; path = "Target Support Files/Pods-KickerKill/Pods-KickerKill.debug.xcconfig"; sourceTree = "<group>"; };
 		5372C891215B43F2A4FCE009 /* Pods-KickerKillTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKillTests.release.xcconfig"; path = "Target Support Files/Pods-KickerKillTests/Pods-KickerKillTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -200,8 +200,8 @@
 		02615EA6255DB7AC00326EF0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				02615EA7255DB7AC00326EF0 /* Match.storyboard */,
 				02615EA8255DB7AC00326EF0 /* MatchViewController.swift */,
+				028D2A8C25A7672A00D2A76A /* Match.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -230,6 +230,13 @@
 				02615EB0255DB7AC00326EF0 /* MatchRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		02BEA05025A75C54009154F0 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		910C6FFB24DC72330071919F /* Models */ = {
@@ -264,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				91D40EA024C0C26E00E5888E /* Application */,
+				02BEA05025A75C54009154F0 /* Domain */,
 				91D40E9724C0C22200E5888E /* Extensions */,
 				91D40E8D24C0C16300E5888E /* Models */,
 				91D40E4D24C0C14800E5888E /* Modules */,
@@ -671,7 +679,7 @@
 				91D40E7524C0C14800E5888E /* SignIn.storyboard in Resources */,
 				91D40E7A24C0C14800E5888E /* PlayerListCell.xib in Resources */,
 				919FA11724C0BC97004EEE15 /* LaunchScreen.storyboard in Resources */,
-				02615EB3255DB7AC00326EF0 /* Match.storyboard in Resources */,
+				028D2A8D25A7672A00D2A76A /* Match.storyboard in Resources */,
 				91D40E7C24C0C14800E5888E /* PlayersList.storyboard in Resources */,
 				919FA11424C0BC97004EEE15 /* Assets.xcassets in Resources */,
 				91D40EA724C0C3D400E5888E /* GoogleService-Info.plist in Resources */,
