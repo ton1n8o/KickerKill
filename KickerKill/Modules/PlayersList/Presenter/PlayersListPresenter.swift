@@ -80,7 +80,16 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
     }
 
     func startGame() {
-        router.showMatchModule()
+
+        guard let gameType = gameType else {
+            fatalError("gameType is missing")
+        }
+
+        let matchData = MatchData(team1: team1,
+                                  team2: team2,
+                                  gameType: gameType)
+
+        router.showMatchModule(with: matchData)
     }
     
     // MARK: - PlayersListInteractorOutput

@@ -4,6 +4,12 @@ import UIKit
 
 final class MatchViewController: UIViewController, MatchViewInput {
 
+
+    func updateMatchUI() {
+        //TODO: enviar objeto com dados aqui.
+    }
+
+
     var output: MatchViewOutput!
 
     @IBOutlet weak var team1Attack: UIButton!

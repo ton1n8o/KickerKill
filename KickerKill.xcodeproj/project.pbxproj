@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0245409D25C33565003C0C83 /* MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245409C25C33565003C0C83 /* MatchData.swift */; };
+		024540A425C337A1003C0C83 /* MatchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024540A325C337A1003C0C83 /* MatchPresenterTests.swift */; };
+		024540AB25C339A5003C0C83 /* MockMatchViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024540AA25C339A5003C0C83 /* MockMatchViewInput.swift */; };
 		02615EB1255DB7AC00326EF0 /* MatchInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EA3255DB7AC00326EF0 /* MatchInterfaces.swift */; };
 		02615EB2255DB7AC00326EF0 /* MatchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EA5255DB7AC00326EF0 /* MatchPresenter.swift */; };
 		02615EB4255DB7AC00326EF0 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EA8255DB7AC00326EF0 /* MatchViewController.swift */; };
@@ -83,6 +86,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0245409C25C33565003C0C83 /* MatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchData.swift; sourceTree = "<group>"; };
+		024540A325C337A1003C0C83 /* MatchPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPresenterTests.swift; sourceTree = "<group>"; };
+		024540AA25C339A5003C0C83 /* MockMatchViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMatchViewInput.swift; sourceTree = "<group>"; };
 		02615EA3255DB7AC00326EF0 /* MatchInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchInterfaces.swift; sourceTree = "<group>"; };
 		02615EA5255DB7AC00326EF0 /* MatchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchPresenter.swift; sourceTree = "<group>"; };
 		02615EA8255DB7AC00326EF0 /* MatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +182,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		024540A125C33766003C0C83 /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				024540A925C3398E003C0C83 /* Mock */,
+				024540A225C33779003C0C83 /* Presenter */,
+			);
+			path = Match;
+			sourceTree = "<group>";
+		};
+		024540A225C33779003C0C83 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				024540A325C337A1003C0C83 /* MatchPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		024540A925C3398E003C0C83 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				024540AA25C339A5003C0C83 /* MockMatchViewInput.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		02615EA2255DB7AC00326EF0 /* Match */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +266,7 @@
 		02BEA05025A75C54009154F0 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				0245409C25C33565003C0C83 /* MatchData.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -289,6 +321,7 @@
 			children = (
 				91CBABEF24C0CFB400D64578 /* Network */,
 				91CBABD424C0CF9C00D64578 /* PlayersList */,
+				024540A125C33766003C0C83 /* Match */,
 				919FA12324C0BC97004EEE15 /* Info.plist */,
 				91CBABF624C0CFBA00D64578 /* Test+Extensions.swift */,
 				914EAECC24E5AB6B00553724 /* SnapshotTestCase.swift */,
@@ -837,6 +870,7 @@
 				91D40E7B24C0C14800E5888E /* PlayerListCell.swift in Sources */,
 				91D40E9D24C0C22300E5888E /* UITableView+Extensions.swift in Sources */,
 				02615EB7255DB7AC00326EF0 /* MatchInteractorOutput.swift in Sources */,
+				0245409D25C33565003C0C83 /* MatchData.swift in Sources */,
 				91D40E4624C0BF8700E5888E /* PlayerService.swift in Sources */,
 				02615EB4255DB7AC00326EF0 /* MatchViewController.swift in Sources */,
 				91D40E4724C0BF8700E5888E /* PlayerServiceImpl.swift in Sources */,
@@ -864,6 +898,7 @@
 				91CBABE824C0CF9C00D64578 /* MockPlayersListInteractorInput.swift in Sources */,
 				91CBABF724C0CFBA00D64578 /* Test+Extensions.swift in Sources */,
 				91CBABEE24C0CF9C00D64578 /* PlayersListRouterTests.swift in Sources */,
+				024540AB25C339A5003C0C83 /* MockMatchViewInput.swift in Sources */,
 				91CBABF524C0CFB400D64578 /* PlayerServiceImplTests.swift in Sources */,
 				91CBABE724C0CF9C00D64578 /* MockPlayersListRouterInput.swift in Sources */,
 				91CBABED24C0CF9C00D64578 /* PlayersListInteractorTests.swift in Sources */,
@@ -877,6 +912,7 @@
 				914EAECD24E5AB6B00553724 /* SnapshotTestCase.swift in Sources */,
 				91CBABEB24C0CF9C00D64578 /* PlayersListViewControllerTests.swift in Sources */,
 				91CBABEC24C0CF9C00D64578 /* PlayersListModuleBuilderTests.swift in Sources */,
+				024540A425C337A1003C0C83 /* MatchPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

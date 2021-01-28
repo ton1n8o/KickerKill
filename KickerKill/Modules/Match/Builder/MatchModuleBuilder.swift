@@ -5,6 +5,11 @@ import UIKit
 final class MatchModuleBuilder {
 
     private let storyboard = UIStoryboard(name: "Match", bundle: nil)
+    private let matchData: MatchData
+
+    init(matchData: MatchData) {
+        self.matchData = matchData
+    }
 
     func build() -> UIViewController {
 
@@ -13,7 +18,7 @@ final class MatchModuleBuilder {
         let router = MatchRouter()
         router.viewController = viewController
 
-        let presenter = MatchPresenter()
+        let presenter = MatchPresenter(matchData: matchData)
         presenter.view = viewController
         presenter.router = router
 

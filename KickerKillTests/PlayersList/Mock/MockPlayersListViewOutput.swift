@@ -28,4 +28,8 @@ final class MockPlayersListViewOutput: PlayersListViewOutput, HasInvocations {
     func didSelectGameType(_ gameType: GameType?) {
         invocations.append(.didSelectGameType(gameType))
     }
+
+    func startGame() {
+
+    }
 }
