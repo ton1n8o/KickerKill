@@ -1,10 +1,4 @@
-//
-//  MatchViewController.swift
-//  KickerKill
-//
-//  Created by Antonio on 11/12/20.
 //  Copyright © 2020 TNTStudios. All rights reserved.
-//
 
 import UIKit
 
@@ -17,6 +11,8 @@ final class MatchViewController: UIViewController, MatchViewInput {
     @IBOutlet weak var team2Attack: UIButton!
     @IBOutlet weak var team2Defence: UIButton!
 
+    @IBOutlet var imageViewSoccerField: UIImageView!
+
     // MARK: Life cycle
 
     override func viewDidLoad() {
@@ -24,10 +20,26 @@ final class MatchViewController: UIViewController, MatchViewInput {
 
         output.viewIsReady()
 
-//        team1Attack.setRoundCorner()
-//        team1Defence.setRoundCorner()
-//        team2Attack.setRoundCorner()
-//        team2Defence.setRoundCorner()
+        team1Attack.setRoundCorner()
+        team1Defence.setRoundCorner()
+        team2Attack.setRoundCorner()
+        team2Defence.setRoundCorner()
+
+        setupSoccerFieldImage()
+    }
+
+    private func setupSoccerFieldImage() {
+
+        let width = UIScreen.main.bounds.size.width
+        let height = UIScreen.main.bounds.size.height
+
+        let iphoneAspectRatio: CGFloat = 16/9
+
+        if height/width <= iphoneAspectRatio {
+            imageViewSoccerField.image = UIImage(named: "soccerField_iPhone")
+        } else {
+            imageViewSoccerField.image = UIImage(named: "soccerField_iPhoneX")
+        }
     }
 
     override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
