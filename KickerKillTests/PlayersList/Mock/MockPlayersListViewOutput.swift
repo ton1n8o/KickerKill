@@ -25,7 +25,7 @@ final class MockPlayersListViewOutput: PlayersListViewOutput, HasInvocations {
         invocations.append(.removePlayer(at))
     }
 
-    func didSelectGameType(_ gameType: GameType?) {
+    func didSelectGameType(_ gameType: GameType?, gameTypeUnit: Int) {
         invocations.append(.didSelectGameType(gameType))
     }
 

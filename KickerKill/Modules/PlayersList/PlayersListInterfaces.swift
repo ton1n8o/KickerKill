@@ -4,7 +4,7 @@ protocol PlayersListViewInput: class {
     func showPlayers(_ players: [Player])
     func showError(error: PlayerViewErrors)
     func updateWithDataModel(_ dataModel: PlayersListViewDataModel)
-    func updateGameType(_ gameType: GameType)
+    func updateGameType(_ gameType: GameType, unitValue: Int)
 }
 
 protocol PlayersListViewOutput {
@@ -12,6 +12,6 @@ protocol PlayersListViewOutput {
     func viewIsReady()
     func didSelectPlayer(_ player: Player)
     func removePlayer(at: PlayerPosition)
-    func didSelectGameType(_ gameType: GameType?)
+    func didSelectGameType(_ gameType: GameType?, gameTypeUnit: Int)
     func startGame()
 }

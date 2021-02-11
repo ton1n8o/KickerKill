@@ -12,13 +12,14 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
     private var team2: Team = Team(player1: nil, player2: nil)
 
     private var gameType: GameType?
+    private var gameTypeUnit: Int = 5
 
     // MARK: - PlayersListViewOutput
     
     func viewIsReady() {
 
         interactor.fetchAllPlayers(limit: recordsPerPage, firstPage: firstPage)
-        gameType = .goalBased(totalGoals: 5)
+        gameType = .goalBased
         view?.updateWithDataModel(viewDataModel)
     }
 
@@ -46,7 +47,8 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
             team1Initials: team1.initials,
             team2Initials: team2.initials,
             startGameEnabled: enableStartGame,
-            gameType: gameType
+            gameType: gameType,
+            gameTypeUnit: gameTypeUnit
         )
     }
 
@@ -74,8 +76,9 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
         view?.updateWithDataModel(viewDataModel)
     }
 
-    func didSelectGameType(_ gameType: GameType?) {
+    func didSelectGameType(_ gameType: GameType?, gameTypeUnit: Int) {
         self.gameType = gameType
+        self.gameTypeUnit = gameTypeUnit
         view?.updateWithDataModel(viewDataModel)
     }
 

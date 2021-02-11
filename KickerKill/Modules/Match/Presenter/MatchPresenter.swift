@@ -16,6 +16,13 @@ final class MatchPresenter: MatchViewOutput, MatchInteractorOutput {
 
     func viewIsReady() {
 
+        // por tempo ou por goal
+        let dataModel = MatchViewDataModel(showTimer: matchData.gameType == GameType.timeBased,
+                                           remainingMinutes: 5, // pode nao ser usado assim
+                                           team1: matchData.team1,
+                                           team2: matchData.team2)
+
+        view?.updateMatchUI(with: dataModel)
     }
 
     // MARK: - MatchInteractorOutput

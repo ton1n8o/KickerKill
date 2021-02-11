@@ -2,7 +2,7 @@
 
 protocol MatchViewInput: class {
 
-    func updateMatchUI()
+    func updateMatchUI(with dataModel: MatchViewDataModel)
 }
 
 protocol MatchViewOutput {

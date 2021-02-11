@@ -25,7 +25,8 @@ final class SnapshotTestCase: FBSnapshotTestCase {
         let viewDataModel = PlayersListViewDataModel(team1Initials: ("A", nil),
                                                      team2Initials: ("H", nil),
                                                      startGameEnabled: true,
-                                                     gameType: .goalBased(totalGoals: 3))
+                                                     gameType: .goalBased,
+                                                     gameTypeUnit: 3)
 
         sut.updateWithDataModel(viewDataModel)
 
@@ -45,7 +46,8 @@ final class SnapshotTestCase: FBSnapshotTestCase {
         let viewDataModel = PlayersListViewDataModel(team1Initials: ("A", "R"),
                                                      team2Initials: ("H", "C"),
                                                      startGameEnabled: true,
-                                                     gameType: .goalBased(totalGoals: 15))
+                                                     gameType: .goalBased,
+                                                     gameTypeUnit: 15)
 
         sut.updateWithDataModel(viewDataModel)
 
@@ -62,7 +64,7 @@ final class SnapshotTestCase: FBSnapshotTestCase {
         sut.output = MockPlayersListViewOutput()
         sut.loadViewIfNeeded()
 
-        sut.updateGameType(.goalBased(totalGoals: 8))
+        sut.updateGameType(.goalBased, unitValue: 8)
 
         FBSnapshotVerifyView(sut.view)
         FBSnapshotVerifyLayer(sut.view.layer)
@@ -77,7 +79,7 @@ final class SnapshotTestCase: FBSnapshotTestCase {
         sut.output = MockPlayersListViewOutput()
         sut.loadViewIfNeeded()
 
-        sut.updateGameType(.timeBased(minutes: 10))
+        sut.updateGameType(.timeBased, unitValue: 10)
 
         FBSnapshotVerifyView(sut.view)
         FBSnapshotVerifyLayer(sut.view.layer)
