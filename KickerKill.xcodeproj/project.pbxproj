@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0245409D25C33565003C0C83 /* MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245409C25C33565003C0C83 /* MatchData.swift */; };
-		024540A425C337A1003C0C83 /* MatchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024540A325C337A1003C0C83 /* MatchPresenterTests.swift */; };
-		024540AB25C339A5003C0C83 /* MockMatchViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024540AA25C339A5003C0C83 /* MockMatchViewInput.swift */; };
 		02615EB1255DB7AC00326EF0 /* MatchInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EA3255DB7AC00326EF0 /* MatchInterfaces.swift */; };
 		02615EB2255DB7AC00326EF0 /* MatchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EA5255DB7AC00326EF0 /* MatchPresenter.swift */; };
 		02615EB4255DB7AC00326EF0 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EA8255DB7AC00326EF0 /* MatchViewController.swift */; };
@@ -19,6 +17,16 @@
 		02615EB8255DB7AC00326EF0 /* MatchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EAE255DB7AC00326EF0 /* MatchInteractor.swift */; };
 		02615EB9255DB7AC00326EF0 /* MatchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EB0255DB7AC00326EF0 /* MatchRouter.swift */; };
 		028D2A8D25A7672A00D2A76A /* Match.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028D2A8C25A7672A00D2A76A /* Match.storyboard */; };
+		028DD43925DF0FAC002E3B6C /* MatchViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028DD43825DF0FAC002E3B6C /* MatchViewDataModel.swift */; };
+		02ED628225DEF5B2002BB8A1 /* MockMatchRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED627025DEF5B2002BB8A1 /* MockMatchRouterInput.swift */; };
+		02ED628325DEF5B2002BB8A1 /* MockMatchInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED627125DEF5B2002BB8A1 /* MockMatchInteractorInput.swift */; };
+		02ED628425DEF5B2002BB8A1 /* MockMatchViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED627225DEF5B2002BB8A1 /* MockMatchViewInput.swift */; };
+		02ED628525DEF5B2002BB8A1 /* MockMatchViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED627325DEF5B2002BB8A1 /* MockMatchViewOutput.swift */; };
+		02ED628625DEF5B2002BB8A1 /* MockMatchInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED627425DEF5B2002BB8A1 /* MockMatchInteractorOutput.swift */; };
+		02ED628725DEF5B2002BB8A1 /* MatchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED627625DEF5B2002BB8A1 /* MatchPresenterTests.swift */; };
+		02ED628825DEF5B2002BB8A1 /* MatchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED627825DEF5B2002BB8A1 /* MatchViewControllerTests.swift */; };
+		02ED628925DEF5B2002BB8A1 /* MatchModuleBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED627A25DEF5B2002BB8A1 /* MatchModuleBuilderTests.swift */; };
+		02ED628D25DEF5B2002BB8A1 /* MatchRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED628025DEF5B2002BB8A1 /* MatchRouterTests.swift */; };
 		7C48073B5BFACA30953057DC /* Pods_KickerKillTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD803936657EA73B7410F71 /* Pods_KickerKillTests.framework */; };
 		910C6FFD24DC74AE0071919F /* PlayersListViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910C6FFC24DC74AE0071919F /* PlayersListViewDataModel.swift */; };
 		914EAECD24E5AB6B00553724 /* SnapshotTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914EAECC24E5AB6B00553724 /* SnapshotTestCase.swift */; };
@@ -87,8 +95,6 @@
 
 /* Begin PBXFileReference section */
 		0245409C25C33565003C0C83 /* MatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchData.swift; sourceTree = "<group>"; };
-		024540A325C337A1003C0C83 /* MatchPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPresenterTests.swift; sourceTree = "<group>"; };
-		024540AA25C339A5003C0C83 /* MockMatchViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMatchViewInput.swift; sourceTree = "<group>"; };
 		02615EA3255DB7AC00326EF0 /* MatchInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchInterfaces.swift; sourceTree = "<group>"; };
 		02615EA5255DB7AC00326EF0 /* MatchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchPresenter.swift; sourceTree = "<group>"; };
 		02615EA8255DB7AC00326EF0 /* MatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +104,16 @@
 		02615EAE255DB7AC00326EF0 /* MatchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchInteractor.swift; sourceTree = "<group>"; };
 		02615EB0255DB7AC00326EF0 /* MatchRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchRouter.swift; sourceTree = "<group>"; };
 		028D2A8C25A7672A00D2A76A /* Match.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Match.storyboard; sourceTree = "<group>"; };
+		028DD43825DF0FAC002E3B6C /* MatchViewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewDataModel.swift; sourceTree = "<group>"; };
+		02ED627025DEF5B2002BB8A1 /* MockMatchRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMatchRouterInput.swift; sourceTree = "<group>"; };
+		02ED627125DEF5B2002BB8A1 /* MockMatchInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMatchInteractorInput.swift; sourceTree = "<group>"; };
+		02ED627225DEF5B2002BB8A1 /* MockMatchViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMatchViewInput.swift; sourceTree = "<group>"; };
+		02ED627325DEF5B2002BB8A1 /* MockMatchViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMatchViewOutput.swift; sourceTree = "<group>"; };
+		02ED627425DEF5B2002BB8A1 /* MockMatchInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMatchInteractorOutput.swift; sourceTree = "<group>"; };
+		02ED627625DEF5B2002BB8A1 /* MatchPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchPresenterTests.swift; sourceTree = "<group>"; };
+		02ED627825DEF5B2002BB8A1 /* MatchViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchViewControllerTests.swift; sourceTree = "<group>"; };
+		02ED627A25DEF5B2002BB8A1 /* MatchModuleBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchModuleBuilderTests.swift; sourceTree = "<group>"; };
+		02ED628025DEF5B2002BB8A1 /* MatchRouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchRouterTests.swift; sourceTree = "<group>"; };
 		0DD803936657EA73B7410F71 /* Pods_KickerKillTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KickerKillTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3185238AA1917019A29AC6CA /* Pods-KickerKill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKill.debug.xcconfig"; path = "Target Support Files/Pods-KickerKill/Pods-KickerKill.debug.xcconfig"; sourceTree = "<group>"; };
 		5372C891215B43F2A4FCE009 /* Pods-KickerKillTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKillTests.release.xcconfig"; path = "Target Support Files/Pods-KickerKillTests/Pods-KickerKillTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,35 +198,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		024540A125C33766003C0C83 /* Match */ = {
-			isa = PBXGroup;
-			children = (
-				024540A925C3398E003C0C83 /* Mock */,
-				024540A225C33779003C0C83 /* Presenter */,
-			);
-			path = Match;
-			sourceTree = "<group>";
-		};
-		024540A225C33779003C0C83 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				024540A325C337A1003C0C83 /* MatchPresenterTests.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		024540A925C3398E003C0C83 /* Mock */ = {
-			isa = PBXGroup;
-			children = (
-				024540AA25C339A5003C0C83 /* MockMatchViewInput.swift */,
-			);
-			path = Mock;
-			sourceTree = "<group>";
-		};
 		02615EA2255DB7AC00326EF0 /* Match */ = {
 			isa = PBXGroup;
 			children = (
 				02615EA3255DB7AC00326EF0 /* MatchInterfaces.swift */,
+				02A239E825D5C91A00E9230B /* Models */,
 				02615EA4255DB7AC00326EF0 /* Presenter */,
 				02615EA6255DB7AC00326EF0 /* View */,
 				02615EA9255DB7AC00326EF0 /* Builder */,
@@ -263,12 +255,84 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		02A239E825D5C91A00E9230B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				028DD43825DF0FAC002E3B6C /* MatchViewDataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		02BEA05025A75C54009154F0 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
 				0245409C25C33565003C0C83 /* MatchData.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		02ED626D25DEF5B2002BB8A1 /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				02ED626F25DEF5B2002BB8A1 /* Mock */,
+				02ED627525DEF5B2002BB8A1 /* Presenter */,
+				02ED627725DEF5B2002BB8A1 /* View */,
+				02ED627925DEF5B2002BB8A1 /* Builder */,
+				02ED627B25DEF5B2002BB8A1 /* Interactor */,
+				02ED627F25DEF5B2002BB8A1 /* Router */,
+			);
+			path = Match;
+			sourceTree = "<group>";
+		};
+		02ED626F25DEF5B2002BB8A1 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				02ED627025DEF5B2002BB8A1 /* MockMatchRouterInput.swift */,
+				02ED627125DEF5B2002BB8A1 /* MockMatchInteractorInput.swift */,
+				02ED627225DEF5B2002BB8A1 /* MockMatchViewInput.swift */,
+				02ED627325DEF5B2002BB8A1 /* MockMatchViewOutput.swift */,
+				02ED627425DEF5B2002BB8A1 /* MockMatchInteractorOutput.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		02ED627525DEF5B2002BB8A1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				02ED627625DEF5B2002BB8A1 /* MatchPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		02ED627725DEF5B2002BB8A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				02ED627825DEF5B2002BB8A1 /* MatchViewControllerTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		02ED627925DEF5B2002BB8A1 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				02ED627A25DEF5B2002BB8A1 /* MatchModuleBuilderTests.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		02ED627B25DEF5B2002BB8A1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		02ED627F25DEF5B2002BB8A1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				02ED628025DEF5B2002BB8A1 /* MatchRouterTests.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		910C6FFB24DC72330071919F /* Models */ = {
@@ -321,7 +385,7 @@
 			children = (
 				91CBABEF24C0CFB400D64578 /* Network */,
 				91CBABD424C0CF9C00D64578 /* PlayersList */,
-				024540A125C33766003C0C83 /* Match */,
+				02ED626D25DEF5B2002BB8A1 /* Match */,
 				919FA12324C0BC97004EEE15 /* Info.plist */,
 				91CBABF624C0CFBA00D64578 /* Test+Extensions.swift */,
 				914EAECC24E5AB6B00553724 /* SnapshotTestCase.swift */,
@@ -498,9 +562,9 @@
 		91D40E5324C0C14800E5888E /* PlayersList */ = {
 			isa = PBXGroup;
 			children = (
+				91D40E5724C0C14800E5888E /* PlayersListInterfaces.swift */,
 				910C6FFB24DC72330071919F /* Models */,
 				91D40E5424C0C14800E5888E /* Presenter */,
-				91D40E5724C0C14800E5888E /* PlayersListInterfaces.swift */,
 				91D40E5824C0C14800E5888E /* View */,
 				91D40E5D24C0C14800E5888E /* Builder */,
 				91D40E5F24C0C14800E5888E /* Interactor */,
@@ -887,6 +951,7 @@
 				91D40E9524C0C1AC00E5888E /* UIStoryboardExtension.swift in Sources */,
 				91D40E4A24C0BF8700E5888E /* FirebaseWebService.swift in Sources */,
 				91D40E7E24C0C14800E5888E /* PlayersListModuleBuilder.swift in Sources */,
+				028DD43925DF0FAC002E3B6C /* MatchViewDataModel.swift in Sources */,
 				91D40E7D24C0C14800E5888E /* PlayersListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -896,23 +961,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				91CBABE824C0CF9C00D64578 /* MockPlayersListInteractorInput.swift in Sources */,
+				02ED628D25DEF5B2002BB8A1 /* MatchRouterTests.swift in Sources */,
 				91CBABF724C0CFBA00D64578 /* Test+Extensions.swift in Sources */,
 				91CBABEE24C0CF9C00D64578 /* PlayersListRouterTests.swift in Sources */,
-				024540AB25C339A5003C0C83 /* MockMatchViewInput.swift in Sources */,
 				91CBABF524C0CFB400D64578 /* PlayerServiceImplTests.swift in Sources */,
 				91CBABE724C0CF9C00D64578 /* MockPlayersListRouterInput.swift in Sources */,
 				91CBABED24C0CF9C00D64578 /* PlayersListInteractorTests.swift in Sources */,
 				91CBABE924C0CF9C00D64578 /* MockPlayersListInteractorOutput.swift in Sources */,
+				02ED628225DEF5B2002BB8A1 /* MockMatchRouterInput.swift in Sources */,
+				02ED628825DEF5B2002BB8A1 /* MatchViewControllerTests.swift in Sources */,
+				02ED628925DEF5B2002BB8A1 /* MatchModuleBuilderTests.swift in Sources */,
 				91CBABF424C0CFB400D64578 /* MockWebService.swift in Sources */,
 				91CBABE524C0CF9C00D64578 /* MockPlayersListViewOutput.swift in Sources */,
 				91D40E4B24C0C0E600E5888E /* HasInvocations.swift in Sources */,
 				91CBABE624C0CF9C00D64578 /* MockPlayersListViewInput.swift in Sources */,
 				91D40E4C24C0C10000E5888E /* FakeEquatable.swift in Sources */,
+				02ED628425DEF5B2002BB8A1 /* MockMatchViewInput.swift in Sources */,
 				91CBABEA24C0CF9C00D64578 /* PlayersListPresenterTests.swift in Sources */,
 				914EAECD24E5AB6B00553724 /* SnapshotTestCase.swift in Sources */,
 				91CBABEB24C0CF9C00D64578 /* PlayersListViewControllerTests.swift in Sources */,
+				02ED628525DEF5B2002BB8A1 /* MockMatchViewOutput.swift in Sources */,
 				91CBABEC24C0CF9C00D64578 /* PlayersListModuleBuilderTests.swift in Sources */,
-				024540A425C337A1003C0C83 /* MatchPresenterTests.swift in Sources */,
+				02ED628625DEF5B2002BB8A1 /* MockMatchInteractorOutput.swift in Sources */,
+				02ED628325DEF5B2002BB8A1 /* MockMatchInteractorInput.swift in Sources */,
+				02ED628725DEF5B2002BB8A1 /* MatchPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
