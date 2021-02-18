@@ -3,7 +3,7 @@
 import XCTest
 @testable import ___VARIABLE_testable_target___
 
-final class ___VARIABLE_module_name___PresenterTests: XCTestCase, ___VARIABLE_module_name___ViewOutput, ___VARIABLE_module_name___InteractorOutput {
+final class ___VARIABLE_module_name___PresenterTests: XCTestCase {
 
     var sut: ___VARIABLE_module_name___Presenter!
     var router: Mock___VARIABLE_module_name___RouterInput!
@@ -31,9 +31,5 @@ final class ___VARIABLE_module_name___PresenterTests: XCTestCase, ___VARIABLE_mo
 
         super.tearDown()
     }
-
-    // MARK: - ___VARIABLE_module_name___ViewOutput
-
-    // MARK: - ___VARIABLE_module_name___InteractorOutput
 
 }

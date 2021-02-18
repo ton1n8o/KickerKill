@@ -4,11 +4,11 @@
 
 final class Mock___VARIABLE_module_name___RouterInput: ___VARIABLE_module_name___RouterInput, HasInvocations {
 
-    enum Invocations: FakeEquatable {
+    enum Invocation: FakeEquatable {
 
     }
 
-    var invocations: [Invocations] = []
+    var invocations: [Invocation] = []
 
     // MARK: - ___VARIABLE_module_name___RouterInput
 
