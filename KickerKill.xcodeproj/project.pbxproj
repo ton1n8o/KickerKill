@@ -19,7 +19,6 @@
 		02615EB8255DB7AC00326EF0 /* MatchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EAE255DB7AC00326EF0 /* MatchInteractor.swift */; };
 		02615EB9255DB7AC00326EF0 /* MatchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EB0255DB7AC00326EF0 /* MatchRouter.swift */; };
 		028D2A8D25A7672A00D2A76A /* Match.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028D2A8C25A7672A00D2A76A /* Match.storyboard */; };
-		02A239E525D5C8E600E9230B /* MatchViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A239E425D5C8E600E9230B /* MatchViewDataModel.swift */; };
 		7C48073B5BFACA30953057DC /* Pods_KickerKillTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD803936657EA73B7410F71 /* Pods_KickerKillTests.framework */; };
 		910C6FFD24DC74AE0071919F /* PlayersListViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910C6FFC24DC74AE0071919F /* PlayersListViewDataModel.swift */; };
 		914EAECD24E5AB6B00553724 /* SnapshotTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914EAECC24E5AB6B00553724 /* SnapshotTestCase.swift */; };
@@ -99,7 +98,6 @@
 		02615EAE255DB7AC00326EF0 /* MatchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchInteractor.swift; sourceTree = "<group>"; };
 		02615EB0255DB7AC00326EF0 /* MatchRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchRouter.swift; sourceTree = "<group>"; };
 		028D2A8C25A7672A00D2A76A /* Match.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Match.storyboard; sourceTree = "<group>"; };
-		02A239E425D5C8E600E9230B /* MatchViewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MatchViewDataModel.swift; path = KickerKill/Modules/Match/Models/MatchViewDataModel.swift; sourceTree = SOURCE_ROOT; };
 		0DD803936657EA73B7410F71 /* Pods_KickerKillTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KickerKillTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3185238AA1917019A29AC6CA /* Pods-KickerKill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKill.debug.xcconfig"; path = "Target Support Files/Pods-KickerKill/Pods-KickerKill.debug.xcconfig"; sourceTree = "<group>"; };
 		5372C891215B43F2A4FCE009 /* Pods-KickerKillTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKillTests.release.xcconfig"; path = "Target Support Files/Pods-KickerKillTests/Pods-KickerKillTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -213,7 +211,6 @@
 			isa = PBXGroup;
 			children = (
 				02615EA3255DB7AC00326EF0 /* MatchInterfaces.swift */,
-				02A239E825D5C91A00E9230B /* Models */,
 				02615EA4255DB7AC00326EF0 /* Presenter */,
 				02615EA6255DB7AC00326EF0 /* View */,
 				02615EA9255DB7AC00326EF0 /* Builder */,
@@ -264,14 +261,6 @@
 				02615EB0255DB7AC00326EF0 /* MatchRouter.swift */,
 			);
 			path = Router;
-			sourceTree = "<group>";
-		};
-		02A239E825D5C91A00E9230B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				02A239E425D5C8E600E9230B /* MatchViewDataModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		02BEA05025A75C54009154F0 /* Domain */ = {
@@ -898,7 +887,6 @@
 				91D40E9524C0C1AC00E5888E /* UIStoryboardExtension.swift in Sources */,
 				91D40E4A24C0BF8700E5888E /* FirebaseWebService.swift in Sources */,
 				91D40E7E24C0C14800E5888E /* PlayersListModuleBuilder.swift in Sources */,
-				02A239E525D5C8E600E9230B /* MatchViewDataModel.swift in Sources */,
 				91D40E7D24C0C14800E5888E /* PlayersListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

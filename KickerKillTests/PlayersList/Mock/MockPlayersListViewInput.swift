@@ -25,7 +25,7 @@ final class MockPlayersListViewInput: PlayersListViewInput, HasInvocations {
         invocations.append(.updateWithDataModel(dataModel))
     }
 
-    func updateGameType(_ gameType: GameType, unitValue: Int) {
+    func updateGameType(_ gameType: GameType) {
         invocations.append(.updateGameType(gameType))
     }
 }

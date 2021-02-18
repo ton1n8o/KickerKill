@@ -17,7 +17,15 @@ final class MatchPresenterTests: XCTestCase {
 //        interactor = MatchPresenterInteractorInput()
         view = MockMatchViewInput()
 
-        sut = MatchPresenter(matchData: matchDataTimeBased)
+        let team1 = Team()
+        let team2 = Team()
+        let gameType: GameType = .timeBased(minutes: 5)
+
+        let matchData = MatchData(team1: team1,
+                                  team2: team2,
+                                  gameType: gameType)
+
+        sut = MatchPresenter(matchData: matchData)
 //        sut.router = router
 //        sut.interactor = interactor
         sut.view = view
@@ -32,59 +40,9 @@ final class MatchPresenterTests: XCTestCase {
         super.tearDown()
     }
 
-    func test_ViewIsReady_With_TimeBasedGame() {
+    func test_ViewIsReady_Shows_Player_Names() {
 
-        // Arrange
-        let dataModel = MatchViewDataModel(showTimer: true,
-                                           remainingMinutes: 5,
-                                           team1: matchDataTimeBased.team1,
-                                           team2: matchDataTimeBased.team2)
-
-        // Act
         sut.viewIsReady()
-
-        // Assert
-        view.checkInvocations([.updateMatchUI(dataModel)])
-    }
-
-    func Xtest_ViewIsReady_With_GoalBasedGame() {
-
-        // Arrange
-        let dataModel = MatchViewDataModel(showTimer: false,
-                                           remainingMinutes: 0,
-                                           team1: matchDataGoalBased.team1,
-                                           team2: matchDataGoalBased.team2)
-
-        sut = MatchPresenter(matchData: matchDataGoalBased)
-        sut.view = self.view
-
-        // Act
-        sut.viewIsReady()
-
-        // Assert
-        view.checkInvocations([.updateMatchUI(dataModel)])
-    }
-
-    private var matchDataTimeBased: MatchData {
-
-        let team1 = Team()
-        let team2 = Team()
-        let gameType: GameType = .timeBased
-
-        return MatchData(team1: team1,
-                         team2: team2,
-                         gameType: gameType)
-    }
-
-    private var matchDataGoalBased: MatchData {
-
-        let team1 = Team()
-        let team2 = Team()
-        let gameType: GameType = .goalBased
-
-        return MatchData(team1: team1,
-                         team2: team2,
-                         gameType: gameType)
     }
 
 }

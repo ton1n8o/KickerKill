@@ -2,15 +2,9 @@
 
 @testable import KickerKill
 
-final class MockMatchViewInput: MatchViewInput, HasInvocations {
+final class MockMatchViewInput: MatchViewInput {
 
-    enum Invocation: FakeEquatable {
-        case updateMatchUI(MatchViewDataModel)
-    }
+    func updateMatchUI() {
 
-    var invocations: [Invocation] = []
-
-    func updateMatchUI(with matchData: MatchViewDataModel) {
-        invocations.append(.updateMatchUI(matchData))
     }
 }

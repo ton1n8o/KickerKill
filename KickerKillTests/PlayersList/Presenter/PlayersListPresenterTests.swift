@@ -314,7 +314,7 @@ final class PlayersListPresenterTests: XCTestCase {
             team1Initials: (nil, nil),
             team2Initials: (nil, nil),
             startGameEnabled: false,
-            gameType: .goalBased
+            gameType: .goalBased(totalGoals: 5)
         )
 
         // Act
@@ -346,14 +346,14 @@ final class PlayersListPresenterTests: XCTestCase {
             team1Initials: ("M", nil),
             team2Initials: ("P", nil),
             startGameEnabled: true,
-            gameType: .goalBased
+            gameType: .goalBased(totalGoals: 5)
         )
 
         // Act
         sut.didSelectPlayer(players.first!)
         sut.didSelectPlayer(players.last!)
 
-        sut.didSelectGameType(.goalBased, gameTypeUnit: 5)
+        sut.didSelectGameType(.goalBased(totalGoals: 5))
 
         // Assert
         view.checkInvocations([.updateWithDataModel(expectedModel1),
