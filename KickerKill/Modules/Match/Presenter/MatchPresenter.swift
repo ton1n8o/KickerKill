@@ -29,10 +29,13 @@ final class MatchPresenter: MatchViewOutput, MatchInteractorOutput {
         let showTimer: Bool
         let reaminingMinutes: Int
 
-        if case .timeBased(let minutes) = matchData.gameType {
+        switch matchData.gameType {
+
+        case .timeBased(let minutes):
             showTimer = true
             reaminingMinutes = minutes
-        } else {
+
+        case .goalBased:
             showTimer = false
             reaminingMinutes = 0
         }

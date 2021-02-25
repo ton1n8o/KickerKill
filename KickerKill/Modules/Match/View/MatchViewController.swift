@@ -20,12 +20,19 @@ final class MatchViewController: UIViewController, MatchViewInput {
 
         output.viewIsReady()
 
-        team1Attack.setRoundCorner()
-        team1Defence.setRoundCorner()
-        team2Attack.setRoundCorner()
-        team2Defence.setRoundCorner()
+        [team1Attack, team1Defence, team2Attack, team2Defence].forEach {
+            setupLayoutFor(player: $0)
+        }
 
         setupSoccerFieldImage()
+    }
+
+    private func setupLayoutFor(player button: UIButton) {
+
+        button.setRoundCorner()
+        button.titleLabel?.numberOfLines = 0
+        button.titleLabel?.textAlignment = .center
+        button.titleLabel?.adjustsFontForContentSizeCategory = true
     }
 
     private func setupSoccerFieldImage() {
@@ -53,7 +60,11 @@ final class MatchViewController: UIViewController, MatchViewInput {
     // MARK: MatchViewInput
 
     func updateMatchUI(with dataModel: MatchViewDataModel) {
-        //TODO: enviar objeto com dados aqui.
+
+        team1Attack.setTitle(dataModel.team1AttackerName, for: .normal)
+        team1Defence.setTitle(dataModel.team1DefenderName, for: .normal)
+        team2Attack.setTitle(dataModel.team2AttackerName, for: .normal)
+        team2Defence.setTitle(dataModel.team2DefenderName, for: .normal)
     }
 
 }
