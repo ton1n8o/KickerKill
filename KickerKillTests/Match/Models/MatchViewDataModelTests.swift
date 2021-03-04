@@ -55,18 +55,18 @@ final class MatchViewDataModelTests: XCTestCase {
 private extension MatchViewDataModelTests {
 
     func buildTeam(_ namePlayer1: String, _ namePlayer2: String?) -> Team {
-
+        
         let player1 = Player(id: "1",
                              name: namePlayer1,
                              email: "foo@gmail.com")
-
+        
         var player2: Player?
         if let namePlayer2 = namePlayer2 {
             player2 = Player(id: "2",
-                                 name: namePlayer2,
-                                 email: "mar@gmail.com")
+                             name: namePlayer2,
+                             email: "mar@gmail.com")
         }
-
+        
         return Team(player1: player1, player2: player2)
     }
 }

@@ -8,6 +8,7 @@ final class MatchViewController: UIViewController, MatchViewInput {
 
     @IBOutlet weak var team1Attack: UIButton!
     @IBOutlet weak var team1Defence: UIButton!
+
     @IBOutlet weak var team2Attack: UIButton!
     @IBOutlet weak var team2Defence: UIButton!
 

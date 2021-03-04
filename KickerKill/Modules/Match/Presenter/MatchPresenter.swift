@@ -27,20 +27,20 @@ final class MatchPresenter: MatchViewOutput, MatchInteractorOutput {
     private var gameTypeData: (showTimer: Bool, remainingMinutes: Int) {
 
         let showTimer: Bool
-        let reaminingMinutes: Int
+        let remainingMinutes: Int
 
         switch matchData.gameType {
 
         case .timeBased(let minutes):
             showTimer = true
-            reaminingMinutes = minutes
+            remainingMinutes = minutes
 
         case .goalBased:
             showTimer = false
-            reaminingMinutes = 0
+            remainingMinutes = 0
         }
 
-        return (showTimer, reaminingMinutes)
+        return (showTimer, remainingMinutes)
     }
 
     // MARK: - MatchInteractorOutput
