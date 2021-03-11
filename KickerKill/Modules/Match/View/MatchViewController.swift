@@ -68,4 +68,20 @@ final class MatchViewController: UIViewController, MatchViewInput {
         team2Defence.setTitle(dataModel.team2DefenderName, for: .normal)
     }
 
+    @IBAction func team1AttackScoreGoal(_ sender: UIButton) {
+        output.team1AttackerScoredGoal()
+    }
+
+    @IBAction func team1DefenseScoreGoal(_ sender: UIButton) {
+        
+    }
+
+    @IBAction func team2AttackScoreGoal(_ sender: UIButton) {
+
+    }
+
+    @IBAction func team2DefenseScoreGoal(_ sender: UIButton) {
+
+    }
+
 }

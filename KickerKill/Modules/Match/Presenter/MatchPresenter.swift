@@ -6,7 +6,7 @@ final class MatchPresenter: MatchViewOutput, MatchInteractorOutput {
     var interactor: MatchInteractorInput!
     var router: MatchRouterInput!
 
-    private let matchData: MatchData
+    private var matchData: MatchData
 
     init(matchData: MatchData) {
         self.matchData = matchData
@@ -22,6 +22,10 @@ final class MatchPresenter: MatchViewOutput, MatchInteractorOutput {
                                                 team2: matchData.team2)
 
         view?.updateMatchUI(with: matchDataModel)
+    }
+
+    func team1AttackerScoredGoal() {
+        matchData.team1AttackerScoredGoal()
     }
 
     private var gameTypeData: (showTimer: Bool, remainingMinutes: Int) {
