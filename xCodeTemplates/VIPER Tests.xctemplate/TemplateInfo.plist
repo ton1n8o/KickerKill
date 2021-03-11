@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
+	<key>Description</key>
+	<string>VIPER unit tests Module</string>
+	<key>Summary</key>
+	<string>Creates VIPER unit tests module with provided name</string>
+	<key>SortOrder</key>
+	<string>30</string>
+	<key>AllowedTypes</key>
+	<array>
+		<string>public.swift-source</string>
+	</array>
+	<key>DefaultCompletionName</key>
+	<string>File</string>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Description</key>
+			<string>The name of the module to create</string>
+			<key>Name</key>
+			<string>New unit test Module Name:</string>
+			<key>Default</key>
+			<string></string>
+			<key>Identifier</key>
+			<string>module_name</string>
+			<key>NotPersisted</key>
+			<string>YES</string>
+			<key>Required</key>
+			<string>YES</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>The name used to import the testable target</string>
+			<key>Name</key>
+			<string>Testable import name</string>
+			<key>Default</key>
+			<string></string>
+			<key>Identifier</key>
+			<string>testable_target</string>
+			<key>NotPersisted</key>
+			<string>NO</string>
+			<key>Required</key>
+			<string>YES</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_module_name___</string>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_testable_target___</string>
+		</dict>
+	</array>
+</dict>
+</plist>

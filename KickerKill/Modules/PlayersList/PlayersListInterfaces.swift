@@ -13,4 +13,5 @@ protocol PlayersListViewOutput {
     func didSelectPlayer(_ player: Player)
     func removePlayer(at: PlayerPosition)
     func didSelectGameType(_ gameType: GameType?)
+    func startGame()
 }

@@ -6,6 +6,9 @@
 build/
 DerivedData/
 
+# Snapshot tests failure directory
+# KickerKillTests/FailureDiffs/
+
 ## Various settings
 *.pbxuser
 !default.pbxuser

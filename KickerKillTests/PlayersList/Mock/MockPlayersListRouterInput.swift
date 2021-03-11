@@ -3,10 +3,16 @@
 @testable import KickerKill
 
 final class MockPlayersListRouterInput: PlayersListRouterInput, HasInvocations {
+
     enum Invocation: FakeEquatable {
+
     }
+
     var invocations: [Invocation] = []
 
     // MARK: PlayersListRouterInput
 
+    func showMatchModule(with matchData: MatchData) {
+
+    }
 }

@@ -78,6 +78,19 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
         self.gameType = gameType
         view?.updateWithDataModel(viewDataModel)
     }
+
+    func startGame() {
+
+        guard let gameType = gameType else {
+            fatalError("gameType is missing")
+        }
+
+        let matchData = MatchData(team1: team1,
+                                  team2: team2,
+                                  gameType: gameType)
+
+        router.showMatchModule(with: matchData)
+    }
     
     // MARK: - PlayersListInteractorOutput
 

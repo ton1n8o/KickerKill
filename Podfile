@@ -12,6 +12,7 @@ target 'KickerKill' do
 
   pod 'FirebaseUI/Auth'
   pod 'FirebaseUI/Google'
+  pod 'FirebaseUI/Email'
 
   target 'KickerKillTests' do
     inherit! :search_paths
