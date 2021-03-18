@@ -52,8 +52,7 @@ final class MatchPresenterTests: XCTestCase {
         // Arrange
         let dataModel = MatchViewDataModel(showTimer: true,
                                            remainingMinutes: 5,
-                                           team1: matchDataTimeBased.team1,
-                                           team2: matchDataTimeBased.team2)
+                                           matchData: matchDataTimeBased)
 
         // Act
         sut.viewIsReady()
@@ -68,8 +67,7 @@ final class MatchPresenterTests: XCTestCase {
         // Arrange
         let dataModel = MatchViewDataModel(showTimer: false,
                                            remainingMinutes: 0,
-                                           team1: matchDataGoalBased.team1,
-                                           team2: matchDataGoalBased.team2)
+                                           matchData: matchDataGoalBased)
 
         sut = MatchPresenter(matchData: matchDataGoalBased)
         sut.view = self.view
@@ -79,6 +77,40 @@ final class MatchPresenterTests: XCTestCase {
 
         // Assert
          view.checkInvocations([.updateMatchUI(dataModel)])
+    }
+
+    func test_team1AttackerScoredGoal_Adds_a_Goal() {
+
+        // Arrange
+        let dataModelExpected = MatchViewDataModel(showTimer: false,
+                                                   remainingMinutes: 0,
+                                                   matchData: matchDataWith(goals: 1))
+
+        sut = MatchPresenter(matchData: matchDataWith(goals: 0))
+        sut.view = self.view
+
+        // Act
+        sut.team1AttackerScoredGoal()
+
+        // Assert
+        view.checkInvocations([.updateMatchUI(dataModelExpected)])
+    }
+
+    func test_team1DefenseScoredGoal_Adds_a_Goal() {
+
+        // Arrange
+        let dataModelExpected = MatchViewDataModel(showTimer: false,
+                                                   remainingMinutes: 0,
+                                                   matchData: matchDataWith(goals: 0, 1))
+
+        sut = MatchPresenter(matchData: matchDataWith(goals: 0, 0))
+        sut.view = self.view
+
+        // Act
+        sut.team1DefenseScoredGoal()
+
+        // Assert
+        view.checkInvocations([.updateMatchUI(dataModelExpected)])
     }
 
 }
@@ -107,5 +139,42 @@ private extension MatchPresenterTests {
         return MatchData(team1: team1,
                          team2: team2,
                          gameType: gameType)
+    }
+
+    private func matchDataWith(goals: Int...) -> MatchData {
+
+        let team1 = Team()
+        let team2 = Team()
+
+        switch goals.count {
+        case 1:
+            return MatchData(team1: team1,
+                             team2: team2,
+                             gameType: .goalBased(totalGoals: 5),
+                             team1AttackerGoals: goals[0])
+        case 2:
+            return MatchData(team1: team1,
+                             team2: team2,
+                             gameType: .goalBased(totalGoals: 5),
+                             team1AttackerGoals: goals[0],
+                             team1DefenseGoals: goals[1])
+        case 3:
+            return MatchData(team1: team1,
+                             team2: team2,
+                             gameType: .goalBased(totalGoals: 5),
+                             team1AttackerGoals: goals[0],
+                             team1DefenseGoals: goals[1],
+                             team2AttackerGoals: goals[2])
+        case 4:
+            return MatchData(team1: team1,
+                             team2: team2,
+                             gameType: .goalBased(totalGoals: 5),
+                             team1AttackerGoals: goals[0],
+                             team1DefenseGoals: goals[1],
+                             team2AttackerGoals: goals[2],
+                             team2DefenseGoals: goals[3])
+        default:
+            fatalError("number of records beyond the supported limit.")
+        }
     }
 }

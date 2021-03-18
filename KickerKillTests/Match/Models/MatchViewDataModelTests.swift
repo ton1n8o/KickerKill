@@ -9,9 +9,11 @@ final class MatchViewDataModelTests: XCTestCase {
 
         // Arrange
         let team1 = buildTeam("Marco", nil)
-        let sut = MatchViewDataModel(showTimer: true, remainingMinutes: 0,
-                                 team1: team1,
-                                 team2: buildTeam("Foo", nil))
+        let team2 = buildTeam("Foo", nil)
+        let matchData = buildMatchData(team1: team1, team2: team2)
+        let sut = MatchViewDataModel(showTimer: true,
+                                     remainingMinutes: 0,
+                                     matchData: matchData)
 
         // Act Assert
         XCTAssertEqual(sut.team1AttackerName, "Marco")
@@ -21,10 +23,12 @@ final class MatchViewDataModelTests: XCTestCase {
     func test_Team2_When_1_Player_Returns_Same_Name() {
 
         // Arrange
+        let team1 = buildTeam("Foo", nil)
         let team2 = buildTeam("Pedro", nil)
-        let sut = MatchViewDataModel(showTimer: true, remainingMinutes: 0,
-                                 team1: buildTeam("Foo", nil),
-                                 team2: team2)
+        let matchData = buildMatchData(team1: team1, team2: team2)
+        let sut = MatchViewDataModel(showTimer: true,
+                                     remainingMinutes: 0,
+                                     matchData: matchData)
 
         // Act Assert
         XCTAssertEqual(sut.team2AttackerName, "Pedro")
@@ -36,11 +40,10 @@ final class MatchViewDataModelTests: XCTestCase {
         // Arrange
         let team1 = buildTeam("Marco", "Antonio")
         let team2 = buildTeam("Rodrigo", "Stuart")
-
+        let matchData = buildMatchData(team1: team1, team2: team2)
         let sut = MatchViewDataModel(showTimer: true,
-                                 remainingMinutes: 5,
-                                 team1: team1,
-                                 team2: team2)
+                                     remainingMinutes: 5,
+                                     matchData: matchData)
 
         // Act Assert
         XCTAssertEqual(sut.team1AttackerName, "Marco")
@@ -68,5 +71,9 @@ private extension MatchViewDataModelTests {
         }
         
         return Team(player1: player1, player2: player2)
+    }
+
+    func buildMatchData(team1: Team, team2: Team) -> MatchData {
+        return MatchData(team1: team1, team2: team2, gameType: .goalBased(totalGoals: 5))
     }
 }

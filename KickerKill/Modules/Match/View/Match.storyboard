@@ -245,8 +245,10 @@
                         <outlet property="imageViewSoccerField" destination="cN2-nf-V09" id="ktI-BM-JP1"/>
                         <outlet property="team1Attack" destination="gmK-2g-Isu" id="jFs-5E-rfv"/>
                         <outlet property="team1Defence" destination="k0S-Za-hdF" id="ufu-HW-O7K"/>
+                        <outlet property="team1Goals" destination="kBx-w2-rNm" id="MAq-7g-PNe"/>
                         <outlet property="team2Attack" destination="FL3-2L-ohH" id="Nph-3f-9Ao"/>
                         <outlet property="team2Defence" destination="EZr-If-Hi9" id="Zg5-Oj-tJ8"/>
+                        <outlet property="team2Goals" destination="esU-bU-Zuz" id="vij-lV-g7u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bff-kf-dJR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

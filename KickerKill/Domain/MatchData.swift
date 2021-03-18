@@ -23,4 +23,8 @@ struct MatchData {
     mutating func team1AttackerScoredGoal() {
         team1AttackerGoals += 1
     }
+
+    mutating func team1DefenseScoredGoal() {
+        team1DefenseGoals += 1
+    }
 }

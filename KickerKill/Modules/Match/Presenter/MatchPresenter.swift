@@ -15,17 +15,26 @@ final class MatchPresenter: MatchViewOutput, MatchInteractorOutput {
     // MARK: - MatchViewOutput
 
     func viewIsReady() {
+        view?.updateMatchUI(with: matchViewDataModel)
+    }
 
-        let matchDataModel = MatchViewDataModel(showTimer: gameTypeData.showTimer,
-                                                remainingMinutes: gameTypeData.remainingMinutes,
-                                                team1: matchData.team1,
-                                                team2: matchData.team2)
+    private var matchViewDataModel: MatchViewDataModel {
 
-        view?.updateMatchUI(with: matchDataModel)
+        return MatchViewDataModel(
+            showTimer: gameTypeData.showTimer,
+            remainingMinutes: gameTypeData.remainingMinutes,
+            matchData: matchData
+        )
     }
 
     func team1AttackerScoredGoal() {
         matchData.team1AttackerScoredGoal()
+        view?.updateMatchUI(with: matchViewDataModel)
+    }
+
+    func team1DefenseScoredGoal() {
+        matchData.team1DefenseScoredGoal()
+        view?.updateMatchUI(with: matchViewDataModel)
     }
 
     private var gameTypeData: (showTimer: Bool, remainingMinutes: Int) {
