@@ -73,7 +73,6 @@
 		91D40E8224C0C14800E5888E /* PlayersListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E6424C0C14800E5888E /* PlayersListRouter.swift */; };
 		91D40E8F24C0C16300E5888E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E8E24C0C16300E5888E /* Player.swift */; };
 		91D40E9524C0C1AC00E5888E /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E9224C0C1AC00E5888E /* UIStoryboardExtension.swift */; };
-		91D40E9624C0C1AC00E5888E /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E9324C0C1AC00E5888E /* PresenterInterface.swift */; };
 		91D40E9C24C0C22300E5888E /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E9824C0C22200E5888E /* Encodable+Extensions.swift */; };
 		91D40E9D24C0C22300E5888E /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E9924C0C22200E5888E /* UITableView+Extensions.swift */; };
 		91D40E9E24C0C22300E5888E /* UI+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E9A24C0C22200E5888E /* UI+Extensions.swift */; };
@@ -169,7 +168,6 @@
 		91D40E6424C0C14800E5888E /* PlayersListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersListRouter.swift; sourceTree = "<group>"; };
 		91D40E8E24C0C16300E5888E /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		91D40E9224C0C1AC00E5888E /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
-		91D40E9324C0C1AC00E5888E /* PresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
 		91D40E9824C0C22200E5888E /* Encodable+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encodable+Extensions.swift"; sourceTree = "<group>"; };
 		91D40E9924C0C22200E5888E /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		91D40E9A24C0C22200E5888E /* UI+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UI+Extensions.swift"; sourceTree = "<group>"; };
@@ -642,7 +640,6 @@
 			isa = PBXGroup;
 			children = (
 				91D40E9224C0C1AC00E5888E /* UIStoryboardExtension.swift */,
-				91D40E9324C0C1AC00E5888E /* PresenterInterface.swift */,
 			);
 			path = VIPER;
 			sourceTree = "<group>";
@@ -933,7 +930,6 @@
 				91D40E7924C0C14800E5888E /* PlayersListInterfaces.swift in Sources */,
 				91D40EA224C0C27C00E5888E /* Identifiable.swift in Sources */,
 				91D40E7424C0C14800E5888E /* SignInBuilder.swift in Sources */,
-				91D40E9624C0C1AC00E5888E /* PresenterInterface.swift in Sources */,
 				91D40E4424C0BF8700E5888E /* CreatePlayerDTO.swift in Sources */,
 				91D40E4924C0BF8700E5888E /* QueryParameters.swift in Sources */,
 				91D40E8F24C0C16300E5888E /* Player.swift in Sources */,

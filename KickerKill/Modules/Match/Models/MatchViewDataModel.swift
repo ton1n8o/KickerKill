@@ -24,6 +24,10 @@ struct MatchViewDataModel {
         matchData.team1Goals
     }
 
+    var team2Goals: Int {
+        matchData.team2Goals
+    }
+
     var team2AttackerName: String {
         matchData.team2.player1?.name ?? ""
     }

@@ -70,6 +70,7 @@ final class MatchViewController: UIViewController, MatchViewInput {
         team2Defence.setTitle(dataModel.team2DefenderName, for: .normal)
 
         team1Goals.text = "\(dataModel.team1Goals)"
+        team2Goals.text = "\(dataModel.team2Goals)"
     }
 
     @IBAction func team1AttackScoreGoal(_ sender: UIButton) {
@@ -81,11 +82,11 @@ final class MatchViewController: UIViewController, MatchViewInput {
     }
 
     @IBAction func team2AttackScoreGoal(_ sender: UIButton) {
-
+        output.team2AttackerScoredGoal()
     }
 
     @IBAction func team2DefenseScoreGoal(_ sender: UIButton) {
-
+        output.team2DefenseScoredGoal()
     }
 
 }

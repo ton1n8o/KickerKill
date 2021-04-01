@@ -61,7 +61,6 @@ final class MatchPresenterTests: XCTestCase {
         view.checkInvocations([.updateMatchUI(dataModel)])
     }
 
-
     func test_ViewIsReady_With_GoalBasedGame() {
 
         // Arrange
@@ -108,6 +107,40 @@ final class MatchPresenterTests: XCTestCase {
 
         // Act
         sut.team1DefenseScoredGoal()
+
+        // Assert
+        view.checkInvocations([.updateMatchUI(dataModelExpected)])
+    }
+
+    func test_team2AttackerScoredGoal_Adds_a_Goal() {
+
+        // Arrange
+        let dataModelExpected = MatchViewDataModel(showTimer: false,
+                                                   remainingMinutes: 0,
+                                                   matchData: matchDataWith(goals: 0, 0, 1))
+
+        sut = MatchPresenter(matchData: matchDataWith(goals: 0))
+        sut.view = self.view
+
+        // Act
+        sut.team2AttackerScoredGoal()
+
+        // Assert
+        view.checkInvocations([.updateMatchUI(dataModelExpected)])
+    }
+
+    func test_team2DefenseScoredGoal_Adds_a_Goal() {
+
+        // Arrange
+        let dataModelExpected = MatchViewDataModel(showTimer: false,
+                                                   remainingMinutes: 0,
+                                                   matchData: matchDataWith(goals: 0, 0, 0, 1))
+
+        sut = MatchPresenter(matchData: matchDataWith(goals: 0))
+        sut.view = self.view
+
+        // Act
+        sut.team2DefenseScoredGoal()
 
         // Assert
         view.checkInvocations([.updateMatchUI(dataModelExpected)])

@@ -23,4 +23,12 @@ final class MockMatchViewOutput: MatchViewOutput, HasInvocations {
     func team1DefenseScoredGoal() {
         
     }
+
+    func team2AttackerScoredGoal() {
+
+    }
+
+    func team2DefenseScoredGoal() {
+
+    }
 }

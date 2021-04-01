@@ -37,6 +37,16 @@ final class MatchPresenter: MatchViewOutput, MatchInteractorOutput {
         view?.updateMatchUI(with: matchViewDataModel)
     }
 
+    func team2AttackerScoredGoal() {
+        matchData.team2AttackerScoredGoal()
+        view?.updateMatchUI(with: matchViewDataModel)
+    }
+
+    func team2DefenseScoredGoal() {
+        matchData.team2DefenseScoredGoal()
+        view?.updateMatchUI(with: matchViewDataModel)
+    }
+
     private var gameTypeData: (showTimer: Bool, remainingMinutes: Int) {
 
         let showTimer: Bool

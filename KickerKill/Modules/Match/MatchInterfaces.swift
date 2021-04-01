@@ -10,4 +10,6 @@ protocol MatchViewOutput {
     func viewIsReady()
     func team1AttackerScoredGoal()
     func team1DefenseScoredGoal()
+    func team2AttackerScoredGoal()
+    func team2DefenseScoredGoal()
 }
