@@ -16,6 +16,7 @@
 		02615EB7255DB7AC00326EF0 /* MatchInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EAD255DB7AC00326EF0 /* MatchInteractorOutput.swift */; };
 		02615EB8255DB7AC00326EF0 /* MatchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EAE255DB7AC00326EF0 /* MatchInteractor.swift */; };
 		02615EB9255DB7AC00326EF0 /* MatchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EB0255DB7AC00326EF0 /* MatchRouter.swift */; };
+		0278BB5F263B1B5C0062DC40 /* MatchDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0278BB5E263B1B5C0062DC40 /* MatchDataTests.swift */; };
 		0280A04625E82D6F00D6A599 /* MatchViewDataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0280A04525E82D6F00D6A599 /* MatchViewDataModelTests.swift */; };
 		028D2A8D25A7672A00D2A76A /* Match.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028D2A8C25A7672A00D2A76A /* Match.storyboard */; };
 		028DD43925DF0FAC002E3B6C /* MatchViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028DD43825DF0FAC002E3B6C /* MatchViewDataModel.swift */; };
@@ -103,6 +104,7 @@
 		02615EAD255DB7AC00326EF0 /* MatchInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchInteractorOutput.swift; sourceTree = "<group>"; };
 		02615EAE255DB7AC00326EF0 /* MatchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchInteractor.swift; sourceTree = "<group>"; };
 		02615EB0255DB7AC00326EF0 /* MatchRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchRouter.swift; sourceTree = "<group>"; };
+		0278BB5E263B1B5C0062DC40 /* MatchDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDataTests.swift; sourceTree = "<group>"; };
 		0280A04525E82D6F00D6A599 /* MatchViewDataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewDataModelTests.swift; sourceTree = "<group>"; };
 		028D2A8C25A7672A00D2A76A /* Match.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Match.storyboard; sourceTree = "<group>"; };
 		028DD43825DF0FAC002E3B6C /* MatchViewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewDataModel.swift; sourceTree = "<group>"; };
@@ -255,6 +257,14 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		0278BB5D263B1B470062DC40 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				0278BB5E263B1B5C0062DC40 /* MatchDataTests.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		0280A04425E82D1300D6A599 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +402,7 @@
 		919FA12024C0BC97004EEE15 /* KickerKillTests */ = {
 			isa = PBXGroup;
 			children = (
+				0278BB5D263B1B470062DC40 /* Domain */,
 				91CBABEF24C0CFB400D64578 /* Network */,
 				91CBABD424C0CF9C00D64578 /* PlayersList */,
 				02ED626D25DEF5B2002BB8A1 /* Match */,
@@ -978,6 +989,7 @@
 				02ED628225DEF5B2002BB8A1 /* MockMatchRouterInput.swift in Sources */,
 				02ED628825DEF5B2002BB8A1 /* MatchViewControllerTests.swift in Sources */,
 				02ED628925DEF5B2002BB8A1 /* MatchModuleBuilderTests.swift in Sources */,
+				0278BB5F263B1B5C0062DC40 /* MatchDataTests.swift in Sources */,
 				91CBABF424C0CFB400D64578 /* MockWebService.swift in Sources */,
 				0280A04625E82D6F00D6A599 /* MatchViewDataModelTests.swift in Sources */,
 				91CBABE524C0CF9C00D64578 /* MockPlayersListViewOutput.swift in Sources */,

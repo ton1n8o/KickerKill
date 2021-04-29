@@ -21,18 +21,34 @@ struct MatchData {
     }
 
     mutating func team1AttackerScoredGoal() {
-        team1AttackerGoals += 1
+        scoreGoal( { team1AttackerGoals += 1 } )
+    }
+
+    private func scoreGoal(_ addGoal: () -> ()) {
+        guard !matchIsOver else { return }
+        addGoal()
     }
 
     mutating func team1DefenseScoredGoal() {
-        team1DefenseGoals += 1
+        scoreGoal( { team1DefenseGoals += 1 } )
     }
 
     mutating func team2AttackerScoredGoal() {
-        team2AttackerGoals += 1
+        scoreGoal( { team2AttackerGoals += 1 } )
     }
 
     mutating func team2DefenseScoredGoal() {
-        team2DefenseGoals += 1
+        scoreGoal( { team2DefenseGoals += 1 } )
+    }
+
+    var matchIsOver: Bool {
+
+        switch gameType {
+        case .goalBased(let totalGoals):
+            return totalGoals == team1Goals || totalGoals == team2Goals
+        case .timeBased:
+            // TODO: lidar com o tempo depois.
+            return false
+        }
     }
 }

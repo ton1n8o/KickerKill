@@ -51,6 +51,94 @@ final class MatchViewDataModelTests: XCTestCase {
         XCTAssertEqual(sut.team2AttackerName, "Rodrigo")
         XCTAssertEqual(sut.team2DefenderName, "Stuart")
     }
+
+    func test_MatchIsOver_True_When_Team1_Reaches_Total_Score() {
+
+        // Arrange
+        let team1 = buildTeam("Marco", "Antonio")
+        let team2 = buildTeam("Rodrigo", "Stuart")
+        let gameType = GameType.goalBased(totalGoals: 10)
+
+        var matchData = buildMatchData(team1: team1, team2: team2, gameType: gameType)
+
+        // Act
+        (0 ..< 10).forEach { _ in
+            matchData.team1AttackerScoredGoal()
+        }
+
+        let sut = MatchViewDataModel(showTimer: true,
+                                     remainingMinutes: 5,
+                                     matchData: matchData)
+
+        // Assert
+        XCTAssertTrue(sut.matchIsOver)
+    }
+
+    func test_MatchIsOver_False_When_Team1_Score_Less_Than_Total() {
+
+        // Arrange
+        let team1 = buildTeam("Marco", "Antonio")
+        let team2 = buildTeam("Rodrigo", "Stuart")
+        let gameType = GameType.goalBased(totalGoals: 10)
+
+        var matchData = buildMatchData(team1: team1, team2: team2, gameType: gameType)
+
+        // Act
+        (0 ..< 5).forEach { _ in
+            matchData.team1AttackerScoredGoal()
+        }
+
+        let sut = MatchViewDataModel(showTimer: true,
+                                     remainingMinutes: 5,
+                                     matchData: matchData)
+
+        // Assert
+        XCTAssertFalse(sut.matchIsOver)
+    }
+
+    func test_MatchIsOver_True_When_Team2_Reaches_Total_Score() {
+
+        // Arrange
+        let team1 = buildTeam("Marco", "Antonio")
+        let team2 = buildTeam("Rodrigo", "Stuart")
+        let gameType = GameType.goalBased(totalGoals: 10)
+
+        var matchData = buildMatchData(team1: team1, team2: team2, gameType: gameType)
+
+        // Act
+        (0 ..< 10).forEach { _ in
+            matchData.team2AttackerScoredGoal()
+        }
+
+        let sut = MatchViewDataModel(showTimer: true,
+                                     remainingMinutes: 5,
+                                     matchData: matchData)
+
+        // Assert
+        XCTAssertTrue(sut.matchIsOver)
+    }
+
+    func test_MatchIsOver_False_When_Team2_Score_Less_Than_Total() {
+
+        // Arrange
+        let team1 = buildTeam("Marco", "Antonio")
+        let team2 = buildTeam("Rodrigo", "Stuart")
+        let gameType = GameType.goalBased(totalGoals: 10)
+
+        var matchData = buildMatchData(team1: team1, team2: team2, gameType: gameType)
+
+        // Act
+        (0 ..< 5).forEach { _ in
+            matchData.team2AttackerScoredGoal()
+        }
+
+        let sut = MatchViewDataModel(showTimer: true,
+                                     remainingMinutes: 5,
+                                     matchData: matchData)
+
+        // Assert
+        XCTAssertFalse(sut.matchIsOver)
+    }
 }
 
 // MARK: - Helpers
@@ -73,7 +161,7 @@ private extension MatchViewDataModelTests {
         return Team(player1: player1, player2: player2)
     }
 
-    func buildMatchData(team1: Team, team2: Team) -> MatchData {
-        return MatchData(team1: team1, team2: team2, gameType: .goalBased(totalGoals: 5))
+    func buildMatchData(team1: Team, team2: Team, gameType: GameType = .goalBased(totalGoals: 5)) -> MatchData {
+        return MatchData(team1: team1, team2: team2, gameType: gameType)
     }
 }

@@ -35,4 +35,8 @@ struct MatchViewDataModel {
     var team2DefenderName: String {
         matchData.team2.player2?.name ?? team2AttackerName
     }
+
+    var matchIsOver: Bool {
+        matchData.matchIsOver
+    }
 }

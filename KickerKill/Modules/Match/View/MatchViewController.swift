@@ -71,6 +71,8 @@ final class MatchViewController: UIViewController, MatchViewInput {
 
         team1Goals.text = "\(dataModel.team1Goals)"
         team2Goals.text = "\(dataModel.team2Goals)"
+
+        // TODO: terminou o jogo?
     }
 
     @IBAction func team1AttackScoreGoal(_ sender: UIButton) {
