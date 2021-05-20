@@ -71,24 +71,24 @@ final class MatchViewController: UIViewController, MatchViewInput {
 
         team1Goals.text = "\(dataModel.team1Goals)"
         team2Goals.text = "\(dataModel.team2Goals)"
-
-        // TODO: terminou o jogo?
     }
 
     @IBAction func team1AttackScoreGoal(_ sender: UIButton) {
-        output.team1AttackerScoredGoal()
+        output.playerScoredGoal(teamPlayer: .team1Attack)
     }
 
     @IBAction func team1DefenseScoreGoal(_ sender: UIButton) {
-        output.team1DefenseScoredGoal()
+        output.playerScoredGoal(teamPlayer: .team1Defense)
     }
 
     @IBAction func team2AttackScoreGoal(_ sender: UIButton) {
-        output.team2AttackerScoredGoal()
+        output.playerScoredGoal(teamPlayer: .team2Attack)
     }
 
     @IBAction func team2DefenseScoreGoal(_ sender: UIButton) {
-        output.team2DefenseScoredGoal()
+        output.playerScoredGoal(teamPlayer: .team2Defense)
+    }
+
     }
 
 }

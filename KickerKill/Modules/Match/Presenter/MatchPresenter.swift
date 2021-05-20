@@ -1,5 +1,12 @@
 //  Copyright © 2020 TNTStudios. All rights reserved.
 
+enum TeamPlayers {
+    case team1Attack
+    case team1Defense
+    case team2Attack
+    case team2Defense
+}
+
 final class MatchPresenter: MatchViewOutput, MatchInteractorOutput {
 
     weak var view: MatchViewInput?
@@ -27,24 +34,24 @@ final class MatchPresenter: MatchViewOutput, MatchInteractorOutput {
         )
     }
 
-    func team1AttackerScoredGoal() {
-        matchData.team1AttackerScoredGoal()
-        view?.updateMatchUI(with: matchViewDataModel)
-    }
+    func playerScoredGoal(teamPlayer: TeamPlayers) {
 
-    func team1DefenseScoredGoal() {
-        matchData.team1DefenseScoredGoal()
-        view?.updateMatchUI(with: matchViewDataModel)
-    }
+        switch teamPlayer {
+        case .team1Attack:
+            matchData.team1AttackerScoredGoal()
+        case .team1Defense:
+            matchData.team1DefenseScoredGoal()
+        case .team2Attack:
+            matchData.team2AttackerScoredGoal()
+        case .team2Defense:
+            matchData.team2DefenseScoredGoal()
+        }
 
-    func team2AttackerScoredGoal() {
-        matchData.team2AttackerScoredGoal()
         view?.updateMatchUI(with: matchViewDataModel)
-    }
 
-    func team2DefenseScoredGoal() {
-        matchData.team2DefenseScoredGoal()
-        view?.updateMatchUI(with: matchViewDataModel)
+        if matchViewDataModel.matchIsOver {
+            router.showScoreBoard(matchViewDataModel)
+        }
     }
 
     private var gameTypeData: (showTimer: Bool, remainingMinutes: Int) {

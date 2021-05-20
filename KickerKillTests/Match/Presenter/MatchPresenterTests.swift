@@ -89,7 +89,7 @@ final class MatchPresenterTests: XCTestCase {
         sut.view = self.view
 
         // Act
-        sut.team1AttackerScoredGoal()
+        sut.playerScoredGoal(teamPlayer: .team1Attack)
 
         // Assert
         view.checkInvocations([.updateMatchUI(dataModelExpected)])
@@ -106,7 +106,7 @@ final class MatchPresenterTests: XCTestCase {
         sut.view = self.view
 
         // Act
-        sut.team1DefenseScoredGoal()
+        sut.playerScoredGoal(teamPlayer: .team1Defense)
 
         // Assert
         view.checkInvocations([.updateMatchUI(dataModelExpected)])
@@ -123,7 +123,7 @@ final class MatchPresenterTests: XCTestCase {
         sut.view = self.view
 
         // Act
-        sut.team2AttackerScoredGoal()
+        sut.playerScoredGoal(teamPlayer: .team2Attack)
 
         // Assert
         view.checkInvocations([.updateMatchUI(dataModelExpected)])
@@ -140,7 +140,7 @@ final class MatchPresenterTests: XCTestCase {
         sut.view = self.view
 
         // Act
-        sut.team2DefenseScoredGoal()
+        sut.playerScoredGoal(teamPlayer: .team2Defense)
 
         // Assert
         view.checkInvocations([.updateMatchUI(dataModelExpected)])
