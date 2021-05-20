@@ -13,7 +13,8 @@ final class MatchRouter: MatchRouterInput {
 	// MARK: - MatchRouterInput
 
     func showScoreBoard(_ matchViewData: MatchViewDataModel) {
-
+        let matchScoreVC = MatchScoreModuleBuilder().build()
+        viewController?.present(matchScoreVC, animated: true)
     }
 
     deinit {

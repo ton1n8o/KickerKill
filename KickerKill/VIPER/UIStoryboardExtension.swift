@@ -9,4 +9,16 @@ extension UIStoryboard {
         let identifier = identifier ?? String(describing: T.self)
         return instantiateViewController(withIdentifier: identifier) as! T
     }
+
+    static func viewController<T: UIViewController>(
+        ofType _: T.Type,
+        withIdentifier identifier: String? = nil,
+        from storyboardNamed: String
+    ) -> T {
+
+        let storyboard = UIStoryboard(name: storyboardNamed, bundle: nil)
+
+        let identifier = identifier ?? String(describing: T.self)
+        return storyboard.instantiateViewController(withIdentifier: identifier) as! T
+    }
 }
