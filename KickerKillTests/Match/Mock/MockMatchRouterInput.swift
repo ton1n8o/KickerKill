@@ -12,4 +12,7 @@ final class MockMatchRouterInput: MatchRouterInput, HasInvocations {
 
     // MARK: - MatchRouterInput
 
+    func showScoreBoard(_ matchViewData: MatchViewDataModel) {
+        
+    }
 }

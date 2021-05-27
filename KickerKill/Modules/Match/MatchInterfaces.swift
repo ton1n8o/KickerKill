@@ -8,4 +8,5 @@ protocol MatchViewInput: class {
 protocol MatchViewOutput {
 
     func viewIsReady()
+    func playerScoredGoal(teamPlayer: TeamPlayers)
 }

@@ -1,12 +1,19 @@
 //  Copyright © 2020 TNTStudios. All rights reserved.
 
+enum TeamPlayers {
+    case team1Attack
+    case team1Defense
+    case team2Attack
+    case team2Defense
+}
+
 final class MatchPresenter: MatchViewOutput, MatchInteractorOutput {
 
     weak var view: MatchViewInput?
     var interactor: MatchInteractorInput!
     var router: MatchRouterInput!
 
-    private let matchData: MatchData
+    private var matchData: MatchData
 
     init(matchData: MatchData) {
         self.matchData = matchData
@@ -15,13 +22,36 @@ final class MatchPresenter: MatchViewOutput, MatchInteractorOutput {
     // MARK: - MatchViewOutput
 
     func viewIsReady() {
+        view?.updateMatchUI(with: matchViewDataModel)
+    }
 
-        let matchDataModel = MatchViewDataModel(showTimer: gameTypeData.showTimer,
-                                                remainingMinutes: gameTypeData.remainingMinutes,
-                                                team1: matchData.team1,
-                                                team2: matchData.team2)
+    private var matchViewDataModel: MatchViewDataModel {
 
-        view?.updateMatchUI(with: matchDataModel)
+        return MatchViewDataModel(
+            showTimer: gameTypeData.showTimer,
+            remainingMinutes: gameTypeData.remainingMinutes,
+            matchData: matchData
+        )
+    }
+
+    func playerScoredGoal(teamPlayer: TeamPlayers) {
+
+        switch teamPlayer {
+        case .team1Attack:
+            matchData.team1AttackerScoredGoal()
+        case .team1Defense:
+            matchData.team1DefenseScoredGoal()
+        case .team2Attack:
+            matchData.team2AttackerScoredGoal()
+        case .team2Defense:
+            matchData.team2DefenseScoredGoal()
+        }
+
+        view?.updateMatchUI(with: matchViewDataModel)
+
+        if matchViewDataModel.matchIsOver {
+            router.showScoreBoard(matchViewDataModel)
+        }
     }
 
     private var gameTypeData: (showTimer: Bool, remainingMinutes: Int) {

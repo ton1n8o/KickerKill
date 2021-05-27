@@ -8,9 +8,11 @@ final class MatchViewController: UIViewController, MatchViewInput {
 
     @IBOutlet weak var team1Attack: UIButton!
     @IBOutlet weak var team1Defence: UIButton!
+    @IBOutlet weak var team1Goals: UILabel!
 
     @IBOutlet weak var team2Attack: UIButton!
     @IBOutlet weak var team2Defence: UIButton!
+    @IBOutlet weak var team2Goals: UILabel!
 
     @IBOutlet var imageViewSoccerField: UIImageView!
 
@@ -41,9 +43,9 @@ final class MatchViewController: UIViewController, MatchViewInput {
         let width = UIScreen.main.bounds.size.width
         let height = UIScreen.main.bounds.size.height
 
-        let iphoneAspectRatio: CGFloat = 16/9
+        let iPhoneAspectRatio: CGFloat = 16/9
 
-        if height/width <= iphoneAspectRatio {
+        if height/width <= iPhoneAspectRatio {
             imageViewSoccerField.image = UIImage(named: "soccerField_iPhone")
         } else {
             imageViewSoccerField.image = UIImage(named: "soccerField_iPhoneX")
@@ -66,6 +68,25 @@ final class MatchViewController: UIViewController, MatchViewInput {
         team1Defence.setTitle(dataModel.team1DefenderName, for: .normal)
         team2Attack.setTitle(dataModel.team2AttackerName, for: .normal)
         team2Defence.setTitle(dataModel.team2DefenderName, for: .normal)
+
+        team1Goals.text = "\(dataModel.team1Goals)"
+        team2Goals.text = "\(dataModel.team2Goals)"
+    }
+
+    @IBAction func team1AttackScoreGoal(_ sender: UIButton) {
+        output.playerScoredGoal(teamPlayer: .team1Attack)
+    }
+
+    @IBAction func team1DefenseScoreGoal(_ sender: UIButton) {
+        output.playerScoredGoal(teamPlayer: .team1Defense)
+    }
+
+    @IBAction func team2AttackScoreGoal(_ sender: UIButton) {
+        output.playerScoredGoal(teamPlayer: .team2Attack)
+    }
+
+    @IBAction func team2DefenseScoreGoal(_ sender: UIButton) {
+        output.playerScoredGoal(teamPlayer: .team2Defense)
     }
 
 }

@@ -89,7 +89,11 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="k0S-Za-hdF" secondAttribute="height" multiplier="1:1" id="bDI-dU-Mg5"/>
                                                         </constraints>
+                                                        <inset key="titleEdgeInsets" minX="0.0" minY="-10" maxX="0.0" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="team1DefenseScoreGoal:" destination="Z37-eO-9uL" eventType="touchUpInside" id="FEt-yd-Uum"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Defense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Rx-IU-YfQ">
                                                         <rect key="frame" x="169" y="20.666666666666671" width="66" height="20.333333333333329"/>
@@ -115,7 +119,11 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FL3-2L-ohH">
                                                         <rect key="frame" x="153" y="48.999999999999993" width="98" height="98.333333333333314"/>
                                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                        <inset key="titleEdgeInsets" minX="0.0" minY="-10" maxX="0.0" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="team2AttackScoreGoal:" destination="Z37-eO-9uL" eventType="touchUpInside" id="Gbb-ub-6NX"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gN9-Yd-3gJ">
                                                         <rect key="frame" x="176" y="20.666666666666686" width="52" height="20.333333333333329"/>
@@ -149,7 +157,11 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmK-2g-Isu">
                                                         <rect key="frame" x="153" y="48.999999999999993" width="98" height="98.333333333333314"/>
                                                         <color key="backgroundColor" name="matchBackground"/>
+                                                        <inset key="titleEdgeInsets" minX="0.0" minY="-10" maxX="0.0" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="team1AttackScoreGoal:" destination="Z37-eO-9uL" eventType="touchUpInside" id="sYO-4a-5cE"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xO9-ID-1jt">
                                                         <rect key="frame" x="176" y="20.666666666666671" width="52" height="20.333333333333329"/>
@@ -175,7 +187,11 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZr-If-Hi9">
                                                         <rect key="frame" x="153" y="48.999999999999993" width="98" height="98.333333333333314"/>
                                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                        <inset key="titleEdgeInsets" minX="0.0" minY="-10" maxX="0.0" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="team2DefenseScoreGoal:" destination="Z37-eO-9uL" eventType="touchUpInside" id="KUz-TQ-BxT"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Defense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2g-1D-Rii">
                                                         <rect key="frame" x="169" y="20" width="66" height="21"/>
@@ -229,8 +245,10 @@
                         <outlet property="imageViewSoccerField" destination="cN2-nf-V09" id="ktI-BM-JP1"/>
                         <outlet property="team1Attack" destination="gmK-2g-Isu" id="jFs-5E-rfv"/>
                         <outlet property="team1Defence" destination="k0S-Za-hdF" id="ufu-HW-O7K"/>
+                        <outlet property="team1Goals" destination="kBx-w2-rNm" id="MAq-7g-PNe"/>
                         <outlet property="team2Attack" destination="FL3-2L-ohH" id="Nph-3f-9Ao"/>
                         <outlet property="team2Defence" destination="EZr-If-Hi9" id="Zg5-Oj-tJ8"/>
+                        <outlet property="team2Goals" destination="esU-bU-Zuz" id="vij-lV-g7u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bff-kf-dJR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
