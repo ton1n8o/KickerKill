@@ -6,4 +6,8 @@ final class MatchScoreInteractor: MatchScoreInteractorInput {
 
     // MARK: - MatchScoreInteractorInput
 
+    deinit {
+        print("\(String(describing: self)) >>> GONE" )
+    }
+
 }

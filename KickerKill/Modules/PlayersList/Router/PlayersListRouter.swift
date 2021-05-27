@@ -14,8 +14,18 @@ final class PlayersListRouter: PlayersListRouterInput {
 
     func showMatchModule(with matchData: MatchData) {
 
-        let matchVC = MatchModuleBuilder(matchData: matchData).build()
+        let matchVC = MatchModuleBuilder(matchData: matchData, output: self).build()
         matchVC.modalPresentationStyle = .fullScreen
         viewController?.present(matchVC, animated: true)
+    }
+}
+
+extension PlayersListRouter: MatchModuleOutput {
+
+    func gameIsOver(_ matchViewData: MatchViewDataModel) {
+
+        let matchScoreVC = MatchScoreModuleBuilder().build(matchViewData)
+        matchScoreVC.modalPresentationStyle = .fullScreen
+        viewController?.present(matchScoreVC, animated: true)
     }
 }

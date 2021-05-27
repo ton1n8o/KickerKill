@@ -4,14 +4,14 @@ import UIKit
 
 final class MatchScoreModuleBuilder {
 
-    func build() -> UIViewController {
+    func build(_ matchViewData: MatchViewDataModel) -> UIViewController {
 
         let viewController = UIStoryboard.viewController(ofType: MatchScoreViewController.self, from: "MatchScore")
 
         let router = MatchScoreRouter()
         router.viewController = viewController
 
-        let presenter = MatchScorePresenter()
+        let presenter = MatchScorePresenter(matchViewData)
         presenter.view = viewController
         presenter.router = router
 
@@ -22,5 +22,9 @@ final class MatchScoreModuleBuilder {
         viewController.output = presenter
 
         return viewController
+    }
+
+    deinit {
+        print("\(String(describing: self)) >>> GONE" )
     }
 }

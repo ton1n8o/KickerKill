@@ -39,4 +39,20 @@ struct MatchViewDataModel {
     var matchIsOver: Bool {
         matchData.matchIsOver
     }
+
+    var matchScore: PlayerGoals {
+        .init(team1Attacker: matchData.team1AttackerGoals,
+              team1Defense: matchData.team1DefenseGoals,
+              team2Attacker: matchData.team2AttackerGoals,
+              team2Defense: matchData.team2DefenseGoals)
+    }
+
+}
+
+struct PlayerGoals {
+    let team1Attacker: Int
+    let team1Defense: Int
+    let team2Attacker: Int
+    let team2Defense: Int
+
 }

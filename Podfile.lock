@@ -278,12 +278,12 @@ PODS:
     - GoogleUtilities/Environment (~> 6.7)
     - GoogleUtilities/UserDefaults (~> 6.7)
     - PromisesObjC (~> 1.2)
-  - FirebaseUI/Auth (10.0.1):
+  - FirebaseUI/Auth (9.0.0):
     - Firebase/Auth
     - GoogleUtilities/UserDefaults
-  - FirebaseUI/Email (10.0.1):
+  - FirebaseUI/Email (9.0.0):
     - FirebaseUI/Auth
-  - FirebaseUI/Google (10.0.1):
+  - FirebaseUI/Google (9.0.0):
     - FirebaseUI/Auth
     - GoogleSignIn (~> 5.0)
   - GoogleAppMeasurement (6.9.0):
@@ -341,14 +341,10 @@ PODS:
     - BoringSSL-GRPC (= 0.0.7)
     - gRPC-Core/Interface (= 1.28.2)
   - gRPC-Core/Interface (1.28.2)
-  - GTMAppAuth (1.1.0):
+  - GTMAppAuth (1.2.2):
     - AppAuth/Core (~> 1.4)
-    - GTMSessionFetcher (~> 1.4)
-  - GTMSessionFetcher (1.5.0):
-    - GTMSessionFetcher/Full (= 1.5.0)
-  - GTMSessionFetcher/Core (1.5.0)
-  - GTMSessionFetcher/Full (1.5.0):
-    - GTMSessionFetcher/Core (= 1.5.0)
+    - GTMSessionFetcher/Core (~> 1.5)
+  - GTMSessionFetcher/Core (1.6.1)
   - iOSSnapshotTestCase (6.2.0):
     - iOSSnapshotTestCase/SwiftSupport (= 6.2.0)
   - iOSSnapshotTestCase/Core (6.2.0)
@@ -366,9 +362,9 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Firestore
   - FirebaseFirestoreSwift
-  - FirebaseUI/Auth
-  - FirebaseUI/Email
-  - FirebaseUI/Google
+  - FirebaseUI/Auth (~> 9.0)
+  - FirebaseUI/Email (~> 9.0)
+  - FirebaseUI/Google (~> 9.0)
   - iOSSnapshotTestCase
 
 SPEC REPOS:
@@ -410,20 +406,20 @@ SPEC CHECKSUMS:
   FirebaseFirestore: 9b2f1b9b9a6f2f0b6fb7484b9e32ab7e39243554
   FirebaseFirestoreSwift: 2c46dbc1156db97dc4f6dd798d4f5b57b9c7fab6
   FirebaseInstallations: 466c7b4d1f58fe16707693091da253726a731ed2
-  FirebaseUI: c93b7b76034bce07c90d9c53068bd4d25712bbb3
+  FirebaseUI: f0677a1cc235f6da602cbd5c9b5fbbd24544a6b3
   GoogleAppMeasurement: a6a3a066369828db64eda428cb2856dc1cdc7c4e
   GoogleDataTransport: f56af7caa4ed338dc8e138a5d7c5973e66440833
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
   "gRPC-C++": 13d8ccef97d5c3c441b7e3c529ef28ebee86fad2
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
-  GTMAppAuth: 197a8dabfea5d665224aa00d17f164fc2248dab9
-  GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
+  GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
+  GTMSessionFetcher: 36689134877faeb055b27dfa4ccc9ceaa42e029e
   iOSSnapshotTestCase: 9ab44cb5aa62b84d31847f40680112e15ec579a6
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: 6452bd0741c21d96b8da0057021dde6780569005
+PODFILE CHECKSUM: 5e3a6bccca336e745aebb0e5b9a0adbb00fcfb73
 
 COCOAPODS: 1.10.1

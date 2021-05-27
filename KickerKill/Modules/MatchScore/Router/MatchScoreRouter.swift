@@ -3,7 +3,7 @@
 import UIKit
 
 protocol MatchScoreRouterInput {
-
+    func newGame()
 }
 
 final class MatchScoreRouter: MatchScoreRouterInput {
@@ -11,5 +11,12 @@ final class MatchScoreRouter: MatchScoreRouterInput {
 	weak var viewController: UIViewController?
 
 	// MARK: - MatchScoreRouterInput
-	
+
+    func newGame() {
+        viewController?.dismiss(animated: true)
+    }
+
+    deinit {
+        print("\(String(describing: self)) >>> GONE" )
+    }	
 }

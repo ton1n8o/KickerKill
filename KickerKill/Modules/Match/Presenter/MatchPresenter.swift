@@ -12,11 +12,16 @@ final class MatchPresenter: MatchViewOutput, MatchInteractorOutput {
     weak var view: MatchViewInput?
     var interactor: MatchInteractorInput!
     var router: MatchRouterInput!
+    var moduleOutput: MatchModuleOutput!
 
     private var matchData: MatchData
 
     init(matchData: MatchData) {
         self.matchData = matchData
+    }
+
+    deinit {
+        print("\(String(describing: self)) >>> GONE" )
     }
 
     // MARK: - MatchViewOutput
@@ -50,7 +55,9 @@ final class MatchPresenter: MatchViewOutput, MatchInteractorOutput {
         view?.updateMatchUI(with: matchViewDataModel)
 
         if matchViewDataModel.matchIsOver {
-            router.showScoreBoard(matchViewDataModel)
+            router.dismiss {
+                self.moduleOutput?.gameIsOver(self.matchViewDataModel)
+            }
         }
     }
 
