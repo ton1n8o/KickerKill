@@ -8,9 +8,10 @@ final class MatchModuleBuilderTests: XCTestCase {
     func testBuild() {
 
         continueAfterFailure = false
+        let mockModuleOutput = MockMatchModuleOutput()
 
         // Arrange
-        let builder = MatchModuleBuilder(matchData: matchData)
+        let builder = MatchModuleBuilder(matchData: matchData, output: mockModuleOutput)
 
         // Act
         let viewController: MatchViewController! = builder.build() as? MatchViewController

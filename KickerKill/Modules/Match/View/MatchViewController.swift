@@ -89,4 +89,8 @@ final class MatchViewController: UIViewController, MatchViewInput {
         output.playerScoredGoal(teamPlayer: .team2Defense)
     }
 
+    deinit {
+        print("\(String(describing: self)) >>> GONE" )
+    }
+
 }

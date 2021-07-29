@@ -12,4 +12,7 @@ final class MatchInteractor: MatchInteractorInput {
 
     // MARK: - MatchInteractorInput
 
+    deinit {
+        print("\(String(describing: self)) >>> GONE" )
+    }
 }

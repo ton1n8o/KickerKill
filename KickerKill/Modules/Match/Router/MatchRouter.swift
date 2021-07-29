@@ -3,7 +3,7 @@
 import UIKit
 
 protocol MatchRouterInput {
-    func showScoreBoard( _ matchViewData: MatchViewDataModel)
+    func dismiss(completion: (() -> Void)?)
 }
 
 final class MatchRouter: MatchRouterInput {
@@ -12,12 +12,11 @@ final class MatchRouter: MatchRouterInput {
 
 	// MARK: - MatchRouterInput
 
-    func showScoreBoard(_ matchViewData: MatchViewDataModel) {
-        let matchScoreVC = MatchScoreModuleBuilder().build()
-        viewController?.present(matchScoreVC, animated: true)
+    func dismiss(completion: (() -> Void)?) {
+        viewController?.dismiss(animated: false, completion: completion)
     }
 
     deinit {
-        print("\(#file.components(separatedBy: "/").last!) >>> GONE.")
+        print("\(String(describing: self)) >>>> GONE" )
     }
 }

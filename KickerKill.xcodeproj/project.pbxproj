@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020E146B2697759E0008946C /* MockMatchModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E146A2697759E0008946C /* MockMatchModuleOutput.swift */; };
 		0245409D25C33565003C0C83 /* MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245409C25C33565003C0C83 /* MatchData.swift */; };
 		02615EB1255DB7AC00326EF0 /* MatchInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EA3255DB7AC00326EF0 /* MatchInterfaces.swift */; };
 		02615EB2255DB7AC00326EF0 /* MatchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02615EA5255DB7AC00326EF0 /* MatchPresenter.swift */; };
@@ -104,6 +105,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		020E146A2697759E0008946C /* MockMatchModuleOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMatchModuleOutput.swift; sourceTree = "<group>"; };
 		0245409C25C33565003C0C83 /* MatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchData.swift; sourceTree = "<group>"; };
 		02615EA3255DB7AC00326EF0 /* MatchInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchInterfaces.swift; sourceTree = "<group>"; };
 		02615EA5255DB7AC00326EF0 /* MatchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchPresenter.swift; sourceTree = "<group>"; };
@@ -380,6 +382,7 @@
 		02ED626F25DEF5B2002BB8A1 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				020E146A2697759E0008946C /* MockMatchModuleOutput.swift */,
 				02ED627025DEF5B2002BB8A1 /* MockMatchRouterInput.swift */,
 				02ED627125DEF5B2002BB8A1 /* MockMatchInteractorInput.swift */,
 				02ED627225DEF5B2002BB8A1 /* MockMatchViewInput.swift */,
@@ -1070,6 +1073,7 @@
 				91CBABE724C0CF9C00D64578 /* MockPlayersListRouterInput.swift in Sources */,
 				91CBABED24C0CF9C00D64578 /* PlayersListInteractorTests.swift in Sources */,
 				91CBABE924C0CF9C00D64578 /* MockPlayersListInteractorOutput.swift in Sources */,
+				020E146B2697759E0008946C /* MockMatchModuleOutput.swift in Sources */,
 				02ED628225DEF5B2002BB8A1 /* MockMatchRouterInput.swift in Sources */,
 				02ED628825DEF5B2002BB8A1 /* MatchViewControllerTests.swift in Sources */,
 				02ED628925DEF5B2002BB8A1 /* MatchModuleBuilderTests.swift in Sources */,

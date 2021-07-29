@@ -10,9 +10,13 @@ target 'KickerKill' do
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
 
-  pod 'FirebaseUI/Auth'
-  pod 'FirebaseUI/Google'
-  pod 'FirebaseUI/Email'
+  # we're working with version 9 however
+  # the suggested version from https://cocoapods.org/pods/FirebaseUI is ( 8.0 ).
+  # also, when updating to the latest version ( 10.0 ) we also faced some issues.
+
+  pod 'FirebaseUI/Auth', '~> 9.0'
+  pod 'FirebaseUI/Google', '~> 9.0'
+  pod 'FirebaseUI/Email', '~> 9.0'
 
   target 'KickerKillTests' do
     inherit! :search_paths

@@ -2,7 +2,7 @@
 
 @testable import KickerKill
 
-final class MockMatchRouterInput: MatchRouterInput, HasInvocations {
+final class MockMatchModuleOutput: MatchModuleOutput, HasInvocations {
 
     enum Invocation: FakeEquatable {
 
@@ -10,9 +10,9 @@ final class MockMatchRouterInput: MatchRouterInput, HasInvocations {
 
     var invocations: [Invocation] = []
 
-    // MARK: - MatchRouterInput
+    // MARK: - MatchModuleOutput
 
-    func dismiss(completion: (() -> Void)?) {
+    func gameIsOver(_ matchViewData: MatchViewDataModel) {
 
     }
 }
