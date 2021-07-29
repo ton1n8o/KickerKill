@@ -1,5 +1,7 @@
 //  Copyright © 2020 TNTStudios. All rights reserved.
 
+import Foundation
+
 enum TeamPlayers {
     case team1Attack
     case team1Defense
@@ -13,11 +15,30 @@ final class MatchPresenter: MatchViewOutput, MatchInteractorOutput {
     var interactor: MatchInteractorInput!
     var router: MatchRouterInput!
     var moduleOutput: MatchModuleOutput!
+    private var timer: Timer!
 
     private var matchData: MatchData
 
     init(matchData: MatchData) {
         self.matchData = matchData
+
+
+        // TODO: Pode ser que mover essa logica para dentro do Match data seja uma boa... vamos pensar nisso.
+
+
+        if case .timeBased(let minutes) = matchData.gameType {
+            var remainingSeconds = 15
+            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { timer in
+                print("\(#function ) >>> \(timer.timeInterval)")
+                remainingSeconds -= 1
+                if remainingSeconds < 1 {
+                    timer.invalidate()
+                    // update ui with seconds remaining.
+                    // view?.updateTimerWith(remainingSeconds)
+                }
+                // TODO: view?.updateTimerWith(remainingSeconds)
+            })
+        }
     }
 
     deinit {

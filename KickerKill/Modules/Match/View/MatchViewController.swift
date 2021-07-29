@@ -16,6 +16,9 @@ final class MatchViewController: UIViewController, MatchViewInput {
 
     @IBOutlet var imageViewSoccerField: UIImageView!
 
+    @IBOutlet var timerView: UIView!
+    @IBOutlet var timerLabel: UILabel!
+
     // MARK: Life cycle
 
     override func viewDidLoad() {
@@ -63,6 +66,8 @@ final class MatchViewController: UIViewController, MatchViewInput {
     // MARK: MatchViewInput
 
     func updateMatchUI(with dataModel: MatchViewDataModel) {
+
+        timerView.isHidden = !dataModel.showTimer
 
         team1Attack.setTitle(dataModel.team1AttackerName, for: .normal)
         team1Defence.setTitle(dataModel.team1DefenderName, for: .normal)

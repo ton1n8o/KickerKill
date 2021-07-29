@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z37-eO-9uL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z37-eO-9uL">
     <device id="retina6_5" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,6 +28,26 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soccerField_iPhoneX" translatesAutoresizingMaskIntoConstraints="NO" id="cN2-nf-V09">
                                 <rect key="frame" x="44" y="0.0" width="808" height="393"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ek7-0j-u4K" userLabel="TimerView">
+                                <rect key="frame" x="418" y="55" width="60" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zE7-aQ-IYT">
+                                        <rect key="frame" x="5" y="5" width="50" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="zE7-aQ-IYT" firstAttribute="top" secondItem="ek7-0j-u4K" secondAttribute="top" constant="5" id="8sy-Xl-6wh"/>
+                                    <constraint firstItem="zE7-aQ-IYT" firstAttribute="leading" secondItem="ek7-0j-u4K" secondAttribute="leading" constant="5" id="A6m-rS-5Yo"/>
+                                    <constraint firstAttribute="width" constant="60" id="IFC-LO-4xl"/>
+                                    <constraint firstAttribute="trailing" secondItem="zE7-aQ-IYT" secondAttribute="trailing" constant="5" id="Jjf-55-eSO"/>
+                                    <constraint firstAttribute="height" constant="30" id="hwj-qT-DyG"/>
+                                    <constraint firstAttribute="bottom" secondItem="zE7-aQ-IYT" secondAttribute="bottom" constant="5" id="p9k-z5-0Ia"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ml1-SY-HlL">
                                 <rect key="frame" x="405" y="15" width="86.333333333333314" height="35"/>
                                 <subviews>
@@ -231,10 +251,12 @@
                             <constraint firstItem="VWE-Wq-Xnd" firstAttribute="leading" secondItem="Yb3-X8-LDb" secondAttribute="leading" id="6la-yx-mVY"/>
                             <constraint firstItem="cN2-nf-V09" firstAttribute="leading" secondItem="Yb3-X8-LDb" secondAttribute="leading" id="8wL-BS-K43"/>
                             <constraint firstItem="Yb3-X8-LDb" firstAttribute="bottom" secondItem="cN2-nf-V09" secondAttribute="bottom" id="ACf-hf-sZU"/>
+                            <constraint firstItem="ek7-0j-u4K" firstAttribute="centerX" secondItem="Ml1-SY-HlL" secondAttribute="centerX" id="CMO-nj-d2O"/>
                             <constraint firstAttribute="bottom" secondItem="fKU-hL-BL6" secondAttribute="bottom" id="F3E-wb-T55"/>
                             <constraint firstAttribute="trailing" secondItem="fKU-hL-BL6" secondAttribute="trailing" id="Fm6-gd-0h8"/>
                             <constraint firstItem="fKU-hL-BL6" firstAttribute="leading" secondItem="ffg-jb-tDG" secondAttribute="leading" id="HMf-cf-Pcj"/>
                             <constraint firstItem="Yb3-X8-LDb" firstAttribute="trailing" secondItem="cN2-nf-V09" secondAttribute="trailing" id="IAp-Pc-HzR"/>
+                            <constraint firstItem="ek7-0j-u4K" firstAttribute="top" secondItem="Ml1-SY-HlL" secondAttribute="bottom" constant="5" id="KOh-Pc-lS7"/>
                             <constraint firstItem="Ml1-SY-HlL" firstAttribute="centerX" secondItem="Yb3-X8-LDb" secondAttribute="centerX" id="Pfc-RC-2sH"/>
                             <constraint firstItem="VWE-Wq-Xnd" firstAttribute="top" secondItem="Yb3-X8-LDb" secondAttribute="top" id="UtK-gI-wF0"/>
                             <constraint firstItem="Ml1-SY-HlL" firstAttribute="top" secondItem="Yb3-X8-LDb" secondAttribute="top" constant="15" id="XcS-Uc-qda"/>
@@ -252,6 +274,8 @@
                         <outlet property="team2Attack" destination="FL3-2L-ohH" id="Nph-3f-9Ao"/>
                         <outlet property="team2Defence" destination="EZr-If-Hi9" id="Zg5-Oj-tJ8"/>
                         <outlet property="team2Goals" destination="esU-bU-Zuz" id="vij-lV-g7u"/>
+                        <outlet property="timerLabel" destination="zE7-aQ-IYT" id="kRd-pe-jIO"/>
+                        <outlet property="timerView" destination="ek7-0j-u4K" id="qHC-TU-Ng9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bff-kf-dJR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
