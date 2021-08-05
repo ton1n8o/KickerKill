@@ -1,5 +1,7 @@
 //  Copyright © 2020 TNTStudios. All rights reserved.
 
+import Foundation
+
 enum TeamPlayers {
     case team1Attack
     case team1Defense
@@ -13,11 +15,30 @@ final class MatchPresenter: MatchViewOutput, MatchInteractorOutput {
     var interactor: MatchInteractorInput!
     var router: MatchRouterInput!
     var moduleOutput: MatchModuleOutput!
-
     private var matchData: MatchData
 
     init(matchData: MatchData) {
         self.matchData = matchData
+        if case .timeBased = matchData.gameType {
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: timerHandler)
+        }
+    }
+
+    private func timerHandler(timer: Timer) {
+        matchData.oneSecPasst()
+        if matchData.matchIsOver {
+            timer.invalidate()
+        }
+        view?.updateMatchUI(with: matchViewDataModel)
+        handleMatchIsOver()
+    }
+
+    private func handleMatchIsOver() {
+        guard matchViewDataModel.matchIsOver else { return }
+
+        router.dismiss {
+            self.moduleOutput?.gameIsOver(self.matchViewDataModel)
+        }
     }
 
     deinit {
@@ -31,12 +52,14 @@ final class MatchPresenter: MatchViewOutput, MatchInteractorOutput {
     }
 
     private var matchViewDataModel: MatchViewDataModel {
-
-        return MatchViewDataModel(
-            showTimer: gameTypeData.showTimer,
-            remainingMinutes: gameTypeData.remainingMinutes,
-            matchData: matchData
-        )
+        let showTimer: Bool
+        switch matchData.gameType {
+        case .timeBased:
+            showTimer = true
+        case .goalBased:
+            showTimer = false
+        }
+        return MatchViewDataModel(showTimer: showTimer, matchData: matchData)
     }
 
     func playerScoredGoal(teamPlayer: TeamPlayers) {
@@ -53,31 +76,7 @@ final class MatchPresenter: MatchViewOutput, MatchInteractorOutput {
         }
 
         view?.updateMatchUI(with: matchViewDataModel)
-
-        if matchViewDataModel.matchIsOver {
-            router.dismiss {
-                self.moduleOutput?.gameIsOver(self.matchViewDataModel)
-            }
-        }
-    }
-
-    private var gameTypeData: (showTimer: Bool, remainingMinutes: Int) {
-
-        let showTimer: Bool
-        let remainingMinutes: Int
-
-        switch matchData.gameType {
-
-        case .timeBased(let minutes):
-            showTimer = true
-            remainingMinutes = minutes
-
-        case .goalBased:
-            showTimer = false
-            remainingMinutes = 0
-        }
-
-        return (showTimer, remainingMinutes)
+        handleMatchIsOver()
     }
 
     // MARK: - MatchInteractorOutput

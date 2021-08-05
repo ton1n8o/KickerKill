@@ -12,7 +12,6 @@ final class MatchViewDataModelTests: XCTestCase {
         let team2 = buildTeam("Foo", nil)
         let matchData = buildMatchData(team1: team1, team2: team2)
         let sut = MatchViewDataModel(showTimer: true,
-                                     remainingMinutes: 0,
                                      matchData: matchData)
 
         // Act Assert
@@ -27,7 +26,6 @@ final class MatchViewDataModelTests: XCTestCase {
         let team2 = buildTeam("Pedro", nil)
         let matchData = buildMatchData(team1: team1, team2: team2)
         let sut = MatchViewDataModel(showTimer: true,
-                                     remainingMinutes: 0,
                                      matchData: matchData)
 
         // Act Assert
@@ -40,9 +38,8 @@ final class MatchViewDataModelTests: XCTestCase {
         // Arrange
         let team1 = buildTeam("Marco", "Antonio")
         let team2 = buildTeam("Rodrigo", "Stuart")
-        let matchData = buildMatchData(team1: team1, team2: team2)
+        let matchData = buildMatchData(team1: team1, team2: team2) // 5
         let sut = MatchViewDataModel(showTimer: true,
-                                     remainingMinutes: 5,
                                      matchData: matchData)
 
         // Act Assert
@@ -67,8 +64,7 @@ final class MatchViewDataModelTests: XCTestCase {
         }
 
         let sut = MatchViewDataModel(showTimer: true,
-                                     remainingMinutes: 5,
-                                     matchData: matchData)
+                                     matchData: matchData) // 5
 
         // Assert
         XCTAssertTrue(sut.matchIsOver)
@@ -89,8 +85,7 @@ final class MatchViewDataModelTests: XCTestCase {
         }
 
         let sut = MatchViewDataModel(showTimer: true,
-                                     remainingMinutes: 5,
-                                     matchData: matchData)
+                                     matchData: matchData) // 5
 
         // Assert
         XCTAssertFalse(sut.matchIsOver)
@@ -111,8 +106,7 @@ final class MatchViewDataModelTests: XCTestCase {
         }
 
         let sut = MatchViewDataModel(showTimer: true,
-                                     remainingMinutes: 5,
-                                     matchData: matchData)
+                                     matchData: matchData) // 5
 
         // Assert
         XCTAssertTrue(sut.matchIsOver)
@@ -133,8 +127,7 @@ final class MatchViewDataModelTests: XCTestCase {
         }
 
         let sut = MatchViewDataModel(showTimer: true,
-                                     remainingMinutes: 5,
-                                     matchData: matchData)
+                                     matchData: matchData) // 5
 
         // Assert
         XCTAssertFalse(sut.matchIsOver)
