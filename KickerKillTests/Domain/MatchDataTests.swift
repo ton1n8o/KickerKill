@@ -93,4 +93,25 @@ final class MatchDataTests: XCTestCase {
         XCTAssertEqual(sut.team2Goals, expected)
     }
 
+    func test_remainingSeconds_Properly_Multiplied_By_60() {
+
+        // Arrange
+        let minutes = Int.random(in: 1...10)
+        let expected = minutes * 60
+
+        let team1 = Team()
+        let team2 = Team()
+        let sut = MatchData(
+            team1: team1,
+            team2: team2,
+            gameType: .timeBased(minutes: minutes)
+        )
+
+        // Act
+        let secondsRemaining = sut.remainingSeconds
+
+        // Assert
+        XCTAssertEqual(secondsRemaining, expected)
+    }
+
 }

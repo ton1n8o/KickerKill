@@ -11,6 +11,11 @@ struct MatchData {
     private(set) var team1DefenseGoals: Int = 0
     private(set) var team2AttackerGoals: Int = 0
     private(set) var team2DefenseGoals: Int = 0
+    private(set) var remainingSeconds: Int = 0
+
+    mutating func oneSecPasst() {
+        remainingSeconds -= 1
+    }
 
     var team1Goals: Int {
         team1AttackerGoals + team1DefenseGoals
@@ -47,8 +52,22 @@ struct MatchData {
         case .goalBased(let totalGoals):
             return totalGoals == team1Goals || totalGoals == team2Goals
         case .timeBased:
-            // TODO: lidar com o tempo depois.
-            return false
+            return remainingSeconds < 1
+        }
+    }
+}
+
+extension MatchData {
+
+    private static let minutesMultiplier = 60
+
+    init(team1: Team, team2: Team, gameType: GameType) {
+        self.team1 = team1
+        self.team2 = team2
+        self.gameType = gameType
+
+        if case .timeBased(let minutes) = gameType {
+            remainingSeconds = minutes * Self.minutesMultiplier
         }
     }
 }

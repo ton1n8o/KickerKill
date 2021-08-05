@@ -51,7 +51,6 @@ final class MatchPresenterTests: XCTestCase {
 
         // Arrange
         let dataModel = MatchViewDataModel(showTimer: true,
-                                           remainingMinutes: 5,
                                            matchData: matchDataTimeBased)
 
         // Act
@@ -65,7 +64,6 @@ final class MatchPresenterTests: XCTestCase {
 
         // Arrange
         let dataModel = MatchViewDataModel(showTimer: false,
-                                           remainingMinutes: 0,
                                            matchData: matchDataGoalBased)
 
         sut = MatchPresenter(matchData: matchDataGoalBased)
@@ -82,7 +80,6 @@ final class MatchPresenterTests: XCTestCase {
 
         // Arrange
         let dataModelExpected = MatchViewDataModel(showTimer: false,
-                                                   remainingMinutes: 0,
                                                    matchData: matchDataWith(goals: 1))
 
         sut = MatchPresenter(matchData: matchDataWith(goals: 0))
@@ -99,7 +96,6 @@ final class MatchPresenterTests: XCTestCase {
 
         // Arrange
         let dataModelExpected = MatchViewDataModel(showTimer: false,
-                                                   remainingMinutes: 0,
                                                    matchData: matchDataWith(goals: 0, 1))
 
         sut = MatchPresenter(matchData: matchDataWith(goals: 0, 0))
@@ -116,7 +112,6 @@ final class MatchPresenterTests: XCTestCase {
 
         // Arrange
         let dataModelExpected = MatchViewDataModel(showTimer: false,
-                                                   remainingMinutes: 0,
                                                    matchData: matchDataWith(goals: 0, 0, 1))
 
         sut = MatchPresenter(matchData: matchDataWith(goals: 0))
@@ -133,7 +128,6 @@ final class MatchPresenterTests: XCTestCase {
 
         // Arrange
         let dataModelExpected = MatchViewDataModel(showTimer: false,
-                                                   remainingMinutes: 0,
                                                    matchData: matchDataWith(goals: 0, 0, 0, 1))
 
         sut = MatchPresenter(matchData: matchDataWith(goals: 0))

@@ -3,12 +3,10 @@
 struct MatchViewDataModel {
 
     let showTimer: Bool
-    let remainingMinutes: Int
     private let matchData: MatchData
 
-    init(showTimer: Bool, remainingMinutes: Int, matchData: MatchData) {
+    init(showTimer: Bool, matchData: MatchData) {
         self.showTimer = showTimer
-        self.remainingMinutes = remainingMinutes
         self.matchData = matchData
     }
 
@@ -38,6 +36,12 @@ struct MatchViewDataModel {
 
     var matchIsOver: Bool {
         matchData.matchIsOver
+    }
+
+    var timerText: String {
+        let min = matchData.remainingSeconds / 60
+        let sec = matchData.remainingSeconds % 60
+        return String(format: "%02d:%02d", min, sec)
     }
 
     var matchScore: PlayerGoals {
