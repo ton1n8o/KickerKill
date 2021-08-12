@@ -9,4 +9,7 @@ protocol MatchViewOutput {
 
     func viewIsReady()
     func playerScoredGoal(teamPlayer: TeamPlayers)
+    func didPressPause()
+    func resumeMatch()
+    func endMatch()
 }

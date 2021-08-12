@@ -15,16 +15,20 @@ final class MatchPresenter: MatchViewOutput, MatchInteractorOutput {
     var interactor: MatchInteractorInput!
     var router: MatchRouterInput!
     var moduleOutput: MatchModuleOutput!
+    private var gameTimer: Timer?
     private var matchData: MatchData
 
     init(matchData: MatchData) {
         self.matchData = matchData
-        if case .timeBased = matchData.gameType {
-            Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: timerHandler)
-        }
+        checkInitGameTimer()
     }
 
-    private func timerHandler(timer: Timer) {
+    private func checkInitGameTimer() {
+        guard case .timeBased = matchData.gameType else { return }
+        gameTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: timerTic)
+    }
+
+    private func timerTic(timer: Timer) {
         matchData.oneSecPasst()
         if matchData.matchIsOver {
             timer.invalidate()
@@ -35,7 +39,10 @@ final class MatchPresenter: MatchViewOutput, MatchInteractorOutput {
 
     private func handleMatchIsOver() {
         guard matchViewDataModel.matchIsOver else { return }
+        didEndMatch()
+    }
 
+    private func didEndMatch() {
         router.dismiss {
             self.moduleOutput?.gameIsOver(self.matchViewDataModel)
         }
@@ -77,6 +84,18 @@ final class MatchPresenter: MatchViewOutput, MatchInteractorOutput {
 
         view?.updateMatchUI(with: matchViewDataModel)
         handleMatchIsOver()
+    }
+
+    func didPressPause() {
+        gameTimer?.invalidate()
+    }
+
+    func resumeMatch() {
+        checkInitGameTimer()
+    }
+
+    func endMatch() {
+        didEndMatch()
     }
 
     // MARK: - MatchInteractorOutput
