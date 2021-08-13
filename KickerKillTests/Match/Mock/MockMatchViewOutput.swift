@@ -19,4 +19,16 @@ final class MockMatchViewOutput: MatchViewOutput, HasInvocations {
     func playerScoredGoal(teamPlayer: TeamPlayers) {
 
     }
+
+    func didPressPause() {
+
+    }
+
+    func resumeMatch() {
+
+    }
+
+    func endMatch() {
+
+    }
 }

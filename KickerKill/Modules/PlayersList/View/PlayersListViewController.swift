@@ -47,7 +47,7 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
 
         gameTypeInputText.delegate = self
         setupKeyBoardDismissButton()
-        tableView.registerCell(PlayerListCell.self)
+        tableView.registerByCellNib(PlayerListCell.self)
 
         output.viewIsReady()
 
@@ -252,7 +252,7 @@ extension PlayersListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withClass: PlayerListCell.self, for: indexPath)
+        let cell = tableView.dequeueReusableCell(PlayerListCell.self, for: indexPath)
         cell.config(players[indexPath.row])
         return cell
     }
