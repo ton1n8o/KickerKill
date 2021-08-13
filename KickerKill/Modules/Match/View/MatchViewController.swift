@@ -6,6 +6,7 @@ final class MatchViewController: UIViewController, MatchViewInput {
 
     var output: MatchViewOutput!
 
+    @IBOutlet weak var buttonPause: UIButton!
     @IBOutlet weak var team1Attack: UIButton!
     @IBOutlet weak var team1Defence: UIButton!
     @IBOutlet weak var team1Goals: UILabel!
@@ -95,8 +96,26 @@ final class MatchViewController: UIViewController, MatchViewInput {
         output.playerScoredGoal(teamPlayer: .team2Defense)
     }
 
+    @IBAction func didPressPause(_ sender: UIButton) {
+
+        output.didPressPause()
+
+        let alertController = UIAlertController(title: "Encerrar partida?", message: nil, preferredStyle: .alert)
+        alertController.addAction(.init(title: "Sim", style: .destructive, handler: handleEndMatch))
+        alertController.addAction(.init(title: "Não", style: .cancel, handler: handleContinueMatch))
+
+        present(alertController, animated: true)
+    }
+
+    private func handleEndMatch(action: UIAlertAction) {
+        output.endMatch()
+    }
+
+    private func handleContinueMatch(action: UIAlertAction) {
+        output.resumeMatch()
+    }
+
     deinit {
         print("\(String(describing: self)) >>> GONE" )
     }
-
 }
