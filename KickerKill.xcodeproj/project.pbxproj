@@ -30,6 +30,9 @@
 		028148112656DDE100B1919F /* MatchScoreRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028148082656DDE100B1919F /* MatchScoreRouter.swift */; };
 		028D2A8D25A7672A00D2A76A /* Match.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028D2A8C25A7672A00D2A76A /* Match.storyboard */; };
 		028DD43925DF0FAC002E3B6C /* MatchViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028DD43825DF0FAC002E3B6C /* MatchViewDataModel.swift */; };
+		02DB2D2F26CEC6A1001A3085 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DB2D2E26CEC6A1001A3085 /* UITableViewCell+Extensions.swift */; };
+		02DB2D3326CECC02001A3085 /* UITableViewHeaderFooterView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DB2D3226CECC02001A3085 /* UITableViewHeaderFooterView+Extensions.swift */; };
+		02DB2D3726CECC9E001A3085 /* UICollectionViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DB2D3626CECC9E001A3085 /* UICollectionViewCell+Extensions.swift */; };
 		02ED628225DEF5B2002BB8A1 /* MockMatchRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED627025DEF5B2002BB8A1 /* MockMatchRouterInput.swift */; };
 		02ED628325DEF5B2002BB8A1 /* MockMatchInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED627125DEF5B2002BB8A1 /* MockMatchInteractorInput.swift */; };
 		02ED628425DEF5B2002BB8A1 /* MockMatchViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ED627225DEF5B2002BB8A1 /* MockMatchViewInput.swift */; };
@@ -88,7 +91,6 @@
 		91D40E9D24C0C22300E5888E /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E9924C0C22200E5888E /* UITableView+Extensions.swift */; };
 		91D40E9E24C0C22300E5888E /* UI+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E9A24C0C22200E5888E /* UI+Extensions.swift */; };
 		91D40E9F24C0C22300E5888E /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E9B24C0C22200E5888E /* UICollectionView+Extensions.swift */; };
-		91D40EA224C0C27C00E5888E /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40EA124C0C27C00E5888E /* Identifiable.swift */; };
 		91D40EA424C0C29600E5888E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40EA324C0C29600E5888E /* Localizable.swift */; };
 		91D40EA724C0C3D400E5888E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91D40EA624C0C3D400E5888E /* GoogleService-Info.plist */; };
 		DB5A8C5054A90971E30755E2 /* Pods_KickerKill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80AD92F50F804D576DEC7C1C /* Pods_KickerKill.framework */; };
@@ -128,6 +130,9 @@
 		028148082656DDE100B1919F /* MatchScoreRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchScoreRouter.swift; sourceTree = "<group>"; };
 		028D2A8C25A7672A00D2A76A /* Match.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Match.storyboard; sourceTree = "<group>"; };
 		028DD43825DF0FAC002E3B6C /* MatchViewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewDataModel.swift; sourceTree = "<group>"; };
+		02DB2D2E26CEC6A1001A3085 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		02DB2D3226CECC02001A3085 /* UITableViewHeaderFooterView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+Extensions.swift"; sourceTree = "<group>"; };
+		02DB2D3626CECC9E001A3085 /* UICollectionViewCell+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		02ED627025DEF5B2002BB8A1 /* MockMatchRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMatchRouterInput.swift; sourceTree = "<group>"; };
 		02ED627125DEF5B2002BB8A1 /* MockMatchInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMatchInteractorInput.swift; sourceTree = "<group>"; };
 		02ED627225DEF5B2002BB8A1 /* MockMatchViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMatchViewInput.swift; sourceTree = "<group>"; };
@@ -194,7 +199,6 @@
 		91D40E9924C0C22200E5888E /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		91D40E9A24C0C22200E5888E /* UI+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UI+Extensions.swift"; sourceTree = "<group>"; };
 		91D40E9B24C0C22200E5888E /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
-		91D40EA124C0C27C00E5888E /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		91D40EA324C0C29600E5888E /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		91D40EA624C0C3D400E5888E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		920AC06EBCE24F0C0161A1B4 /* Pods-KickerKill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKill.release.xcconfig"; path = "Target Support Files/Pods-KickerKill/Pods-KickerKill.release.xcconfig"; sourceTree = "<group>"; };
@@ -740,6 +744,9 @@
 				91D40E9924C0C22200E5888E /* UITableView+Extensions.swift */,
 				91D40E9A24C0C22200E5888E /* UI+Extensions.swift */,
 				91D40E9B24C0C22200E5888E /* UICollectionView+Extensions.swift */,
+				02DB2D3626CECC9E001A3085 /* UICollectionViewCell+Extensions.swift */,
+				02DB2D2E26CEC6A1001A3085 /* UITableViewCell+Extensions.swift */,
+				02DB2D3226CECC02001A3085 /* UITableViewHeaderFooterView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -750,7 +757,6 @@
 				91D40EA524C0C3D400E5888E /* Resources */,
 				919FA10A24C0BC95004EEE15 /* AppDelegate.swift */,
 				91D40EA324C0C29600E5888E /* Localizable.swift */,
-				91D40EA124C0C27C00E5888E /* Identifiable.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -1021,10 +1027,10 @@
 				028148092656DDE100B1919F /* MatchScorePresenter.swift in Sources */,
 				02615EB6255DB7AC00326EF0 /* MatchInteractorInput.swift in Sources */,
 				91D40E7924C0C14800E5888E /* PlayersListInterfaces.swift in Sources */,
-				91D40EA224C0C27C00E5888E /* Identifiable.swift in Sources */,
 				0281480D2656DDE100B1919F /* MatchScoreInteractorInput.swift in Sources */,
 				91D40E7424C0C14800E5888E /* SignInBuilder.swift in Sources */,
 				91D40E4424C0BF8700E5888E /* CreatePlayerDTO.swift in Sources */,
+				02DB2D2F26CEC6A1001A3085 /* UITableViewCell+Extensions.swift in Sources */,
 				91D40E4924C0BF8700E5888E /* QueryParameters.swift in Sources */,
 				91D40E8F24C0C16300E5888E /* Player.swift in Sources */,
 				91D40EA424C0C29600E5888E /* Localizable.swift in Sources */,
@@ -1041,8 +1047,10 @@
 				0245409D25C33565003C0C83 /* MatchData.swift in Sources */,
 				91D40E4624C0BF8700E5888E /* PlayerService.swift in Sources */,
 				02615EB4255DB7AC00326EF0 /* MatchViewController.swift in Sources */,
+				02DB2D3326CECC02001A3085 /* UITableViewHeaderFooterView+Extensions.swift in Sources */,
 				91D40E4724C0BF8700E5888E /* PlayerServiceImpl.swift in Sources */,
 				91D40E8024C0C14800E5888E /* PlayersListInteractorOutput.swift in Sources */,
+				02DB2D3726CECC9E001A3085 /* UICollectionViewCell+Extensions.swift in Sources */,
 				02615EB2255DB7AC00326EF0 /* MatchPresenter.swift in Sources */,
 				02615EB9255DB7AC00326EF0 /* MatchRouter.swift in Sources */,
 				91D40E9E24C0C22300E5888E /* UI+Extensions.swift in Sources */,

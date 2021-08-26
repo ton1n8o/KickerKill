@@ -1,4 +1,4 @@
-// Copyright © 4/16/20 Antônio Carlos. All rights reserved.
+//  Copyright © 2021 TNTStudios. All rights reserved.
 
 import UIKit
 
@@ -6,23 +6,28 @@ import UIKit
 
 extension UITableView {
 
-    func dequeueReusableCell<T: UITableViewCell>(withClass name: T.Type, for indexPath: IndexPath) -> T where T: Identifiable {
-
-        guard let cell = dequeueReusableCell(withIdentifier: T.identifier, for: indexPath) as? T else {
-            fatalError("Couldn't find UITableViewCell for \(T.identifier)")
+    func dequeueReusableCell<T: UITableViewCell>(_ cellClass: T.Type, for indexPath: IndexPath) -> T {
+        guard let cell = dequeueReusableCell(withIdentifier: T.reusableCellIdentifier, for: indexPath) as? T else {
+            assertionFailure("Couldn't find Cell for \(T.reusableCellIdentifier)")
+            return T()
         }
         return cell
     }
 
-    func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView>(withClass name: T.Type) -> T where T: Identifiable {
+    func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView>(withClass name: T.Type) -> T {
 
-        guard let cell = dequeueReusableHeaderFooterView(withIdentifier: T.identifier) as? T else {
-            fatalError("Couldn't find UITableViewHeaderFooterView for \(T.identifier)")
+        guard let cell = dequeueReusableHeaderFooterView(withIdentifier: T.reusableCellIdentifier) as? T else {
+            assertionFailure("Couldn't find a UITableViewHeaderFooterView for \(T.reusableCellIdentifier)")
+            return T()
         }
         return cell
     }
 
-    func registerCell<T: Identifiable>(_ withClass: T.Type) {
-        self.register(withClass.nib, forCellReuseIdentifier: withClass.identifier)
+    func registerByCellNib<T: UITableViewCell>(_ cellClass: T.Type) {
+        register(T.nib, forCellReuseIdentifier: T.reusableCellIdentifier)
+    }
+
+    func registerByCellClass<T: UITableViewCell>(_ cellClass: T.Type) {
+        register(cellClass, forCellReuseIdentifier: T.reusableCellIdentifier)
     }
 }

@@ -2,16 +2,11 @@
 
 import UIKit
 
-final class PlayerListCell: UITableViewCell, Identifiable {
+final class PlayerListCell: UITableViewCell {
 
     @IBOutlet private var nameLabel: UILabel!
     @IBOutlet private var emailLabel: UILabel!
     @IBOutlet private var idLabel: UILabel!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
     func config(_ player: Player) {
         nameLabel.text = player.name
