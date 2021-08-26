@@ -87,8 +87,6 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
 
     private func roundAndHideElements() {
 
-        playerView3.isHidden = true
-        playerView4.isHidden = true
         [playerView1, playerView2, playerView3, playerView4, startGameButton].forEach {
             $0.setRoundCorner()
         }
@@ -157,7 +155,27 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
 
     func updateWithDataModel(_ dataModel: PlayersListViewDataModel) {
 
+        print("\(#function ) >>> CHAMOUUUUUUU")
+
+        /*
+         adicionar placeholder
+         placeholder ( do próximo player a ser selecionado ) fica animado ( fade de cor )
+         */
+
+        playerView2.alpha = 0.2
+        playerView3.alpha = 0.2
+        playerView4.alpha = 0.2
+
+        UIView.animate(withDuration: 0.8, delay: 0, options: [.autoreverse, .repeat]) {
+            self.playerView1.alpha = 0.1
+        } completion: { _ in
+            print("\(#function ) >>> COMPLETED ")
+            self.playerView1.alpha = 1
+        }
+
+
         startGameButton.isEnabled = dataModel.startGameEnabled
+        startGameButton.backgroundColor = dataModel.startGameEnabled ? .systemGreen : .lightGray
 
         player1Label.text = dataModel.team1Initials.0
         showHidePlayerUI(playerView: playerView1,
@@ -185,8 +203,8 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
     }
 
     private func showHidePlayerUI(playerView: UIView, btnRemove: UIButton, hide: Bool) {
-        playerView.isHidden = hide
-        btnRemove.isHidden = hide
+//        playerView.isHidden = hide
+//        btnRemove.isHidden = hide
     }
 
     func showError(error: PlayerViewErrors) {
