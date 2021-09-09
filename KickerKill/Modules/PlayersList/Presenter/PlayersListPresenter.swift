@@ -40,7 +40,7 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
         view?.updateWithDataModel(viewDataModel)
     }
 
-    func getNextPlayer() -> PlayerPosition {
+    func getNextPlayer() -> PlayerPosition? {
 
         if team1.player1 == nil {
             return .firstPlayer
@@ -48,9 +48,10 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
             return .secondPlayer
         } else if team1.player2 == nil {
             return .thirdPlayer
-        } else {
+        } else if team2.player2 == nil {
             return .forthPlayer
         }
+        return nil // todos os jogadores selecionados
     }
 
     private var viewDataModel: PlayersListViewDataModel {

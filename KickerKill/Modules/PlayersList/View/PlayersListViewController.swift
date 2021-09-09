@@ -37,6 +37,8 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
     @IBOutlet private var gameTypeSwitch: UISwitch!
     @IBOutlet weak var gameTypeLabel: UILabel!
 
+    private var previousPlayerView: UIView?
+
     var output: PlayersListViewOutput!
     private var players: [Player] = []
 
@@ -155,22 +157,11 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
 
     func updateWithDataModel(_ dataModel: PlayersListViewDataModel) {
 
-        print("\(#function ) >>> CHAMOUUUUUUU")
-
-        /*
-         adicionar placeholder
-         placeholder ( do próximo player a ser selecionado ) fica animado ( fade de cor )
-         */
-
-        //playerView2.alpha = 0.1
-        //playerView3.alpha = 0.1
-        //playerView4.alpha = 0.1
-
-        animateNextPlayer(getNextPlayer())
-        //animateNextPlayer(playerView1)
-        //animateNextPlayer2()
-
-        //addPulse(getNextPlayer())
+        previousPlayerView?.alpha = 1
+        if let nextPlayer = output.getNextPlayer() {
+            previousPlayerView = nextPlayerViewFor(nextPlayer)
+            animateNextPlayer(previousPlayerView!)
+        }
 
         startGameButton.isEnabled = dataModel.startGameEnabled
         startGameButton.backgroundColor = dataModel.startGameEnabled ? .systemGreen : .lightGray
@@ -200,12 +191,8 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
         }
     }
 
-    private func getNextPlayer() -> UIView {
-
-        let nextPlayer: PlayerPosition = output.getNextPlayer()
-        print("\(#function ) >>> PlayerPosition: \(nextPlayer)")
-
-        switch nextPlayer {
+    private func nextPlayerViewFor(_ playerPosition: PlayerPosition) -> UIView {
+        switch playerPosition {
         case .firstPlayer:
             return playerView1
         case .secondPlayer:
@@ -218,74 +205,17 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
     }
 
     private func animateNextPlayer(_ player: UIView) {
-        let durationOfAnimation: Double = 1.5
+
+        let durationOfAnimation: Double = 1.0
         let delayOfAnimation: Double = 0
-        let inicialTransparency: CGFloat = 0.3
-        let finalTransparency: CGFloat = 1
+        let initialTransparency: CGFloat = 0.3
 
         UIView.animate(withDuration: durationOfAnimation, delay: delayOfAnimation, options: [.autoreverse, .repeat]) {
-            player.alpha = inicialTransparency
-        } completion: { finish in
-            player.alpha = finalTransparency
-
-            print("\(#function ) >>> finish: \(finish)")
+            player.alpha = initialTransparency
         }
     }
-
-/* it does not working...
-    private func animateNextPlayer2() {
-        let durationOfAnimation: Double = 1.5
-        let delayOfAnimation: Double = 0
-        let inicialTransparency: CGFloat = 0.3
-        let finalTransparency: CGFloat = 1
-        let nextPlayer: PlayerPosition = output.getNextPlayer()
-        print("\(#function ) >>> PlayerPosition: \(nextPlayer)")
-
-        switch nextPlayer {
-        case .firstPlayer:
-            UIView.animate(withDuration: durationOfAnimation, delay: delayOfAnimation, options: [.autoreverse, .repeat]) {
-                self.playerView1.alpha = inicialTransparency
-            } completion: { finish in
-                self.playerView1.alpha = finalTransparency
-                print("\(#function ) >>> finish: \(finish)")
-            }
-        case .secondPlayer:
-            UIView.animate(withDuration: durationOfAnimation, delay: delayOfAnimation, options: [.autoreverse, .repeat]) {
-                self.playerView2.alpha = inicialTransparency
-            } completion: { finish in
-                self.playerView2.alpha = finalTransparency
-                print("\(#function ) >>> finish: \(finish)")
-            }
-        case .thirdPlayer:
-            UIView.animate(withDuration: durationOfAnimation, delay: delayOfAnimation, options: [.autoreverse, .repeat]) {
-                self.playerView3.alpha = inicialTransparency
-            } completion: { finish in
-                self.playerView3.alpha = finalTransparency
-                print("\(#function ) >>> finish: \(finish)")
-            }
-        case .forthPlayer:
-            UIView.animate(withDuration: durationOfAnimation, delay: delayOfAnimation, options: [.autoreverse, .repeat]) {
-                self.playerView4.alpha = inicialTransparency
-            } completion: { finish in
-                self.playerView4.alpha = finalTransparency
-                print("\(#function ) >>> finish: \(finish)")
-            }
-        }
-    }
-*/
-
-/* it does not working...
-    func addPulse(_ player: UIView) {
-        let pulse = Pulsing(numberOfPulses: 1, radius: 110, position: player.center)
-        pulse.animationDuration = 0.8
-        pulse.backgroundColor = UIColor.blue.cgColor
-
-        player.layer.insertSublayer(pulse, below: player.layer)
-    }
-*/
 
     private func showHidePlayerUI(playerView: UIView, btnRemove: UIButton, hide: Bool) {
-//        playerView.isHidden = hide
         btnRemove.isHidden = hide
     }
 

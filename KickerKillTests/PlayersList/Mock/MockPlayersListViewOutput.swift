@@ -32,4 +32,8 @@ final class MockPlayersListViewOutput: PlayersListViewOutput, HasInvocations {
     func startGame() {
 
     }
+
+    func getNextPlayer() -> PlayerPosition? {
+        nil
+    }
 }

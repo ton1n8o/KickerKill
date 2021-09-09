@@ -93,7 +93,6 @@
 		91D40E9F24C0C22300E5888E /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40E9B24C0C22200E5888E /* UICollectionView+Extensions.swift */; };
 		91D40EA424C0C29600E5888E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D40EA324C0C29600E5888E /* Localizable.swift */; };
 		91D40EA724C0C3D400E5888E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91D40EA624C0C3D400E5888E /* GoogleService-Info.plist */; };
-		AC20011426E6847900C7277C /* Pulsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20011326E6847900C7277C /* Pulsing.swift */; };
 		DB5A8C5054A90971E30755E2 /* Pods_KickerKill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80AD92F50F804D576DEC7C1C /* Pods_KickerKill.framework */; };
 /* End PBXBuildFile section */
 
@@ -203,7 +202,6 @@
 		91D40EA324C0C29600E5888E /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		91D40EA624C0C3D400E5888E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		920AC06EBCE24F0C0161A1B4 /* Pods-KickerKill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerKill.release.xcconfig"; path = "Target Support Files/Pods-KickerKill/Pods-KickerKill.release.xcconfig"; sourceTree = "<group>"; };
-		AC20011326E6847900C7277C /* Pulsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulsing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,7 +365,6 @@
 			isa = PBXGroup;
 			children = (
 				0245409C25C33565003C0C83 /* MatchData.swift */,
-				AC20011326E6847900C7277C /* Pulsing.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -1022,7 +1019,6 @@
 			files = (
 				91D40E7724C0C14800E5888E /* PlayersListPresenter.swift in Sources */,
 				91D40E9F24C0C22300E5888E /* UICollectionView+Extensions.swift in Sources */,
-				AC20011426E6847900C7277C /* Pulsing.swift in Sources */,
 				91D40E7824C0C14800E5888E /* Team.swift in Sources */,
 				028148112656DDE100B1919F /* MatchScoreRouter.swift in Sources */,
 				0281480B2656DDE100B1919F /* MatchScoreViewController.swift in Sources */,
