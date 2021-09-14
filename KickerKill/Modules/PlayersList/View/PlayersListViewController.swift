@@ -158,7 +158,7 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
     func updateWithDataModel(_ dataModel: PlayersListViewDataModel) {
 
         previousPlayerView?.alpha = 1
-        if let nextPlayer = output.getNextPlayer() {
+        if let nextPlayer = dataModel.nextPlayerToBeSelected {
             previousPlayerView = nextPlayerViewFor(nextPlayer)
             animateNextPlayer(previousPlayerView!)
         }
@@ -192,6 +192,7 @@ final class PlayersListViewController: UIViewController, PlayersListViewInput {
     }
 
     private func nextPlayerViewFor(_ playerPosition: PlayerPosition) -> UIView {
+
         switch playerPosition {
         case .firstPlayer:
             return playerView1

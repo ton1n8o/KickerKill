@@ -10,4 +10,5 @@ struct PlayersListViewDataModel {
     let team2Initials: (String?, String?)
     let startGameEnabled: Bool
     let gameType: GameType?
+    let nextPlayerToBeSelected: PlayerPosition?
 }

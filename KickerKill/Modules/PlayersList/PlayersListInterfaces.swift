@@ -14,5 +14,4 @@ protocol PlayersListViewOutput {
     func removePlayer(at: PlayerPosition)
     func didSelectGameType(_ gameType: GameType?)
     func startGame()
-    func getNextPlayer() -> PlayerPosition?
 }
