@@ -52,8 +52,7 @@ final class PlayerServiceImpl: PlayerService {
 
                                     switch result {
                                     case .success(let document):
-
-                                        let fetchPlayerDTO = document == nil ? nil : FetchPlayerDTO(document!)
+                                        let fetchPlayerDTO = document.flatMap(FetchPlayerDTO.init)
                                         completion(.success(fetchPlayerDTO))
                                     case .failure(let error):
                                         completion(.failure(error))

@@ -25,7 +25,8 @@ final class SnapshotTestCase: FBSnapshotTestCase {
         let viewDataModel = PlayersListViewDataModel(team1Initials: ("A", nil),
                                                      team2Initials: ("H", nil),
                                                      startGameEnabled: true,
-                                                     gameType: .goalBased(totalGoals: 3))
+                                                     gameType: .goalBased(totalGoals: 3),
+                                                     nextPlayerToBeSelected: .thirdPlayer)
 
         sut.updateWithDataModel(viewDataModel)
 
@@ -45,7 +46,8 @@ final class SnapshotTestCase: FBSnapshotTestCase {
         let viewDataModel = PlayersListViewDataModel(team1Initials: ("A", "R"),
                                                      team2Initials: ("H", "C"),
                                                      startGameEnabled: true,
-                                                     gameType: .goalBased(totalGoals: 15))
+                                                     gameType: .goalBased(totalGoals: 15),
+                                                     nextPlayerToBeSelected: nil)
 
         sut.updateWithDataModel(viewDataModel)
 

@@ -40,15 +40,18 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
         view?.updateWithDataModel(viewDataModel)
     }
 
-    private func getNextPlayer() -> PlayerPosition? {
+    private var nextPlayer: PlayerPosition? {
 
         if team1.player1 == nil {
             return .firstPlayer
-        } else if team2.player1 == nil {
+        }
+        if team2.player1 == nil {
             return .secondPlayer
-        } else if team1.player2 == nil {
+        }
+        if team1.player2 == nil {
             return .thirdPlayer
-        } else if team2.player2 == nil {
+        }
+        if team2.player2 == nil {
             return .forthPlayer
         }
         return nil // all players are selected
@@ -61,7 +64,7 @@ final class PlayersListPresenter: PlayersListViewOutput, PlayersListInteractorOu
             team2Initials: team2.initials,
             startGameEnabled: enableStartGame,
             gameType: gameType,
-            nextPlayerToBeSelected: getNextPlayer()
+            nextPlayerToBeSelected: nextPlayer
         )
     }
 
